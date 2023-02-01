@@ -33,7 +33,7 @@ Parcel definection have two different meanings.
 In this section, we will describe the implementation for the HOC factory.
 ### Props Proxy
 The simple implementation of Props Proxy
-```
+```javascript
   function ppHOC(WrappedComponent) {  
     return class PP extends React.Component {    
       render() {      
@@ -43,7 +43,7 @@ The simple implementation of Props Proxy
   }
 ```
 The main thing here is that the Hoc returns a React element of type WrappedComponent in the render method, and we also pass in the props  recieved by the HOC, which is where name <b>Props Proxy</b> comes from.
-```
+```javascript
  <WrappedComponent {...this.props}/> 
  // equal 
  React.createElement(WrappedComponent, this.props, null)
@@ -52,9 +52,114 @@ Both create a React Element for rendering in a reconciliation process within Rea
 
 (Note: the reconciliation process can be understood as the process within React of synchronising the virtual DOM to the real DOM, including comparing the old and new virtual DOM and calculating the minimum DOM operation)
 
-### The reconciliation process
+#### The reconciliation process
 reconciliation process can be understood that unifies behaviour, and the HOC is an implementation based on this idea.
-
+##### Reconciliation process in react
+The reconciliation process is understood as the process within React of synchronising the virtual DOM to the real DOM, including comparison of the old and new virtual DOM and calculation of the minimum DOM operation.
 > https://zhuanlan.zhihu.com/p/24776678
+
+<b>What can i do with Props proxy</b>
+- Manipulate props
+- Access to component instance by Refs
+- Extract state
+- Wrapping wrappedCompoent with other components
+
+#### Manipulate props
+U can delete, add or change props that are passed to WrappedComponent.
+> When u delete props, u must to be careful, because delete options will destroy the WrappedComponent.
+```javascript
+function ppHOC(WrappedComponent) {
+  return class PP extends React.Component {
+    render() {
+      const newProps = {
+        user: currentLoggedInUser
+      }
+      return <WrappedComponent {...this.props} {...newProps}/>
+    }
+  }
+}
+```
+#### Access to component instance by refs
+```javascript
+function refsHOC(WrappedComponent) {
+  return class RefsHOC extends React.Component {
+    proc(wrappedComponentInstance) {
+      wrappedComponentInstance.method()
+    }
+
+    render() {
+      const props = Object.assign({}, this.props, {ref: this.proc.bind(this)})
+      return <WrappedComponent {...props}/>
+    }
+  }
+}
+```
+
+#### Extract state
+```javascript
+function ppHOC(WrappedComponent) {
+  return class PP extends React.Component {
+    constructor(props) {
+      super(props)
+      this.state = {
+        name: ''
+      }
+
+      this.onNameChange = this.onNameChange.bind(this)
+    }
+    onNameChange(event) {
+      this.setState({
+        name: event.target.value
+      })
+    }
+    render() {
+      const newProps = {
+        name: {
+          value: this.state.name,
+          onChange: this.onNameChange
+        }
+      }
+      return <WrappedComponent {...this.props} {...newProps}/>
+    }
+  }
+}
+```
+
+uses example
+```javascript
+@ppHOC
+class Example extends React.Component {
+  render() {
+    return <input name="name" {...this.props.name}/>
+  }
+}
+```
+
+> For more information on the regular bi-directional binding HOC please click <a herf='https://link.zhihu.com/?target=https%3A//github.com/franleplant/react-hoc-examples/blob/master/pp_state.js'>link</a>
+
+#### Wrapping wrappedComponent with other components
+```javascript
+function ppHOC(WrappedComponent) {
+  return class PP extends React.Component {
+    render() {
+      return (
+        <div style={{display: 'block'}}>
+          <WrappedComponent {...this.props}/>
+        </div>
+      )
+    }
+  }
+}
+```
+
+
+<b>
+When u readding all of the content, u must know HOC is pure compoent with no side effects. if u want to use HOC to solve repeat tasks, u should create a bit of independency HOC.
+The HOC should be regular and no-effects.when u need create a completely component, u can combine two or more HOC.
+</b>
+
+
+
+
 
 
