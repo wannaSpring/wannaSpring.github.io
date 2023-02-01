@@ -74,6 +74,16 @@ prismjs:
   preprocess: true
   line_number: true
   tab_replace: ''
+# Rss
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
