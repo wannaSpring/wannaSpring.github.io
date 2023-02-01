@@ -123,4 +123,4 @@ deploy:
   type: git
   repo: https://github.com/wannaSpring/wannaSpring.github.io
   branch: main
-  message: Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}
+  message: none
