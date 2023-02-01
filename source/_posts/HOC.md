@@ -58,13 +58,13 @@ reconciliation process can be understood that unifies behaviour, and the HOC is 
 The reconciliation process is understood as the process within React of synchronising the virtual DOM to the real DOM, including comparison of the old and new virtual DOM and calculation of the minimum DOM operation.
 > https://zhuanlan.zhihu.com/p/24776678
 
-<b>What can i do with Props proxy</b>
+## What can i do with Props proxy
 - Manipulate props
 - Access to component instance by Refs
 - Extract state
 - Wrapping wrappedCompoent with other components
 
-#### Manipulate props
+### Manipulate props
 U can delete, add or change props that are passed to WrappedComponent.
 > When u delete props, u must to be careful, because delete options will destroy the WrappedComponent.
 ```javascript
@@ -79,7 +79,7 @@ function ppHOC(WrappedComponent) {
   }
 }
 ```
-#### Access to component instance by refs
+### Access to component instance by refs
 ```javascript
 function refsHOC(WrappedComponent) {
   return class RefsHOC extends React.Component {
@@ -95,7 +95,7 @@ function refsHOC(WrappedComponent) {
 }
 ```
 
-#### Extract state
+### Extract state
 ```javascript
 function ppHOC(WrappedComponent) {
   return class PP extends React.Component {
@@ -137,7 +137,7 @@ class Example extends React.Component {
 
 > For more information on the regular bi-directional binding HOC please click <a herf='https://link.zhihu.com/?target=https%3A//github.com/franleplant/react-hoc-examples/blob/master/pp_state.js'>link</a>
 
-#### Wrapping wrappedComponent with other components
+### Wrapping wrappedComponent with other components
 ```javascript
 function ppHOC(WrappedComponent) {
   return class PP extends React.Component {
@@ -152,7 +152,7 @@ function ppHOC(WrappedComponent) {
 }
 ```
 
-
+## Summary
 <b>
 When u readding all of the content, u must know HOC is pure compoent with no side effects. if u want to use HOC to solve repeat tasks, u should create a bit of independency HOC.
 The HOC should be regular and no-effects.when u need create a completely component, u can combine two or more HOC.
