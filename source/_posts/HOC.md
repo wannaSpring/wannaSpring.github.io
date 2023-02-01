@@ -56,7 +56,6 @@ Both create a React Element for rendering in a reconciliation process within Rea
 reconciliation process can be understood that unifies behaviour, and the HOC is an implementation based on this idea.
 ##### Reconciliation process in react
 The reconciliation process is understood as the process within React of synchronising the virtual DOM to the real DOM, including comparison of the old and new virtual DOM and calculation of the minimum DOM operation.
-> https://zhuanlan.zhihu.com/p/24776678
 
 ## What can i do with Props proxy
 - Manipulate props
