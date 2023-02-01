@@ -6,7 +6,7 @@ top: true
 hide: false
 cover: true
 coverImg: https://images.pexels.com/photos/355465/pexels-photo-355465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
-toc: true
+toc: false
 mathjax: false
 summary: ----
 categories: Tech
