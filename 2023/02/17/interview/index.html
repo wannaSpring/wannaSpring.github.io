@@ -376,7 +376,7 @@
 <h2 id="11-说说你对属性data-的理解"><a href="#11-说说你对属性data-的理解" class="headerlink" title="11.说说你对属性data-的理解"></a>11.说说你对属性data-的理解</h2><p>data- 是自定义属性，用来暂存非用户输入的值，在js中也能获取。</p>
 <h2 id="12-请说说-lt-script-gt-、-lt-script-async-gt-和-lt-script-defer-gt-的区别"><a href="#12-请说说-lt-script-gt-、-lt-script-async-gt-和-lt-script-defer-gt-的区别" class="headerlink" title="12. 请说说&lt;script&gt;、&lt;script async&gt;和&lt;script defer&gt;的区别"></a>12. 请说说<code>&lt;script&gt;、&lt;script async&gt;和&lt;script defer&gt;</code>的区别</h2><p>script 立即加载<br>async 加载和渲染同时执行<br>defer 渲染完成后执行</p>
 <h2 id="13-解释下你对GBK和UTF-8的理解？并说说页面上产生乱码的可能原因"><a href="#13-解释下你对GBK和UTF-8的理解？并说说页面上产生乱码的可能原因" class="headerlink" title="13. 解释下你对GBK和UTF-8的理解？并说说页面上产生乱码的可能原因"></a>13. 解释下你对GBK和UTF-8的理解？并说说页面上产生乱码的可能原因</h2><p>GBK 是中国使用的语言编码标准，包括简体和繁体<br>UTF-8 是全球通用的语言编码标准，<br>如果产生乱码，可能是html meta 标签的语言编码和实际使用不一致的情况</p>
-<h2 id="14-说说你对标签的理解"><a href="#14-说说你对标签的理解" class="headerlink" title="14. 说说你对标签的理解"></a>14. 说说你对<meta>标签的理解</h2><ol>
+<h2 id="14-说说你对-lt-meta-gt-标签的理解"><a href="#14-说说你对-lt-meta-gt-标签的理解" class="headerlink" title="14. 说说你对&lt;meta&gt;标签的理解"></a>14. 说说你对<code>&lt;meta&gt;</code>标签的理解</h2><ol>
 <li>meta 最常见的用处是用来声明语言编码标准</li>
 <li>此外 name:keywords: 配合seo使用</li>
 </ol>
@@ -386,21 +386,23 @@
 </ol>
 <h2 id="16-DOM和BOM有什么区别"><a href="#16-DOM和BOM有什么区别" class="headerlink" title="16. DOM和BOM有什么区别"></a>16. DOM和BOM有什么区别</h2><p>BOM: Browser of model<br>DOM: Document of model<br>BOM 是独立于内容于浏览器进行交互的对象，是浏览器提供给js用来和浏览器交互的接口，例如Window对象下的方法，navigation, history,<br>DOM 是html提供给js的API接口，可以理解为用来操作html元素的接口，例如Document对象下的方法。<br><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230227162725aL5CT5.png?token=ALJ6LAVVI4JVZA6BAEC6PTLD7RU22" alt="Picsee-20230227162725.png"></p>
 <h2 id="17-怪异模式Quirks和标准模式Standards有什么区别"><a href="#17-怪异模式Quirks和标准模式Standards有什么区别" class="headerlink" title="17. 怪异模式Quirks和标准模式Standards有什么区别"></a>17. 怪异模式Quirks和标准模式Standards有什么区别</h2><p>标准模式的宽度就是给定的本身，而怪异模式内容加padding + border而不算上margin<br>默认情况下浏览器使用的标准模式，而大家一般习惯使用怪异模式，所以只需要使用<code>border-sizing: border-box</code></p>
-<h2 id="18-cookie-session-and-storage"><a href="#18-cookie-session-and-storage" class="headerlink" title="18. cookie, session and storage"></a>18. cookie, session and storage</h2><blockquote>
-<p>cookie 是一种协议，不属于服务端也不属于客服端，但是通常在服务端产生。<br>session 后端会话的一种机制<br>storage 分为localstorage 和sessionstorage<br>localstorage 是将数据永久存储在本地，存储到了电脑的内存和硬盘中，同源共享</p>
-</blockquote>
+<h2 id="18-cookie-session-and-storage"><a href="#18-cookie-session-and-storage" class="headerlink" title="18. cookie, session and storage"></a>18. cookie, session and storage</h2><p>cookie 是一种协议，不属于服务端也不属于客服端，但是通常在服务端产生。<br>session 后端会话的一种机制<br>storage 分为localstorage 和sessionstorage<br>localstorage 是将数据永久存储在本地，存储到了电脑的内存和硬盘中，同源共享</p>
 <ul>
 <li>不会随着会话的关闭而消失</li>
 <li>属性名相关的情况下会产生覆写</li>
 <li>不大于5MB</li>
-<li>存储的时候存储的是字符串<br>sessionstorage 会话存储，不能共享，当页面关闭时数据也会消失</li>
+<li>存储的时候存储的是字符串</li>
 </ul>
+<p>sessionstorage 会话存储，不能共享，当页面关闭时数据也会消失</p>
 <p>cookie 是http协议中的一部分，因为http是无状态协议，因此前后端为了验证是否登陆状态，而使用cookie，前端在获取到cookie后可以将cookie存储在浏览器，并且在每一次请求时在请求头中携带，服务端可以进行验证，以此确认登陆状态</p>
 <p>session 是服务器存储的一种机制，服务器不会将session发送给浏览器。当客户端请求登陆时，会将账号密码一并发送给服务端，当服务端验证完成后，会生成一个session文件，之后的每一次请求，服务端会将session-id写入cookie并且将cookie发送给客户端，客户端在请求时将cookie携带发给服务端，服务端解密后得到session- ID，根据session-id去查看session文件，如果匹配则表明登陆成功，。</p>
 <p>cookie vs session<br>存储</p>
 <ul>
 <li>cookie如果不设置过期时间，存储在内存中，随着浏览器关闭而消失，这种称为会话cookie，另外一种则会存储在内存中</li>
-<li>session保存在服务器端<br>存储大小</li>
+<li>session保存在服务器端</li>
+</ul>
+<p>存储大小</p>
+<ul>
 <li>cookie 不超过4kb</li>
 <li>session 没有大小限制</li>
 </ul>
@@ -476,9 +478,9 @@
 <p>前端性能优化可以从多个方面入手，包括代码方面、网络请求方面、渲染方面等。其中一些常见的优化方案包括：使用压缩和混淆工具来减少代码文件的大小，使用CDN加速网络请求，使用浏览器缓存来减少网络请求，使用图片懒加载和无限滚动来减少资源加载次数，避免布局抖动、减少重绘和回流等。</p>
 <h2 id="31-VM-webpack-datepipe-router-safe"><a href="#31-VM-webpack-datepipe-router-safe" class="headerlink" title="31. VM, webpack, datepipe, router, safe"></a>31. VM, webpack, datepipe, router, safe</h2><h3 id="请问什么是-Virtual-DOM？它和传统-DOM-有什么不同？"><a href="#请问什么是-Virtual-DOM？它和传统-DOM-有什么不同？" class="headerlink" title="请问什么是 Virtual DOM？它和传统 DOM 有什么不同？"></a>请问什么是 Virtual DOM？它和传统 DOM 有什么不同？</h3><p>1.1 Virtual DOM（虚拟DOM）是指一个虚拟的DOM树，它是以JavaScript对象的形式表示，通过它来操作和更新真实的DOM树.Virtual DOM可以将DOM操作集中处理，避免频繁地操作DOM而导致页面性能下降。在进行DOM操作时，Virtual DOM会对比新旧DOM树的差异，并只更新差异部分，从而提高页面的渲染效率。<br>1.2 Virtual DOM和传统DOM的主要不同点在于，Virtual DOM通过JavaScript对象来表示DOM节点和其属性，从而避免了直接操作真实的DOM节点。这样可以提高渲染效率，同时也避免了一些常见的问题，比如浏览器兼容性、性能问题等。</p>
 <h3 id="请问什么是-Webpack？它的作用是什么？"><a href="#请问什么是-Webpack？它的作用是什么？" class="headerlink" title="请问什么是 Webpack？它的作用是什么？"></a>请问什么是 Webpack？它的作用是什么？</h3><p>webpack是一个模块打包工具，它可以将不同类型的文件（js，css，图片等）视为模块，并将他们打包成一个或者多个静态资源文件。此外webpack还提供了强大的插件和loader机制，使得开发者可以方便的进行代码压缩，分割和按需加载等操作。同时可以使用sass，less等预处理器来编写css</p>
-<h3 id="请问什么是单向数据流？它和双向数据绑定有什么不同？"><a href="#请问什么是单向数据流？它和双向数据绑定有什么不同？" class="headerlink" title="请问什么是单向数据流？它和双向数据绑定有什么不同？"></a>请问什么是单向数据流？它和双向数据绑定有什么不同？</h3><p>单向数据流是指数据从父组件传递给子组件，子组件通过props修改数据，而无法修改父组件的数据。而双向数据绑定在这道题中的意思是指，数据可以在父子组件中双向流动，子组件不仅可以接受数据也可以通过事件的形式修改父组件的数据。在vue中我们可以用v-model实现。在react中，我们可以通过绑定方法的情况进行实现。</p>
+<h3 id="请问什么是单向数据流？它和双向数据绑定有什么不同？"><a href="#请问什么是单向数据流？它和双向数据绑定有什么不同？" class="headerlink" title="请问什么是单向数据流？它和双向数据绑定有什么不同？"></a>请问什么是单向数据流？它和双向数据绑定有什么不同？</h3><p>单向数据流是指数据从父组件传递给子组件，子组件通过props接收数据，而无法修改父组件的数据。而双向数据绑定在这道题中的意思是指，数据可以在父子组件中双向流动，子组件不仅可以接受数据也可以通过事件的形式修改父组件的数据。在vue中我们可以用v-model实现。在react中，我们可以通过绑定方法的情况进行实现。</p>
 <h3 id="请问如何实现前端路由？有哪些常见的前端路由框架？"><a href="#请问如何实现前端路由？有哪些常见的前端路由框架？" class="headerlink" title="请问如何实现前端路由？有哪些常见的前端路由框架？"></a>请问如何实现前端路由？有哪些常见的前端路由框架？</h3><p>前端路由指的是通过更改url路径来加载页面，即SPA模式，实现前端路由的方式有两种：一种是Hash（#）模式的路由，另外一种是History API得路由。常见的前端路由框架有react-router和vue router</p>
-<h3 id="请问如何进行前端安全防范？可以列举一些常见的前端安全攻击方式和防范措施吗？"><a href="#请问如何进行前端安全防范？可以列举一些常见的前端安全攻击方式和防范措施吗？" class="headerlink" title="请问如何进行前端安全防范？可以列举一些常见的前端安全攻击方式和防范措施吗？"></a>请问如何进行前端安全防范？可以列举一些常见的前端安全攻击方式和防范措施吗？</h3><p>常见的安全工具有Xss，csrf等。预防xss攻击可以通过对用户输入的内容和转移来防止恶意脚本注入。预防CSRF攻击可以采用token验证，samesite等属性来防止跨站请求未沾。通过前端可以通过HTTPS，CSP等方式加强页面的安全性。<br>CSP是Content security policy，可以通过在http相应头中设置csp字段或者在html的meta标签形式来实现。</p>
+<h3 id="请问如何进行前端安全防范？可以列举一些常见的前端安全攻击方式和防范措施吗？"><a href="#请问如何进行前端安全防范？可以列举一些常见的前端安全攻击方式和防范措施吗？" class="headerlink" title="请问如何进行前端安全防范？可以列举一些常见的前端安全攻击方式和防范措施吗？"></a>请问如何进行前端安全防范？可以列举一些常见的前端安全攻击方式和防范措施吗？</h3><p>常见的安全问题有Xss，csrf等。预防xss攻击可以通过对用户输入的内容和转移来防止恶意脚本注入。预防CSRF攻击可以采用token验证，samesite等属性来防止跨站请求未沾。通过前端可以通过HTTPS，CSP等方式加强页面的安全性。<br>CSP是Content security policy，可以通过在http相应头中设置csp字段或者在html的meta标签形式来实现。</p>
 <ol>
 <li>在http中实现<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">Content<span class="token operator">-</span>Security<span class="token operator">-</span>Policy<span class="token operator">:</span> <span class="token keyword">default</span><span class="token operator">-</span>src <span class="token string">'self'</span><span class="token punctuation">;</span> script<span class="token operator">-</span>src <span class="token string">'self'</span> <span class="token string">'unsafe-inline'</span> <span class="token literal-property property">https</span><span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>example<span class="token punctuation">.</span>com<span class="token punctuation">;</span> img<span class="token operator">-</span>src <span class="token string">'self'</span> <span class="token literal-property property">https</span><span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>example<span class="token punctuation">.</span>com<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 </ol>
@@ -488,11 +490,13 @@
 </ol>
 <p>这种方式的设置与上述在 HTTP 响应头中设置 CSP 的方式相似，只不过是使用 meta 标签来设置。<br>需要注意的是，CSP 的具体设置方式会因为网站的不同而有所差异，因此在实际应用中，需要根据实际情况进行设置。同时，CSP 也需要在网站开发和维护过程中不断进行调整和优化，以保证网站的安全性和可用性。</p>
 <h2 id="32-cache-react-vue-js-algorithm"><a href="#32-cache-react-vue-js-algorithm" class="headerlink" title="32.cache, react, vue, js, algorithm"></a>32.cache, react, vue, js, algorithm</h2><ol>
-<li><p>请问浏览器缓存的分类有哪些？如何设置浏览器缓存？<br>浏览器缓存机制确实分为强缓存和协商缓存。其中，强缓存是通过设置HTTP响应头中的Cache-Control和Expires字段来实现的，浏览器可以根据这些字段的值来判断是否可以使用缓存。而协商缓存则是通过设置HTTP响应头中的Last-Modified和ETag字段来实现的，浏览器可以通过这些字段来判断缓存是否过期或者需要重新获取资源。需要注意的是，当Cache-Control和Expires都存在时，Cache-Control优先级更高。</p>
-</li>
-<li><p>请问 React 的生命周期函数有哪些？它们分别在什么时候被触发？<br>react的生命周期分为三大阶段，挂载，更新和卸载。<br>在挂载阶段有componentwillmount,componentdidmount,componentWillReceiveProps<br>在更新阶段有componentwillupdate,componentshouldupdate, componentdidupdate<br>在卸载阶段有componentWillUnmount<br>需要注意的是，componentWillUpdate和componentDidUpdate并不是渲染执行结束前和渲染结束后的生命周期函数，它们是在组件更新前和更新后被调用的。</p>
-</li>
+<li>请问浏览器缓存的分类有哪些？如何设置浏览器缓存？</li>
 </ol>
+<p>浏览器缓存机制确实分为强缓存和协商缓存。其中，强缓存是通过设置HTTP响应头中的Cache-Control和Expires字段来实现的，浏览器可以根据这些字段的值来判断是否可以使用缓存。而协商缓存则是通过设置HTTP响应头中的Last-Modified和ETag字段来实现的，浏览器可以通过这些字段来判断缓存是否过期或者需要重新获取资源。需要注意的是，当Cache-Control和Expires都存在时，Cache-Control优先级更高。</p>
+<ol start="2">
+<li>请问 React 的生命周期函数有哪些？它们分别在什么时候被触发？</li>
+</ol>
+<p>react的生命周期分为三大阶段，挂载，更新和卸载。<br>在挂载阶段有componentwillmount,componentdidmount,componentWillReceiveProps<br>在更新阶段有componentwillupdate,componentshouldupdate, componentdidupdate<br>在卸载阶段有componentWillUnmount<br>需要注意的是，componentWillUpdate和componentDidUpdate并不是渲染执行结束前和渲染结束后的生命周期函数，它们是在组件更新前和更新后被调用的。</p>
 <p>在挂载阶段constructor 调用，然后依次调用componentwillmount,render, componentdidmount三个函数。<br>在组件的props或者state发生变更时调用componentwillreceiveprops,shouldComponentUpdate、componentWillUpdate、render和componentDidUpdate.<br>在卸载阶段调用componentwillUNmount函数<br>如果需要实现一个生命周期，我们可以基于react.component进行实现。</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">MyComponent</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">&#123;</span>
   <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
