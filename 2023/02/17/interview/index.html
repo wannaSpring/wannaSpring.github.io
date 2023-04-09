@@ -365,14 +365,14 @@
 </li>
 </ol>
 <h2 id="7-html5中的form怎么关闭自动完成"><a href="#7-html5中的form怎么关闭自动完成" class="headerlink" title="7.html5中的form怎么关闭自动完成"></a>7.html5中的form怎么关闭自动完成</h2><p>autocomplete &#x3D; “off”</p>
-<h2 id="8-为什么HTML5只需要写就可以？"><a href="#8-为什么HTML5只需要写就可以？" class="headerlink" title="8.为什么HTML5只需要写就可以？"></a>8.为什么HTML5只需要写<!DOCTYPE HTML>就可以？</h2><p>H5之前以DTD保证浏览器的兼容性，还分为严格模式和标准模式，如果不写的话则会变成怪异模式<br>H5不基于DTD，所以只需要一个根元素即可。</p>
+<h2 id="8-为什么HTML5只需要写-lt-DOCTYPE-HTML-gt-就可以？"><a href="#8-为什么HTML5只需要写-lt-DOCTYPE-HTML-gt-就可以？" class="headerlink" title="8.为什么HTML5只需要写&lt;!DOCTYPE HTML&gt;就可以？"></a>8.为什么HTML5只需要写<code>&lt;!DOCTYPE HTML&gt;</code>就可以？</h2><p>H5之前以DTD保证浏览器的兼容性，还分为严格模式和标准模式，如果不写的话则会变成怪异模式<br>H5不基于DTD，所以只需要一个根元素即可。</p>
 <h2 id="9-怎样在页面上实现一个圆形的可点击区域？"><a href="#9-怎样在页面上实现一个圆形的可点击区域？" class="headerlink" title="9. 怎样在页面上实现一个圆形的可点击区域？"></a>9. 怎样在页面上实现一个圆形的可点击区域？</h2><ol>
 <li>div, radius: 50%</li>
 <li>a, radius: 50%</li>
 <li>button, radius: 50%</li>
 <li>canvas 绘制圆，监听canvas</li>
 </ol>
-<h2 id="10-js放在html的和有什么区别？"><a href="#10-js放在html的和有什么区别？" class="headerlink" title="10. js放在html的和有什么区别？"></a>10. js放在html的<body>和<head>有什么区别？</h2><p>html按照标签顺序执行（未加defer || async标记的情况下），如果加js标签加在head就会导致dom树还没渲染，就加载js的情况。</p>
+<h2 id="10-js放在html的-lt-body-gt-和-lt-head-gt-有什么区别？"><a href="#10-js放在html的-lt-body-gt-和-lt-head-gt-有什么区别？" class="headerlink" title="10. js放在html的&lt;body&gt;和&lt;head&gt;有什么区别？"></a>10. js放在html的<code>&lt;body&gt;</code>和<code>&lt;head&gt;</code>有什么区别？</h2><p>html按照标签顺序执行（未加defer || async标记的情况下），如果加js标签加在head就会导致dom树还没渲染，就加载js的情况。</p>
 <h2 id="11-说说你对属性data-的理解"><a href="#11-说说你对属性data-的理解" class="headerlink" title="11.说说你对属性data-的理解"></a>11.说说你对属性data-的理解</h2><p>data- 是自定义属性，用来暂存非用户输入的值，在js中也能获取。</p>
 <h2 id="12-请说说-lt-script-gt-、-lt-script-async-gt-和-lt-script-defer-gt-的区别"><a href="#12-请说说-lt-script-gt-、-lt-script-async-gt-和-lt-script-defer-gt-的区别" class="headerlink" title="12. 请说说&lt;script&gt;、&lt;script async&gt;和&lt;script defer&gt;的区别"></a>12. 请说说<code>&lt;script&gt;、&lt;script async&gt;和&lt;script defer&gt;</code>的区别</h2><p>script 立即加载<br>async 加载和渲染同时执行<br>defer 渲染完成后执行</p>
 <h2 id="13-解释下你对GBK和UTF-8的理解？并说说页面上产生乱码的可能原因"><a href="#13-解释下你对GBK和UTF-8的理解？并说说页面上产生乱码的可能原因" class="headerlink" title="13. 解释下你对GBK和UTF-8的理解？并说说页面上产生乱码的可能原因"></a>13. 解释下你对GBK和UTF-8的理解？并说说页面上产生乱码的可能原因</h2><p>GBK 是中国使用的语言编码标准，包括简体和繁体<br>UTF-8 是全球通用的语言编码标准，<br>如果产生乱码，可能是html meta 标签的语言编码和实际使用不一致的情况</p>
