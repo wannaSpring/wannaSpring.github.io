@@ -365,34 +365,25 @@ class MyComponent extends React.Component {
 例如，一个算法的时间复杂度为 O(n^2)，表示在最坏情况下，算法的执行时间与输入规模 n 的平方成正比。另一个算法的时间复杂度为 O(n log n)，表示在最坏情况下，算法的执行时间与输入规模 n 的对数与 n 的乘积成正比。
 
 ## 35. 请简述 HTML5 中新增的语义化标签及其作用(HTML)
-```
   语义化标签是为了让开发人员更好的阅读标签的作用，例如ul，li等
-```
 
 ## 36. 解释 CSS 盒模型，包括 content、padding、border 和 margin 四个部分的作用(CSS)
-```
   content 是内容盒子
   padding 是内边距
   border 是边框线宽
   margin 是外边距
   整个盒模型分为怪异盒子和标准盒子，标准盒子的宽度包含padding和border，怪异盒子的宽度仅包含content
-```
 
 ## 37. 简述 Flex 布局和 Grid 布局，并说明两者之间的区别(CSS)
-```
   flex 布局是一维弹性布局，设置flex权重后，flex盒子内的元素会根据剩余宽度自行布局，也可以通过flex-direction更改纵轴或者竖轴布局
   Grid布局为二维网格布局，可以分为行和列，通过grid-template-columns和grid-template-rows属性进行设置，设置每一个元素的比例，来分布盒子。
   flex布局的优势在一维状态下比较明显，简单易用，灵活度高，可以响应布局，缺点是不适用二维布局，存在兼容问题。
   Grid布局的优点是支持二维排列，虽然可以支持响应式布局，但是需要通过media queries实现。缺点是规则多，可读性不佳
-```
 
 ## 38. 如何实现 CSS 动画？请列举一些 CSS 属性并说明其作用 (CSS)
-```
   Css动画我们可以通过animation实现，一般情况下我们需要对元素设置keyframe，以此规定动画在指定帧的行为
-```
 
 ## 39. 移动端适配有哪些方案？请列举并说明各自的优缺点(CSS)
-``` 
   媒体查询：通过 CSS3 的媒体查询技术，根据不同的屏幕尺寸和设备类型，动态地改变页面样式。
   优点：能够根据不同设备的屏幕尺寸和像素密度进行适配，开发成本相对较低。
   缺点：对于屏幕尺寸变化较大的设备，布局可能会失真。
@@ -408,38 +399,31 @@ class MyComponent extends React.Component {
   viewport 布局：通过设置 viewport 的属性，改变设备的默认缩放比例，实现适配。
   优点：能够适应不同尺寸的设备，实现自适应布局。
   缺点：需要针对不同的设备进行调整，不够灵活。
-```
 
 ## 40. 解释 JavaScript 中的“传参是按值传递还是按引用传递”，并举例说明 (JS)
 
-```
   按值传递还是按引用船体需要根据数据类型进行分析。基本数据类型，例如数字，字符串是按值传递的，即传递的是值的副本，修改值不会影响原始变量。而对复杂变量，例如数组，对象等，是按引用传递的，修改值会影响原来的值。
-```
 
 ## 41. 解释 JavaScript 中的 this 关键字，并说明其指向的具体对象 (JS)
 
-```
   this 关键字是指向当前作用域的，如果在函数外部使用，在面向浏览器中会被指向window，而node中会指向global。
   使用apply，call，bind等可以改变函数执行时的this指向。
   在箭头函数中，this的指向是它所处的词法作用域，而不是动态绑定的，一半是父级作用域的this
-```
 
 ## 42. 解释 Promise 的概念及其使用方法，并解释 Promise 中的 then 和 catch 方法 （JS）
 
-```
   promise是一种异步编程的解决方案，它通过对异步操作的结果进行封装，使得异步操作符合同步操作的写法风格，它使用resolve和reject表示异步操作的结果。
   在promise中通过then方法接受promise返回的结果，then会接受两个参数，一个是成功的回调，一个是失败的回调，then方法返回的依旧是promise对象，可以继续使用then方法进行链式调用
   catch是promise的错误捕捉方法，promise中的任意一个then方法或者promise对象本身出错都会立即执行catch方法
-```
 
 ## 43. 解释 JavaScript 中的深拷贝和浅拷贝的概念，列举常见的实现方法 （JS）
 
-```javascript
-  深拷贝是指在拷贝一个对象时，不仅拷贝对象的基本数据类型，还拷贝它的引用对象，也就是说在堆内存中新建一个数据，不管是引用类型还是基本数据类型，都会开闭新的空间，彼此不影响
-  浅拷贝是指在拷贝对象时，只拷贝基本数据类型，而不拷贝引用对象，即拷贝对象的指针，而不是本身，在新的对象中修改对象会导致原始对象中的引用类型变量也发生变化。
-  实现方法。
+深拷贝是指在拷贝一个对象时，不仅拷贝对象的基本数据类型，还拷贝它的引用对象，也就是说在堆内存中新建一个数据，不管是引用类型还是基本数据类型，都会开闭新的空间，彼此不影响
+浅拷贝是指在拷贝对象时，只拷贝基本数据类型，而不拷贝引用对象，即拷贝对象的指针，而不是本身，在新的对象中修改对象会导致原始对象中的引用类型变量也发生变化。
+实现方法。
 
-  手写递归实现深拷贝
+手写递归实现深拷贝
+```javascript
 
   function deepClone(obj)(obj) {
     if(typeof(obj) !== 'object' || obj == null) {
@@ -453,18 +437,214 @@ class MyComponent extends React.Component {
     }
     return result;
   }
-
-  通过JSON序列化和反序列化实现
-  JSON.parse(JSON.stringify(obj))
-
-  也可以通过lodash实现
 ```
+
+通过JSON序列化和反序列化实现
+`<code>JSON.parse(JSON.stringify(obj))</code>`
+也可以通过lodash实现
+## PROMISE A+ (JS)
+
+```javascript
+class Promise {
+  constructor(executor) {
+    // 初始化Promise的状态为pending
+    this.status = "pending";
+    this.value = undefined;
+    this.reason = undefined;
+    this.onFulfilledCallbacks = [];
+    this.onRejectedCallbacks = [];
+
+    // 定义resolve和reject方法，用于改变Promise的状态
+    const resolve = (value) => {
+      // 只有在Promise状态为pending时才能改变状态
+      if (this.status === "pending") {
+        this.status = "fulfilled";
+        this.value = value;
+        // 执行所有已注册的onFulfilled回调函数
+        this.onFulfilledCallbacks.forEach((callback) => callback(this.value));
+      }
+    };
+
+    const reject = (reason) => {
+      // 只有在Promise状态为pending时才能改变状态
+      if (this.status === "pending") {
+        this.status = "rejected";
+        this.reason = reason;
+        // 执行所有已注册的onRejected回调函数
+        this.onRejectedCallbacks.forEach((callback) => callback(this.reason));
+      }
+    };
+
+    try {
+      // 执行executor函数，传入resolve和reject方法
+      executor(resolve, reject);
+    } catch (error) {
+      // 如果executor函数抛出异常，直接调用reject方法
+      reject(error);
+    }
+  }
+
+  then(onFulfilled, onRejected) {
+    // 创建新的Promise实例
+    const promise2 = new Promise((resolve, reject) => {
+      const onFulfilledCallback = (value) => {
+        try {
+          // 如果onFulfilled是一个函数，则调用它，并传入当前Promise的值
+          // 如果onFulfilled不是一个函数，则直接将当前Promise的值传递给下一个Promise
+          const x = onFulfilled ? onFulfilled(value) : value;
+          // 递归处理返回值，决定新Promise的状态和值
+          this.resolvePromise(promise2, x, resolve, reject);
+        } catch (error) {
+          // 如果执行onFulfilled回调函数时抛出异常，调用reject方法
+          reject(error);
+        }
+      };
+
+      const onRejectedCallback = (reason) => {
+        try {
+          // 如果onRejected是一个函数，则调用它，并传入当前Promise的拒因
+          // 如果onRejected不是一个函数，则直接将当前Promise的拒因传递给下一个Promise
+          const x = onRejected ? onRejected(reason) : reason;
+          // 递归处理返回值，决定新Promise的状态和值
+          this.resolvePromise(promise2, x, resolve, reject);
+        } catch (error) {
+          // 如果执行onRejected回调函数时抛出异常，调用reject方法
+          reject(error);
+        }
+      };
+
+      if (this.status === "fulfilled") {
+        // 如果当前Promise已经变为fulfilled状态，异步执行onFulfilled回调函数
+        setTimeout(() => onFulfilledCallback(this.value));
+      } else if (this.status === "rejected") {
+        // 如果当前Promise已经变为rejected状态，异步执行onRejected回调函数
+        setTimeout(() => onRejectedCallback(this.reason));
+      } else {
+        // 如果当前Promise还处于pending状态，将onFulfilled/onRejected回调函数存储起来
+        this.onFulfilledCallbacks.push(() => setTimeout(() => onFulfilledCallback(this.value)));
+        this.onRejectedCallbacks.push(() => setTimeout(() => onRejectedCallback(this.reason)));
+      }
+    });
+
+    // 返回新的Promise实例
+    return promise2;
+  }
+
+  resolvePromise(promise2, x, resolve, reject) {
+    // 如果新的Promise实例和返回值相等，则直接抛出错误
+    if (promise2 === x) {
+      return reject(new TypeError("Chaining cycle detected for promise"));
+    }
+
+    // 判断返回值的类型
+    if (x && (typeof x === "object" || typeof x === "function")) {
+      let called = false;
+      try {
+        // 获取then方法
+        const then = x.then;
+        if (typeof then === "function") {
+          // 如果返回值是一个Promise，调用它的then方法
+          then.call(
+            x,
+            (y) => {
+              // 递归处理返回值
+              if (called) return;
+              called = true;
+              this.resolvePromise(promise2, y, resolve, reject);
+            },
+            (r) => {
+              // 如果调用then方法时发生错误，调用reject方法
+              if (called) return;
+              called = true;
+              reject(r);
+            }
+          );
+        } else {
+          // 如果返回值是一个普通值，直接将其作为新Promise的值
+          resolve(x);
+        }
+      } catch (error) {
+        // 如果调用then方法时抛出异常，调用reject方法
+        if (called) return;
+        called = true;
+        reject(error);
+      }
+    } else {
+      // 如果返回值是一个普通值，直接将其作为新Promise的值
+      resolve(x);
+    }
+  }
+
+  catch(onRejected) {
+    // catch方法实际上是then方法的简写，只注册onRejected回调函数
+    return this.then(null, onRejected);
+  }
+
+  static resolve(value) {
+    // Promise.resolve方法返回一个已经resolved的Promise实例
+    return new Promise((resolve) => {
+      resolve(value);
+    });
+  }
+
+  static reject(reason) {
+    // Promise.reject方法返回一个已经rejected的Promise实例
+    return new Promise((_, reject) => {
+      reject(reason);
+    });
+  }
+
+  static all(promises) {
+    // Promise.all方法接收一个Promise数组，返回一个新的Promise实例
+    return new Promise((resolve, reject) => {
+      const results = [];
+      let count = 0;
+      for (let i = 0; i < promises.length; i++) {
+        Promise.resolve(promises[i]).then(
+          (value) => {
+            // 将每个Promise的值存储起来
+            results[i] = value;
+            count++;
+            // 如果所有Promise都已经resolved，则resolve新的Promise
+            if (count === promises.length) {
+              resolve(results);
+            }
+          },
+          (reason) => {
+            // 如果任何一个Promise被rejected，则reject新的Promise
+            reject(reason);
+          }
+        );
+      }
+    });
+  }
+
+  static race(promises) {
+    // Promise.race方法接收一个Promise数组，返回一个新的Promise实例
+    return new Promise((resolve, reject) => {
+      for (let i = 0; i < promises.length; i++) {
+        Promise.resolve(promises[i]).then(
+          (value) => {
+            // 如果任何一个Promise被resolved，则resolve新的Promise
+            resolve(value);
+          },
+          (reason) => {
+            // 如果任何一个Promise被rejected，则reject新的Promise
+            reject(reason);
+          }
+        );
+      }
+    });
+  }
+}
+```
+
 
 ## 44. 简述常见的排序算法，并给出具体实现 (Algorithms)
 
 冒泡排序，O(n^2),比较相邻两个元素大小，然后交换位置
 ```javascript
-  function bubbleSory(arr) {
+  function bubbleSort(arr) {
     const len = arr.length;
     for (let i = 0; i< len - 1; i++) { 
       // 此处的 len - i表示未完成排序的列表，例如i=0时，arr的长度为4时，我们需要的第二个循环中应该是0，1，2,
