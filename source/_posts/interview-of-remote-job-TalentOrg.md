@@ -4,7 +4,7 @@ date: 2023-01-28 09:25:00
 img: https://images.pexels.com/photos/355465/pexels-photo-355465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
 top: false
 hide: false
-cover: true
+cover: false
 coverImg: https://images.pexels.com/photos/355465/pexels-photo-355465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
 toc: true
 mathjax: false

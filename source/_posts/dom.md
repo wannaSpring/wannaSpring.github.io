@@ -2,9 +2,9 @@
 title: The understod of the dom 
 date: 2020-02-04 13:22:00
 img: https://images.pexels.com/photos/355465/pexels-photo-355465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
-top: true
+top: false
 hide: false
-cover: true
+cover: false
 coverImg: https://images.pexels.com/photos/355465/pexels-photo-355465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
 toc: false
 mathjax: false

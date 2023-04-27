@@ -1,7 +1,18 @@
 ---
-title: leetcode
-date: 2023-02-02 00:35:11
+title: Leetcode 
+date: 2021-03-21 14:15:32
+img: Recording algorithms
+top: true
+hide: false
+cover: true
+coverImg: https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230202012931RzkPOw.png?token=ALJ6LAVQHLMYYRWE2AYT6H3D3KQ3W
+toc: true
+mathjax: false
+summary: Recoding Algorithms.
+categories: Tech
+reprintPolicy: cc_by
 tags:
+  - Algorithms
 ---
 
 # Array
@@ -42,7 +53,9 @@ Constraints:
 0 <= prices[i] <= 104
 
 ### A
-![Picsee-20230202010757.png](https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230202010757iXdqzb.png?token=ALJ6LAXMA2IJBFUDXJGQ2MLD3KOKW)
+![Picsee-20230202012457.png](https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230202012457IZJI9K.png?token=ALJ6LATTRHPQCZO5JBBPJN3D3KQKO)
+
+
 
 ```javascript
 /**
@@ -74,7 +87,11 @@ var maxProfit = function(prices) {
     return maxProfit;
 };
 ```
-![Picsee-20230202010436.png](https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230202010436Y2vVU2.png?token=ALJ6LASYJLVF7O4BPFG2KRLD3KN6E)
+![Picsee-20230202012530.png](https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230202012530f3xrUj.png?token=ALJ6LAWMIMJ4BM4GK5H3YSDD3KQMQ)
+
+
+> https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/solutions/127712/official-solution/
+
 
 
 
