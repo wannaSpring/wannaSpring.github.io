@@ -535,53 +535,20 @@
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="34-请问算法中的时间复杂度和空间复杂度有什么意义？如何计算一个算法的时间复杂度和空间复杂度？（ALGOITHUM）"><a href="#34-请问算法中的时间复杂度和空间复杂度有什么意义？如何计算一个算法的时间复杂度和空间复杂度？（ALGOITHUM）" class="headerlink" title="34. 请问算法中的时间复杂度和空间复杂度有什么意义？如何计算一个算法的时间复杂度和空间复杂度？（ALGOITHUM）"></a>34. 请问算法中的时间复杂度和空间复杂度有什么意义？如何计算一个算法的时间复杂度和空间复杂度？（ALGOITHUM）</h2><p>空间复杂度是衡量算法所需的空间资源的一般使用大O记法表示，时间复杂度则是表示算法运行所需的时间资源，同样使用大O计法。两者可以帮助我们评估算法的效率，选择最优的算法。<br>大O记法描述的是算法的渐进复杂度。通常用O(F(n))，来表示空间或者时间复杂度，其中f(n)表示算法执行时间与输入规模n的增长关系。具体来说O(f(n))表示算法的执行时间或者空间在最坏情况下的增加率。<br>例如，一个算法的时间复杂度为 O(n^2)，表示在最坏情况下，算法的执行时间与输入规模 n 的平方成正比。另一个算法的时间复杂度为 O(n log n)，表示在最坏情况下，算法的执行时间与输入规模 n 的对数与 n 的乘积成正比。</p>
-<h2 id="35-请简述-HTML5-中新增的语义化标签及其作用-HTML"><a href="#35-请简述-HTML5-中新增的语义化标签及其作用-HTML" class="headerlink" title="35. 请简述 HTML5 中新增的语义化标签及其作用(HTML)"></a>35. 请简述 HTML5 中新增的语义化标签及其作用(HTML)</h2><pre class="line-numbers language-none"><code class="language-none">语义化标签是为了让开发人员更好的阅读标签的作用，例如ul，li等<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h2 id="36-解释-CSS-盒模型，包括-content、padding、border-和-margin-四个部分的作用-CSS"><a href="#36-解释-CSS-盒模型，包括-content、padding、border-和-margin-四个部分的作用-CSS" class="headerlink" title="36. 解释 CSS 盒模型，包括 content、padding、border 和 margin 四个部分的作用(CSS)"></a>36. 解释 CSS 盒模型，包括 content、padding、border 和 margin 四个部分的作用(CSS)</h2><pre class="line-numbers language-none"><code class="language-none">content 是内容盒子
-padding 是内边距
-border 是边框线宽
-margin 是外边距
-整个盒模型分为怪异盒子和标准盒子，标准盒子的宽度包含padding和border，怪异盒子的宽度仅包含content<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="37-简述-Flex-布局和-Grid-布局，并说明两者之间的区别-CSS"><a href="#37-简述-Flex-布局和-Grid-布局，并说明两者之间的区别-CSS" class="headerlink" title="37. 简述 Flex 布局和 Grid 布局，并说明两者之间的区别(CSS)"></a>37. 简述 Flex 布局和 Grid 布局，并说明两者之间的区别(CSS)</h2><pre class="line-numbers language-none"><code class="language-none">flex 布局是一维弹性布局，设置flex权重后，flex盒子内的元素会根据剩余宽度自行布局，也可以通过flex-direction更改纵轴或者竖轴布局
-Grid布局为二维网格布局，可以分为行和列，通过grid-template-columns和grid-template-rows属性进行设置，设置每一个元素的比例，来分布盒子。
-flex布局的优势在一维状态下比较明显，简单易用，灵活度高，可以响应布局，缺点是不适用二维布局，存在兼容问题。
-Grid布局的优点是支持二维排列，虽然可以支持响应式布局，但是需要通过media queries实现。缺点是规则多，可读性不佳<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="38-如何实现-CSS-动画？请列举一些-CSS-属性并说明其作用-CSS"><a href="#38-如何实现-CSS-动画？请列举一些-CSS-属性并说明其作用-CSS" class="headerlink" title="38. 如何实现 CSS 动画？请列举一些 CSS 属性并说明其作用 (CSS)"></a>38. 如何实现 CSS 动画？请列举一些 CSS 属性并说明其作用 (CSS)</h2><pre class="line-numbers language-none"><code class="language-none">Css动画我们可以通过animation实现，一般情况下我们需要对元素设置keyframe，以此规定动画在指定帧的行为<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h2 id="39-移动端适配有哪些方案？请列举并说明各自的优缺点-CSS"><a href="#39-移动端适配有哪些方案？请列举并说明各自的优缺点-CSS" class="headerlink" title="39. 移动端适配有哪些方案？请列举并说明各自的优缺点(CSS)"></a>39. 移动端适配有哪些方案？请列举并说明各自的优缺点(CSS)</h2><pre class="line-numbers language-none"><code class="language-none">媒体查询：通过 CSS3 的媒体查询技术，根据不同的屏幕尺寸和设备类型，动态地改变页面样式。
-优点：能够根据不同设备的屏幕尺寸和像素密度进行适配，开发成本相对较低。
-缺点：对于屏幕尺寸变化较大的设备，布局可能会失真。
-
-rem 布局：通过设置根元素的字体大小，根据屏幕尺寸动态计算出各个元素的大小，从而实现适配。
-优点：适配效果比较稳定，适合多种屏幕尺寸和分辨率的设备。
-缺点：需要在不同设备的屏幕尺寸和像素密度下进行调试，开发成本相对较高。
-
-flexbox 布局：通过 CSS3 的 flexbox 布局，实现自适应布局。
-优点：能够根据不同设备的屏幕尺寸和像素密度进行适配，开发成本相对较低。
-缺点：对于某些老旧设备的浏览器支持不好。
-
-viewport 布局：通过设置 viewport 的属性，改变设备的默认缩放比例，实现适配。
-优点：能够适应不同尺寸的设备，实现自适应布局。
-缺点：需要针对不同的设备进行调整，不够灵活。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="40-解释-JavaScript-中的“传参是按值传递还是按引用传递”，并举例说明-JS"><a href="#40-解释-JavaScript-中的“传参是按值传递还是按引用传递”，并举例说明-JS" class="headerlink" title="40. 解释 JavaScript 中的“传参是按值传递还是按引用传递”，并举例说明 (JS)"></a>40. 解释 JavaScript 中的“传参是按值传递还是按引用传递”，并举例说明 (JS)</h2><pre class="line-numbers language-none"><code class="language-none">按值传递还是按引用船体需要根据数据类型进行分析。基本数据类型，例如数字，字符串是按值传递的，即传递的是值的副本，修改值不会影响原始变量。而对复杂变量，例如数组，对象等，是按引用传递的，修改值会影响原来的值。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h2 id="41-解释-JavaScript-中的-this-关键字，并说明其指向的具体对象-JS"><a href="#41-解释-JavaScript-中的-this-关键字，并说明其指向的具体对象-JS" class="headerlink" title="41. 解释 JavaScript 中的 this 关键字，并说明其指向的具体对象 (JS)"></a>41. 解释 JavaScript 中的 this 关键字，并说明其指向的具体对象 (JS)</h2><pre class="line-numbers language-none"><code class="language-none">this 关键字是指向当前作用域的，如果在函数外部使用，在面向浏览器中会被指向window，而node中会指向global。
-使用apply，call，bind等可以改变函数执行时的this指向。
-在箭头函数中，this的指向是它所处的词法作用域，而不是动态绑定的，一半是父级作用域的this<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="42-解释-Promise-的概念及其使用方法，并解释-Promise-中的-then-和-catch-方法-（JS）"><a href="#42-解释-Promise-的概念及其使用方法，并解释-Promise-中的-then-和-catch-方法-（JS）" class="headerlink" title="42. 解释 Promise 的概念及其使用方法，并解释 Promise 中的 then 和 catch 方法 （JS）"></a>42. 解释 Promise 的概念及其使用方法，并解释 Promise 中的 then 和 catch 方法 （JS）</h2><pre class="line-numbers language-none"><code class="language-none">promise是一种异步编程的解决方案，它通过对异步操作的结果进行封装，使得异步操作符合同步操作的写法风格，它使用resolve和reject表示异步操作的结果。
-在promise中通过then方法接受promise返回的结果，then会接受两个参数，一个是成功的回调，一个是失败的回调，then方法返回的依旧是promise对象，可以继续使用then方法进行链式调用
-catch是promise的错误捕捉方法，promise中的任意一个then方法或者promise对象本身出错都会立即执行catch方法<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="43-解释-JavaScript-中的深拷贝和浅拷贝的概念，列举常见的实现方法-（JS）"><a href="#43-解释-JavaScript-中的深拷贝和浅拷贝的概念，列举常见的实现方法-（JS）" class="headerlink" title="43. 解释 JavaScript 中的深拷贝和浅拷贝的概念，列举常见的实现方法 （JS）"></a>43. 解释 JavaScript 中的深拷贝和浅拷贝的概念，列举常见的实现方法 （JS）</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">深拷贝是指在拷贝一个对象时，不仅拷贝对象的基本数据类型，还拷贝它的引用对象，也就是说在堆内存中新建一个数据，不管是引用类型还是基本数据类型，都会开闭新的空间，彼此不影响
-浅拷贝是指在拷贝对象时，只拷贝基本数据类型，而不拷贝引用对象，即拷贝对象的指针，而不是本身，在新的对象中修改对象会导致原始对象中的引用类型变量也发生变化。
-实现方法。
-
-手写递归实现深拷贝
-
+<h2 id="35-请简述-HTML5-中新增的语义化标签及其作用-HTML"><a href="#35-请简述-HTML5-中新增的语义化标签及其作用-HTML" class="headerlink" title="35. 请简述 HTML5 中新增的语义化标签及其作用(HTML)"></a>35. 请简述 HTML5 中新增的语义化标签及其作用(HTML)</h2><p>  语义化标签是为了让开发人员更好的阅读标签的作用，例如ul，li等</p>
+<h2 id="36-解释-CSS-盒模型，包括-content、padding、border-和-margin-四个部分的作用-CSS"><a href="#36-解释-CSS-盒模型，包括-content、padding、border-和-margin-四个部分的作用-CSS" class="headerlink" title="36. 解释 CSS 盒模型，包括 content、padding、border 和 margin 四个部分的作用(CSS)"></a>36. 解释 CSS 盒模型，包括 content、padding、border 和 margin 四个部分的作用(CSS)</h2><p>  content 是内容盒子<br>  padding 是内边距<br>  border 是边框线宽<br>  margin 是外边距<br>  整个盒模型分为怪异盒子和标准盒子，标准盒子的宽度包含padding和border，怪异盒子的宽度仅包含content</p>
+<h2 id="37-简述-Flex-布局和-Grid-布局，并说明两者之间的区别-CSS"><a href="#37-简述-Flex-布局和-Grid-布局，并说明两者之间的区别-CSS" class="headerlink" title="37. 简述 Flex 布局和 Grid 布局，并说明两者之间的区别(CSS)"></a>37. 简述 Flex 布局和 Grid 布局，并说明两者之间的区别(CSS)</h2><p>  flex 布局是一维弹性布局，设置flex权重后，flex盒子内的元素会根据剩余宽度自行布局，也可以通过flex-direction更改纵轴或者竖轴布局<br>  Grid布局为二维网格布局，可以分为行和列，通过grid-template-columns和grid-template-rows属性进行设置，设置每一个元素的比例，来分布盒子。<br>  flex布局的优势在一维状态下比较明显，简单易用，灵活度高，可以响应布局，缺点是不适用二维布局，存在兼容问题。<br>  Grid布局的优点是支持二维排列，虽然可以支持响应式布局，但是需要通过media queries实现。缺点是规则多，可读性不佳</p>
+<h2 id="38-如何实现-CSS-动画？请列举一些-CSS-属性并说明其作用-CSS"><a href="#38-如何实现-CSS-动画？请列举一些-CSS-属性并说明其作用-CSS" class="headerlink" title="38. 如何实现 CSS 动画？请列举一些 CSS 属性并说明其作用 (CSS)"></a>38. 如何实现 CSS 动画？请列举一些 CSS 属性并说明其作用 (CSS)</h2><p>  Css动画我们可以通过animation实现，一般情况下我们需要对元素设置keyframe，以此规定动画在指定帧的行为</p>
+<h2 id="39-移动端适配有哪些方案？请列举并说明各自的优缺点-CSS"><a href="#39-移动端适配有哪些方案？请列举并说明各自的优缺点-CSS" class="headerlink" title="39. 移动端适配有哪些方案？请列举并说明各自的优缺点(CSS)"></a>39. 移动端适配有哪些方案？请列举并说明各自的优缺点(CSS)</h2><p>  媒体查询：通过 CSS3 的媒体查询技术，根据不同的屏幕尺寸和设备类型，动态地改变页面样式。<br>  优点：能够根据不同设备的屏幕尺寸和像素密度进行适配，开发成本相对较低。<br>  缺点：对于屏幕尺寸变化较大的设备，布局可能会失真。</p>
+<p>  rem 布局：通过设置根元素的字体大小，根据屏幕尺寸动态计算出各个元素的大小，从而实现适配。<br>  优点：适配效果比较稳定，适合多种屏幕尺寸和分辨率的设备。<br>  缺点：需要在不同设备的屏幕尺寸和像素密度下进行调试，开发成本相对较高。</p>
+<p>  flexbox 布局：通过 CSS3 的 flexbox 布局，实现自适应布局。<br>  优点：能够根据不同设备的屏幕尺寸和像素密度进行适配，开发成本相对较低。<br>  缺点：对于某些老旧设备的浏览器支持不好。</p>
+<p>  viewport 布局：通过设置 viewport 的属性，改变设备的默认缩放比例，实现适配。<br>  优点：能够适应不同尺寸的设备，实现自适应布局。<br>  缺点：需要针对不同的设备进行调整，不够灵活。</p>
+<h2 id="40-解释-JavaScript-中的“传参是按值传递还是按引用传递”，并举例说明-JS"><a href="#40-解释-JavaScript-中的“传参是按值传递还是按引用传递”，并举例说明-JS" class="headerlink" title="40. 解释 JavaScript 中的“传参是按值传递还是按引用传递”，并举例说明 (JS)"></a>40. 解释 JavaScript 中的“传参是按值传递还是按引用传递”，并举例说明 (JS)</h2><p>  按值传递还是按引用船体需要根据数据类型进行分析。基本数据类型，例如数字，字符串是按值传递的，即传递的是值的副本，修改值不会影响原始变量。而对复杂变量，例如数组，对象等，是按引用传递的，修改值会影响原来的值。</p>
+<h2 id="41-解释-JavaScript-中的-this-关键字，并说明其指向的具体对象-JS"><a href="#41-解释-JavaScript-中的-this-关键字，并说明其指向的具体对象-JS" class="headerlink" title="41. 解释 JavaScript 中的 this 关键字，并说明其指向的具体对象 (JS)"></a>41. 解释 JavaScript 中的 this 关键字，并说明其指向的具体对象 (JS)</h2><p>  this 关键字是指向当前作用域的，如果在函数外部使用，在面向浏览器中会被指向window，而node中会指向global。<br>  使用apply，call，bind等可以改变函数执行时的this指向。<br>  在箭头函数中，this的指向是它所处的词法作用域，而不是动态绑定的，一半是父级作用域的this</p>
+<h2 id="42-解释-Promise-的概念及其使用方法，并解释-Promise-中的-then-和-catch-方法-（JS）"><a href="#42-解释-Promise-的概念及其使用方法，并解释-Promise-中的-then-和-catch-方法-（JS）" class="headerlink" title="42. 解释 Promise 的概念及其使用方法，并解释 Promise 中的 then 和 catch 方法 （JS）"></a>42. 解释 Promise 的概念及其使用方法，并解释 Promise 中的 then 和 catch 方法 （JS）</h2><p>  promise是一种异步编程的解决方案，它通过对异步操作的结果进行封装，使得异步操作符合同步操作的写法风格，它使用resolve和reject表示异步操作的结果。<br>  在promise中通过then方法接受promise返回的结果，then会接受两个参数，一个是成功的回调，一个是失败的回调，then方法返回的依旧是promise对象，可以继续使用then方法进行链式调用<br>  catch是promise的错误捕捉方法，promise中的任意一个then方法或者promise对象本身出错都会立即执行catch方法</p>
+<h2 id="43-解释-JavaScript-中的深拷贝和浅拷贝的概念，列举常见的实现方法-（JS）"><a href="#43-解释-JavaScript-中的深拷贝和浅拷贝的概念，列举常见的实现方法-（JS）" class="headerlink" title="43. 解释 JavaScript 中的深拷贝和浅拷贝的概念，列举常见的实现方法 （JS）"></a>43. 解释 JavaScript 中的深拷贝和浅拷贝的概念，列举常见的实现方法 （JS）</h2><p>深拷贝是指在拷贝一个对象时，不仅拷贝对象的基本数据类型，还拷贝它的引用对象，也就是说在堆内存中新建一个数据，不管是引用类型还是基本数据类型，都会开闭新的空间，彼此不影响<br>浅拷贝是指在拷贝对象时，只拷贝基本数据类型，而不拷贝引用对象，即拷贝对象的指针，而不是本身，在新的对象中修改对象会导致原始对象中的引用类型变量也发生变化。<br>实现方法。</p>
+<p>手写递归实现深拷贝</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">
 <span class="token keyword">function</span> <span class="token function">deepClone</span><span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
   <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token string">'object'</span> <span class="token operator">||</span> obj <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
     <span class="token keyword">return</span> obj<span class="token punctuation">;</span>
@@ -593,13 +560,9 @@ catch是promise的错误捕捉方法，promise中的任意一个then方法或者
     <span class="token punctuation">&#125;</span>
   <span class="token punctuation">&#125;</span>
   <span class="token keyword">return</span> result<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-通过<span class="token constant">JSON</span>序列化和反序列化实现
-<span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-也可以通过lodash实现<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+<p>通过JSON序列化和反序列化实现<br><code>&lt;code&gt;JSON.parse(JSON.stringify(obj))&lt;/code&gt;</code><br>也可以通过lodash实现</p>
 <h2 id="44-简述常见的排序算法，并给出具体实现-Algorithms"><a href="#44-简述常见的排序算法，并给出具体实现-Algorithms" class="headerlink" title="44. 简述常见的排序算法，并给出具体实现 (Algorithms)"></a>44. 简述常见的排序算法，并给出具体实现 (Algorithms)</h2><p>冒泡排序，O(n^2),比较相邻两个元素大小，然后交换位置</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">bubbleSory</span><span class="token punctuation">(</span><span class="token parameter">arr</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
   <span class="token keyword">const</span> len <span class="token operator">=</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
