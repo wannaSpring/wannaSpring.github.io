@@ -1023,7 +1023,8 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>在react中mvc的体现可以理解成，model为组件的状态，controller是setState或者useState，而view则是render中的组件。<br>假设一个场景，用户输入了表单，当view接收到数据后，Controller（useState）更新值，model（state发生变化），view再次更新。</p>
 <p>MVC模式在理想状态下是1:1:1的关系，但是现实中通常是多视图，多模型。比较复杂的情况下view和model可以是多对多的关系，也就是说单个view可能来自多个model。单个model更新需要通知多个view。用户在view上的操作可以对多个model造成影响。最致命的后果，是view和model形成相互更新的死循环。</p>
 <p>例如我们有一个登陆表单，当用户密码错误后，需要提示用户密码错误，并且清空账户名和密码。在这个案例中view为account input和password input，当两者发生变化后，account component 和password component 的Controller发生变化，两者的state发生变化，view更新。（1view：2model：2controller）此时状态图如下图所示<br><img src="https://pic4.zhimg.com/80/74383cc223b0a29bec6650826bdc72cb_1440w.webp"></p>
-<h3 id="2-FLUX"><a href="#2-FLUX" class="headerlink" title="2.FLUX"></a>2.FLUX</h3><h2 id="Fiber架构"><a href="#Fiber架构" class="headerlink" title="Fiber架构"></a>Fiber架构</h2><h2 id=""><a href="#" class="headerlink" title=""></a></h2><ol start="4">
+<h3 id="2-FLUX"><a href="#2-FLUX" class="headerlink" title="2.FLUX"></a>2.FLUX</h3><p><img src="https://pic1.zhimg.com/80/004fe0045e9e2b0fe1673a5a9542230c_1440w.webp"><br>action<br>dispatch<br>store<br>view</p>
+<h2 id="Fiber架构"><a href="#Fiber架构" class="headerlink" title="Fiber架构"></a>Fiber架构</h2><h2 id=""><a href="#" class="headerlink" title=""></a></h2><ol start="4">
 <li>浏览器相关</li>
 </ol>
 <ul>
