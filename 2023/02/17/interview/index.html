@@ -1011,7 +1011,19 @@ console<span class="token punctuation">.</span><span class="token function">log<
 
 <h3 id="mobx"><a href="#mobx" class="headerlink" title="mobx"></a>mobx</h3><p>1.创建state，包含上述状态<br>2.使用observable将state转换为可观察对象，使其成为响应式<br>3.通过action函数定义各个状态的行为<br>4.通过observable连接store和component，获取状态和修改状态的方法。<br>5.通过useEffect和useObservable获取和监控状态变化，触发action来改变state<br>6.组件重渲染。</p>
 <p>异同点：<br>1.redux基于action和reducer，修改状态需要通过dispatch和action改变store中的状态。而mobx直接修改可观察对象，就会自动触发。<br>2.redux使用复杂，需要手动定义action和reducer，而mobx只需要使用observable和action函数就可以。<br>3.redux逻辑清晰但使用繁琐，可以避免不同组件的状态冲突。mobx简单易用，适合小型项目。</p>
-<h2 id="解释-React-中的高阶组件（HOC）的概念和作用，并列举一些常见的使用场景"><a href="#解释-React-中的高阶组件（HOC）的概念和作用，并列举一些常见的使用场景" class="headerlink" title="解释 React 中的高阶组件（HOC）的概念和作用，并列举一些常见的使用场景"></a>解释 React 中的高阶组件（HOC）的概念和作用，并列举一些常见的使用场景</h2><ol start="4">
+<h2 id="解释-React-中的高阶组件（HOC）的概念和作用，并列举一些常见的使用场景"><a href="#解释-React-中的高阶组件（HOC）的概念和作用，并列举一些常见的使用场景" class="headerlink" title="解释 React 中的高阶组件（HOC）的概念和作用，并列举一些常见的使用场景"></a>解释 React 中的高阶组件（HOC）的概念和作用，并列举一些常见的使用场景</h2><p>HOC本质上是一种函数，接收一个组件作为参数，返回一个新的组件，HOC不会修改传入的组件，而是使用包装组件包裹起来，增强功能。<br>HOC并不是react独有的，其实是函数编程的一种模式，函数可以接收一个或者多个函数，返回一个函数的函数。<br>HOC常用场景</p>
+<ol>
+<li>组件复用：使用HOC将通用功能封装成一个高阶组件，使得多个组件可以复用。</li>
+<li>渲染劫持： 通过包裹组件的形式对子组件进行props干预</li>
+<li>条件渲染： 根据实际情况决定是否渲染子组件，例如 loading</li>
+<li>状态抽象</li>
+</ol>
+<h2 id="MVC-amp-MVVM-amp-FLUX"><a href="#MVC-amp-MVVM-amp-FLUX" class="headerlink" title="MVC &amp; MVVM &amp; FLUX"></a>MVC &amp; MVVM &amp; FLUX</h2><h3 id="1-MVC"><a href="#1-MVC" class="headerlink" title="1.MVC"></a>1.MVC</h3><p>View: 数据展示和用户输入<br>Controller: 响应用户的输入，对数据进行操作<br>Model: 管理程序需要的数据，定义操作数据的行为。</p>
+<p><img src="https://pic1.zhimg.com/80/3d2abf5c8d81424c4797201384b456ac_1440w.webp"><br>从view开始，用户在ui上进行操作后，用户的操作被转发到了controlle上，controller根据用户的操作对数据进行更新，数据更新后，Model层接受到变更，Model对所有依赖的是图发出更新通知，收到通知的视图获取最新的数据。</p>
+<p>在react中mvc的体现可以理解成，model为组件的状态，controller是setState或者useState，而view则是render中的组件。<br>假设一个场景，用户输入了表单，当view接收到数据后，Controller（useState）更新值，model（state发生变化），view再次更新。</p>
+<p>MVC模式在理想状态下是1:1:1的关系，但是现实中通常是多视图，多模型。比较复杂的情况下view和model可以是多对多的关系，也就是说单个view可能来自多个model。单个model更新需要通知多个view。用户在view上的操作可以对多个model造成影响。最致命的后果，是view和model形成相互更新的死循环。</p>
+<p>例如我们有一个登陆表单，当用户密码错误后，需要提示用户密码错误，并且清空账户名和密码。在这个案例中view为account input和password input，当两者发生变化后，account component 和password component 的Controller发生变化，两者的state发生变化，view更新。（1view：2model：2controller）此时状态图如下图所示<br><img src="https://pic4.zhimg.com/80/74383cc223b0a29bec6650826bdc72cb_1440w.webp"></p>
+<h3 id="2-FLUX"><a href="#2-FLUX" class="headerlink" title="2.FLUX"></a>2.FLUX</h3><h2 id="Fiber架构"><a href="#Fiber架构" class="headerlink" title="Fiber架构"></a>Fiber架构</h2><h2 id=""><a href="#" class="headerlink" title=""></a></h2><ol start="4">
 <li>浏览器相关</li>
 </ol>
 <ul>
