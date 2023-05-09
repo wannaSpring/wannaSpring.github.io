@@ -797,6 +797,91 @@ action触发reducer更新state中的state，组件从store中获取state并更�
 
 - computed装饰器是用于创建计算属性，计算属性是根据obserable对象的值自动更新自己的值。
 
+## 实现一个简化版本的mobx，体现观察者模式和响应式编程，拥有obserable,action,computed.
+```javascript
+  class Obserable {
+    constructor() {
+      this.obj = {}
+      this.subscribers = []
+    }
+    subscribers(subscribers) {
+      this.subscribers.push(subscribers)
+    }
+    publish(){
+      this.subscribers.foreach(subscribers => subscribers())
+    }
+    set(prop,value){
+      this.obj[props]=value;
+      this.publish();
+    }
+    get(prop){
+      return this.obj[prop]
+    }
+  }
+  function action(fn){
+    return function(...arg){
+      fn.apply(this, arg)
+      this.publish()
+    }
+  }
+  function computed(fn){
+    return function() {
+      const result = fn.apply(this)
+      return result
+    }
+  }
+
+  // exm
+  const state = new Observable()
+  state.subscribe(() => {
+    console.log('state changed', state.get('count'))
+  })
+  const increment = action(function() {
+    state.set('count', state.get('count')+1)
+  })
+  const doubled = computed(() => {
+    return state.get('count') * 2
+  })
+
+  // 修改状态
+  increment()
+  increment()
+
+  // 获取 computed 值
+  console.log(doubled())
+```
+
+### mobx和react结合一般使用装饰器语法，你可以解释装饰器语法的原理吗？
+
+mobx之所以可以在react中采用装饰器语法是因为babel插件，这个插件允许开发人员编写和注册自定义的装饰器。当babel遇到一个被装饰器修饰的节点时，插件会处理该节点，会将装饰器节点转换为一个函数调用，该函数接收被装饰的节点作为参数，返回一个新的节点
+MobX是通过Babel的装饰器插件来实现装饰器语法的支持的。它使用了babel-plugin-transform-decorators-legacy插件来实现装饰器的转换。
+
+该插件会将所有的装饰器节点转换为函数调用节点。例如，在下面的代码中，我们使用了mobx的observable装饰器来定义可观察的属性：
+```javascript
+import { observable } from 'mobx'
+
+class MyStore {
+  @observable count = 0
+}
+```
+在经过babel-plugin-transform-decorators-legacy插件的转换后，该代码将被转换为以下代码：
+
+```javascript
+import { observable } from 'mobx'
+class Mystore {
+  constructor() {
+    this.count = observable(this,'count', 0)
+  }
+}
+```
+
+可以看到，在转换后的代码中，observable装饰器被转换为了一个函数调用observable(this, "count", 0)，该函数会接受当前的对象、属性名和初始值，并返回一个可观察的属性。
+
+需要注意的是，由于装饰器语法是一个提案标准，尚未成为官方的ECMAScript语法，因此在使用装饰器语法时需要使用babel-plugin-transform-decorators-legacy插件来进行转换，以兼容不同的浏览器和Node.js版本。
+
+此外，MobX也提供了另外一个babel插件babel-plugin-transform-decorators用于支持最新版的装饰器语法。你可以通过npm安装该插件，然后在.babelrc或者webpack配置文件中进行配置，使其支持最新的装饰器语法。
+
+
 ## Context API 是 React 提供的原生状态管理工具，请简述其原理和使用方法，并说明其适用场景
 
 Context 是 React 中的一个 API，它用于在组件树中传递数据。通过使用 Context，可以将数据直接传递给所有子组件，而不必将数据逐层传递给每个子组件。在使用 Context 时，需要创建一个 Context 对象，并使用 Provider 包装要传递的数据，然后在子组件中使用 useContext 钩子来获取数据。
@@ -804,11 +889,150 @@ Context 是 React 中的一个 API，它用于在组件树中传递数据。通�
 在 React 中，Context 可以用于实现全局状态管理，但它并不像 Redux 那样提供了一套完整的状态管理方案。相比于 Redux，Context 更加轻量级，适用于小型应用或局部状态共享的场景。同时，Context 可以和 useContext 钩子一起使用，让组件在不同层级间获取和共享状态更加方便。
 
 ## 请结合一个具体的场景，分别使用 Redux 和 MobX 实现该场景下的状态管理，并比较两种方案的异同。
-请简述一下 React Context 的基本原理以及它的适用场景。
-请简述一下 React Hooks 中常用的状态管理 Hook 有哪些，以及它们的作用。
-请结合一个具体的场景，使用 React Hooks 实现该场景下的状态管理，并说明你为什么选择了该方案。
+假设有一个购物车页面，需要管理购物车中商品的状态，数量，总价及加载状态等。
+### redux
+1.定义store，包含上述状态
+2.通过action的type定义各个状态的行为
+3.执行connect函数，参数是mapStateToProps和mapDispatchToProps以及当前组件。连接组件和redux的store和action。
+4.通过mapStateToProps使组件获取store状态，通过mapDispatchToProps获取dispatch函数，使用dispatch函数执行action
+5.通过props获取和修改状态，触发action来修改store的状态
+6.组件重渲染
+
+store
+```javascript
+const initalState = {
+  count: 0
+}
+function reducer(state=initalState, action){
+  switch (action.type){
+    case 'INCREMENT':
+      return { ...state, count: state.count + 1 };
+    case 'DECREMENT':
+      return { ...state, count: state.count - 1 };
+    default:
+      return state;
+  }
+}
+const store = createStore(reducer);
+```
+
+react
+```javascript
+  function Counter(props) {
+    return (
+      <div>
+        <div>{props.count}</div>
+        <div onClick={props.increment}>increment</div>
+        <div onClick={props.decrement}>decrement</div>
+      </div>
+    )
+  }
+  function mapStateToProps(state) {
+    return {
+      count: state.count
+    }
+  }
+  function mapDispatchToProps(dispatch){
+    return {
+      increment: () => dispatch({type:'increment'}),
+      decrement: () => dispatch({type:'decrement'}),
+    }
+  }
+  export default connect(mapStateToprops, mapDispatchToProps)(Counter)
+```
+
+### mobx
+1.创建state，包含上述状态
+2.使用observable将state转换为可观察对象，使其成为响应式
+3.通过action函数定义各个状态的行为
+4.通过observable连接store和component，获取状态和修改状态的方法。
+5.通过useEffect和useObservable获取和监控状态变化，触发action来改变state
+6.组件重渲染。
+
+异同点：
+1.redux基于action和reducer，修改状态需要通过dispatch和action改变store中的状态。而mobx直接修改可观察对象，就会自动触发。
+2.redux使用复杂，需要手动定义action和reducer，而mobx只需要使用observable和action函数就可以。
+3.redux逻辑清晰但使用繁琐，可以避免不同组件的状态冲突。mobx简单易用，适合小型项目。
+
 
 ## 解释 React 中的高阶组件（HOC）的概念和作用，并列举一些常见的使用场景
+
+HOC本质上是一种函数，接收一个组件作为参数，返回一个新的组件，HOC不会修改传入的组件，而是使用包装组件包裹起来，增强功能。
+HOC并不是react独有的，其实是函数编程的一种模式，函数可以接收一个或者多个函数，返回一个函数的函数。
+HOC常用场景
+1. 组件复用：使用HOC将通用功能封装成一个高阶组件，使得多个组件可以复用。
+2. 渲染劫持： 通过包裹组件的形式对子组件进行props干预
+3. 条件渲染： 根据实际情况决定是否渲染子组件，例如 loading
+4. 状态抽象
+
+## MVC & MVVM & FLUX
+### 1.MVC
+View: 数据展示和用户输入
+Controller: 响应用户的输入，对数据进行操作
+Model: 管理程序需要的数据，定义操作数据的行为。
+
+![](https://pic1.zhimg.com/80/3d2abf5c8d81424c4797201384b456ac_1440w.webp)
+从view开始，用户在ui上进行操作后，用户的操作被转发到了controlle上，controller根据用户的操作对数据进行更新，数据更新后，Model层接受到变更，Model对所有依赖的是图发出更新通知，收到通知的视图获取最新的数据。
+
+在react中mvc的体现可以理解成，model为组件的状态，controller是setState或者useState，而view则是render中的组件。
+假设一个场景，用户输入了表单，当view接收到数据后，Controller（useState）更新值，model（state发生变化），view再次更新。
+
+MVC模式在理想状态下是1:1:1的关系，但是现实中通常是多视图，多模型。比较复杂的情况下view和model可以是多对多的关系，也就是说单个view可能来自多个model。单个model更新需要通知多个view。用户在view上的操作可以对多个model造成影响。最致命的后果，是view和model形成相互更新的死循环。
+
+例如我们有一个登陆表单，当用户密码错误后，需要提示用户密码错误，并且清空账户名和密码。在这个案例中view为account input和password input，当两者发生变化后，account component 和password component 的Controller发生变化，两者的state发生变化，view更新。（1view：2model：2controller）此时状态图如下图所示
+![](https://pic4.zhimg.com/80/74383cc223b0a29bec6650826bdc72cb_1440w.webp)
+
+### 2.FLUX
+
+![](https://pic1.zhimg.com/80/004fe0045e9e2b0fe1673a5a9542230c_1440w.webp)
+Action: 组件触发动作
+Dispatch: flux的中枢，所有的action都会被dispatch处理，dispatcher在接收到action之后，调用store中的回调，dispatcher不含业务逻辑，只是一个分发中心，或者说规则。
+Store:  store只包含接收到action行为后 状态的变化，并不提供操作数据的借口。action和dispatcher都无法直接操作store。
+View:  视图层，展示数据也处理用户的交互请求，view同时也监听着store中的数据更变，一旦改变则重新请求数据。
+复杂的flux流行图如图所示
+![](https://pic2.zhimg.com/80/5b3b3765741c4735792e9824be265835_1440w.webp)
+
+## 什么是 React Fiber 架构？为什么 React 需要引入 Fiber 架构？
+
+Fiber 架构是react16中引入的一种协调算法和架构，他的目的是提高react渲染效率和性能。
+在传统的react渲染过程中，react在更新时会先构建一个虚拟dom树，然后对比之前的vm tree，找到差异部分进行更新。这种遍历和比较的过程是同步的。而js在浏览器中是单线程任务，浏览器的主线程会被占用，直到更新完成。在组件书较大或者更新频繁时会导致性能瓶颈。
+
+为了解决这个问题，react引入了fiber架构，fiber的协调算法提供了一种基于时间片的机制，将更新过程分为多个时间片，使得更新过程可以被中断、恢复和优先级调度，从而可以利用浏览器的空闲时间，提高性能和用户体验。fiber架构还通过实现异步渲染和增量渲染等机制，提高了react性能。
+
+## fiber中的协调算法具体在哪些方面体现
+react fiber 架构中的协调算法是基于fiber tree的深度优先遍历算法实现的，该算法成为react fiber reconciler。
+react fiber reconciler的基本思想是将组件渲染过程拆分为多个阶段，并在每个阶段之间进行优先级判断和调度。在这个过程中，每个组件的fiber节点都会标记为不同的状态，以便调度器在后续的更新中优先考虑具有更高优先级的节点。
+react fiber架构中的协调算法体现在以下几个方面
+1. 异步渲染： fiber架构中引入了时间切片和任务优先级，可以让react程序在处理大量程序时更好的响应用户操作
+2. 可中断的渲染： 因为fiber架构将渲染过程进行拆分，因此任务可中断，使得任务单元更小，避免长时间任务导致浏览器渲染线程阻塞。
+3. 批处理更新： fiber架构将组件更新过程拆分为多个小的任务单元，并使用requestIdleCallback API 在浏览器空闲时间进行调度。
+
+## React Fiber 架构相对于旧的 Stack 架构有什么优势和改进？
+1. 异步渲染
+2. 递进式更新： 渲染进程拆分后任务更新单元更小，可以通过优先级算法控制优先度和顺序，以更加细致的控制更新的过程。
+3. 新的协调算法： 将组件的更新分为两个阶段reconciliation和commit，reconciliation阶段会比较前后两次的更新的差异，并生成一个更新树，commit阶段将更新树映射到实际的dom树上。
+## React Fiber 架构是如何实现异步渲染的？
+
+Fiber架构实现异步渲染的方式是通过引入协调器和调度器来实现。fiber将渲染任务分为两个阶段：reconciliation和commit。rec阶段的任务是对vm tree进行diff，找出需要更新的部分，commit阶段是将更新进行渲染。
+
+在rec阶段，fiber采用了fiberNode，每个fiberNode对应一个组件，其中包含组件的状态、props、refs等信息。fiberNode之间通过双向链表连接，形成fiber tree
+
+在commit阶段，fiber引入调度器Scheduler，它负责根据优先级和过期时间来决定哪些fiberNode先被执行。每个fiberNode都有一个优先级和过期时间，调度器会根据算法计算fiberNode的优先级和过期时间，然后根据优先级顺序执行任务。
+
+如果一个FiberNode在协调阶段更新时被标记过期，那么它会在调度阶段优先执行。当调度器在调度时，时间片结束了，那么它会刮起当前任务，返回控制权给浏览器，等到下一个时间片再继续执行剩下的任务，实现了异步渲染的效果。
+
+## fiber中的双向链表是如何实现的，为什么要采取双向链表(React)
+在fiber架构中，双向链表被用来表示fiber节点的树形结构，是一种基于链表结构的数据结构。
+双向链表由多个fiber节点构成，每个节点保存了一个组件的信息和它子节点的引用。双向链表的每个节点都包含了它的前后节点的指针，这使得在进行协调算法时可以很方便地访问相邻节点。
+
+双向链表的优点在于可以高效的插入、删除和移动节点，使得在进行增量渲染和中断操作时可以很方便地修改树的结构。双向链表还可以支持双向遍历，这使得在进行协调算法时可以很方便的访问相邻节点。因为fiber架构需要将渲染任务进行拆分，并且通过scheduler进行优先级调度，涉及到任务的插入、更新和增加，因此双向链表的优势非常符合fiber架构。
+
+
+## React Fiber 架构中的工作单元是什么，它们是如何组织和调度的？
+## React Fiber 架构中的副作用是什么，如何处理副作用？
+
+## 
+
 4. 浏览器相关
 - 解释浏览器缓存机制，包括强缓存和协商缓存两种方式的概念和使用方法
 - 解释浏览器的事件循环机制（Event Loop），并解释宏任务和微任务的概念
