@@ -5,9 +5,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="solidity, Blog, Technology">
-    <meta name="description" content="BlockchainPurpose of blockchainwith a blockchain we can decentralize where code runs and agree on the output
+    <meta name="description" content="Blockchain and crytoPurpose of blockchainwith a blockchain we can decentralize where code runs and agree on the output
 
-there’s no">
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -295,7 +295,7 @@ there’s no">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Blockchain"><a href="#Blockchain" class="headerlink" title="Blockchain"></a>Blockchain</h1><h2 id="Purpose-of-blockchain"><a href="#Purpose-of-blockchain" class="headerlink" title="Purpose of blockchain"></a>Purpose of blockchain</h2><p>with a blockchain we can decentralize where code runs and agree on the output</p>
+                <h1 id="Blockchain-and-cryto"><a href="#Blockchain-and-cryto" class="headerlink" title="Blockchain and cryto"></a>Blockchain and cryto</h1><h2 id="Purpose-of-blockchain"><a href="#Purpose-of-blockchain" class="headerlink" title="Purpose of blockchain"></a>Purpose of blockchain</h2><p>with a blockchain we can decentralize where code runs and agree on the output</p>
 <ul>
 <li>there’s no single owner of the code’s execution</li>
 <li><ul>
@@ -348,7 +348,37 @@ there’s no">
 <li>commitments(smart contract)</li>
 <li>proof of work</li>
 </ul>
-<h1 id="aka"><a href="#aka" class="headerlink" title="aka"></a>aka</h1><p>ethereum: 以太坊<br>Blockchain: 区块链<br>Crypto： 加密<br>crytocurrencts: 加密货币<br>decentralized: 去中心化<br>bitcoin： 比特币，第一个基于区块链技术实现的加密货币<br>fiancial incentives： 金融奖励<br>mining the rewards： 挖矿<br>deterministic: 确定性<br>pseudorandom: 伪随机<br>collsion resistant: 抗碰撞<br>consensus: 共识，一个网络对数据的状态达成共识。<br>censorship：审查<br>bribe： 贿赂<br>drill home： 钻研<br>relatively travel：相对较小的<br>infeasible： 不可能</p>
+<h1 id="digital-signature"><a href="#digital-signature" class="headerlink" title="digital signature"></a>digital signature</h1><h2 id="symmetric-key"><a href="#symmetric-key" class="headerlink" title="symmetric key"></a>symmetric key</h2><p>same key on both sides.<br>communication security over an unsecured channels.<br>history</p>
+<ul>
+<li>military  </li>
+<li><ul>
+<li>key:324, msg: cat, encrypted: dog.<br>example:<br>aes: advanced encrypted standard.<br>downside: bothside must have the key beforehand.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Asymmetric-key"><a href="#Asymmetric-key" class="headerlink" title="Asymmetric key"></a>Asymmetric key</h2><p>one public key, the other private key.<br>public key signs (encrypted).<br>private key verifies. (decrypted)</p>
+<p>commonly referred to publicKey crytography.</p>
+<h2 id="publick-key-in-web3"><a href="#publick-key-in-web3" class="headerlink" title="publick key in web3"></a>publick key in web3</h2><ul>
+<li>users sign a transaction with their private key.</li>
+<li>user boardcasts the transaction to blockchain.</li>
+<li>blockchain nodes recover public key from signature from which the user’s address is derived.</li>
+</ul>
+<h2 id="RSA-amp-ECDSA"><a href="#RSA-amp-ECDSA" class="headerlink" title="RSA &amp; ECDSA"></a>RSA &amp; ECDSA</h2><p>RSA based on publick key methonology. it’s very easy to find the product of two prime numbers, yet extremely difficult to factor out those two prime numbers if you have the product</p>
+<p>The ECDSA algorithm uses elliptic curves. It can provide the same level security as other public key algorithms with smaller key sizes, which is the reason it’s become quite popular. It is the Digital Signing Algorithm used by Bitcoin, specifically the secp256k1 curve.</p>
+<h1 id="proof-of-work-and-mining"><a href="#proof-of-work-and-mining" class="headerlink" title="proof of work and mining"></a>proof of work and mining</h1><p>in a decentralized enviorment we always have those issues:</p>
+<ul>
+<li>how  do all nodes agree on what current and future state of users account balance and contract interactions is?</li>
+<li>who gets to add new blocks&#x2F;transactions to a chain.how do we know any blocks added are ‘valued’</li>
+<li>how we know all of these thing condinated without any central actor in place?</li>
+</ul>
+<p>the solution of those is consensus mechanism</p>
+<h2 id="consensus-mechanism"><a href="#consensus-mechanism" class="headerlink" title="consensus mechanism"></a>consensus mechanism</h2><p>consensus mechanism means comming to a general agreement. <b> blockchain consensus mechanism typically means that at least 51% of nodes are in agreement over the current global state of the network</b>.</p>
+<p>the main consensus  mechanism rules for proof-of-work typically look like religious commandments:</p>
+<ul>
+<li>cannot double spend</li>
+<li>the longest chain will be the one the rest of the nodes accept as the one “true” chain, determined by a chain’s cumulative work. also known as <b>nakamoto consensus</b>.</li>
+</ul>
+<h1 id="aka"><a href="#aka" class="headerlink" title="aka"></a>aka</h1><p>ethereum: 以太坊<br>Blockchain: 区块链<br>Crypto： 加密<br>crytocurrencts: 加密货币<br>decentralized: 去中心化<br>bitcoin： 比特币，第一个基于区块链技术实现的加密货币<br>fiancial incentives： 金融奖励<br>mining the rewards： 挖矿<br>deterministic: 确定性<br>pseudorandom: 伪随机<br>collsion resistant: 抗碰撞<br>consensus: 共识，一个网络对数据的状态达成共识。<br>censorship：审查<br>bribe： 贿赂<br>drill home： 钻研<br>relatively travel：相对较小的<br>infeasible： 不可能<br>symmetric: 对称<br>digital signature: 数字签名<br>RSA: 非对称加密的经典实现<br>ECDSA： bitcoin采用的非对称加密算法<br>ether： 以太币<br>address： 交易发起方类似于ip, bitcoin 使用checksum and base58, ethereum is last 20 bytes of the hash of the public key.<br>Enforcement： 执行<br>consensus rules： 共识规则<br>consensus mechanisms：协商一致<br>inter-changeable: 可互换的<br>cumulative: 积累型<br>nakamoto consensus： 最长的chain将是其他节点接受的一个真正的链，他是由一条链积累的工作所决定的。</p>
 
                 
             </div>
@@ -482,32 +512,51 @@ there’s no">
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/05/04/xx/">
+                <a href="/2023/02/17/interview/">
                     <div class="card-image">
                         
+                        <img src="https://images.pexels.com/photos/355465/pexels-photo-355465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="responsive-img" alt="Interview-base">
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
-                        
-                        <span class="card-title"></span>
+                        <span class="card-title">Interview-base</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            Interview notes.
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-17
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Chatwin
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Interview/" class="post-category">
+                                    Interview
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/html/">
+                        <span class="chip bg-color">html</span>
+                    </a>
+                    
+                    <a href="/tags/css/">
+                        <span class="chip bg-color">css</span>
+                    </a>
+                    
+                    <a href="/tags/js/">
+                        <span class="chip bg-color">js</span>
+                    </a>
+                    
                 </div>
                 
             </div>
