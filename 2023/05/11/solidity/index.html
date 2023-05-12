@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="solidity, Blog, Technology">
+    <meta name="keywords" content="Solidity, Blog, Technology">
     <meta name="description" content="Blockchain and crytoPurpose of blockchainwith a blockchain we can decentralize where code runs and agree on the output
 
 ">
@@ -19,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>solidity | Chat&#39;s Blog</title>
+    <title>Solidity | Chat&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -230,12 +230,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">solidity</h1>
+                    <h1 class="description center-align post-title">Solidity</h1>
                 </div>
             </div>
         </div>
@@ -257,9 +257,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Web3-Blockchain/">
+                                <span class="chip bg-color">Web3, Blockchain,</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -365,7 +369,20 @@
 </ul>
 <h2 id="RSA-amp-ECDSA"><a href="#RSA-amp-ECDSA" class="headerlink" title="RSA &amp; ECDSA"></a>RSA &amp; ECDSA</h2><p>RSA based on publick key methonology. it’s very easy to find the product of two prime numbers, yet extremely difficult to factor out those two prime numbers if you have the product</p>
 <p>The ECDSA algorithm uses elliptic curves. It can provide the same level security as other public key algorithms with smaller key sizes, which is the reason it’s become quite popular. It is the Digital Signing Algorithm used by Bitcoin, specifically the secp256k1 curve.</p>
-<h1 id="proof-of-work-and-mining"><a href="#proof-of-work-and-mining" class="headerlink" title="proof of work and mining"></a>proof of work and mining</h1><p>in a decentralized enviorment we always have those issues:</p>
+<h1 id="proof-of-work-and-mining"><a href="#proof-of-work-and-mining" class="headerlink" title="proof of work and mining"></a>proof of work and mining</h1><h2 id="mining-key-points"><a href="#mining-key-points" class="headerlink" title="mining key points"></a>mining key points</h2><ol>
+<li>mining is the process to create a block of transaction to be added to blockchain.</li>
+<li>peers in the mining process are called ‘miners’</li>
+</ol>
+<ul>
+<li>a. to network</li>
+<li>b. miners provide processing power to network to exchange for chance to get rewards.</li>
+</ul>
+<p>mining has two main functions:</p>
+<ol>
+<li>consensus machanism </li>
+<li>currency issuance</li>
+</ol>
+<p>in a decentralized enviorment we always have those issues:</p>
 <ul>
 <li>how  do all nodes agree on what current and future state of users account balance and contract interactions is?</li>
 <li>who gets to add new blocks&#x2F;transactions to a chain.how do we know any blocks added are ‘valued’</li>
@@ -378,7 +395,16 @@
 <li>cannot double spend</li>
 <li>the longest chain will be the one the rest of the nodes accept as the one “true” chain, determined by a chain’s cumulative work. also known as <b>nakamoto consensus</b>.</li>
 </ul>
-<h1 id="aka"><a href="#aka" class="headerlink" title="aka"></a>aka</h1><p>ethereum: 以太坊<br>Blockchain: 区块链<br>Crypto： 加密<br>crytocurrencts: 加密货币<br>decentralized: 去中心化<br>bitcoin： 比特币，第一个基于区块链技术实现的加密货币<br>fiancial incentives： 金融奖励<br>mining the rewards： 挖矿<br>deterministic: 确定性<br>pseudorandom: 伪随机<br>collsion resistant: 抗碰撞<br>consensus: 共识，一个网络对数据的状态达成共识。<br>censorship：审查<br>bribe： 贿赂<br>drill home： 钻研<br>relatively travel：相对较小的<br>infeasible： 不可能<br>symmetric: 对称<br>digital signature: 数字签名<br>RSA: 非对称加密的经典实现<br>ECDSA： bitcoin采用的非对称加密算法<br>ether： 以太币<br>address： 交易发起方类似于ip, bitcoin 使用checksum and base58, ethereum is last 20 bytes of the hash of the public key.<br>Enforcement： 执行<br>consensus rules： 共识规则<br>consensus mechanisms：协商一致<br>inter-changeable: 可互换的<br>cumulative: 积累型<br>nakamoto consensus： 最长的chain将是其他节点接受的一个真正的链，他是由一条链积累的工作所决定的。</p>
+<h2 id="mining-algorithm"><a href="#mining-algorithm" class="headerlink" title="mining algorithm"></a>mining algorithm</h2><p>when a miner ‘mines’ a block, what does the miner actually do?<br>mining software continously hashes a block until a hash is fount that meets a target difficulty.</p>
+<h2 id="nonce"><a href="#nonce" class="headerlink" title="nonce"></a>nonce</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token function">sha256</span><span class="token punctuation">(</span><span class="token string">"Hi Grandma! coolgrandma555@hotmail.com 0"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// f2d9e2…</span>
+<span class="token function">sha256</span><span class="token punctuation">(</span><span class="token string">"Hi Grandma! coolgrandma555@hotmail.com 1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 4ee36e…</span>
+<span class="token function">sha256</span><span class="token punctuation">(</span><span class="token string">"Hi Grandma! coolgrandma555@hotmail.com 2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// c25e5c…</span>
+<span class="token comment">// keep on guessing, keep on guessing…</span>
+<span class="token function">sha256</span><span class="token punctuation">(</span><span class="token string">"Hi Grandma! coolgrandma555@hotmail.com 424"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 5552ab…</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>📖 The number that we’re appending on the end of the message here is generally referred to as a nonce. We’ll see how both Ethereum and Bitcoin make use of nonces in a few ways!</p>
+</blockquote>
+<h1 id="aka"><a href="#aka" class="headerlink" title="aka"></a>aka</h1><p>ethereum: 以太坊<br>Blockchain: 区块链<br>Crypto： 加密<br>crytocurrencts: 加密货币<br>decentralized: 去中心化<br>bitcoin： 比特币，第一个基于区块链技术实现的加密货币<br>fiancial incentives： 金融奖励<br>mining the rewards： 挖矿<br>deterministic: 确定性<br>pseudorandom: 伪随机<br>collsion resistant: 抗碰撞<br>consensus: 共识，一个网络对数据的状态达成共识。<br>censorship：审查<br>bribe： 贿赂<br>drill home： 钻研<br>relatively travel：相对较小的<br>infeasible： 不可能<br>symmetric: 对称<br>digital signature: 数字签名<br>RSA: 非对称加密的经典实现<br>ECDSA： bitcoin采用的非对称加密算法<br>ether： 以太币<br>address： 交易发起方类似于ip, bitcoin 使用checksum and base58, ethereum is last 20 bytes of the hash of the public key.<br>Enforcement： 执行<br>consensus rules： 共识规则<br>consensus mechanisms：协商一致<br>inter-changeable: 可互换的<br>cumulative: 积累型<br>nakamoto consensus： 最长的chain将是其他节点接受的一个真正的链，他是由一条链积累的工作所决定的。<br>txs: transactions.<br>pos: proof of stack, pos中，参与者需要持有一定数量的crytocurrency，参与记账过程，相比pow，pos不需要大量的算力<br>pow: proof of work，miners通过计算来添加txs和block，需要消耗算力。可以增加security of  blockchain<br>merkle root：默克尔根，用来验证和确认交易是否被篡改。<br>underlying: 底层<br>hashcash： Hashcash工作量证明功能由Adam Back于 1997 年发明，并建议用于反 DoS 用途</p>
 
                 
             </div>
@@ -392,7 +418,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/Web3-Blockchain/">
+                                    <span class="chip bg-color">Web3, Blockchain,</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -478,9 +508,9 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="solidity">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Solidity">
                         
-                        <span class="card-title">solidity</span>
+                        <span class="card-title">Solidity</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -502,6 +532,14 @@
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Web3-Blockchain/">
+                        <span class="chip bg-color">Web3, Blockchain,</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

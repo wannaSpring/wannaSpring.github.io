@@ -6,7 +6,7 @@
   <link href="https://wannaspring.github.io/wannaSpring.github.io/atom.xml" rel="self"/>
   
   <link href="https://wannaspring.github.io/wannaSpring.github.io/"/>
-  <updated>2023-05-11T11:10:38.481Z</updated>
+  <updated>2023-05-12T04:12:49.060Z</updated>
   <id>https://wannaspring.github.io/wannaSpring.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>solidity</title>
+    <title>Solidity</title>
     <link href="https://wannaspring.github.io/wannaSpring.github.io/2023/05/11/solidity/"/>
     <id>https://wannaspring.github.io/wannaSpring.github.io/2023/05/11/solidity/</id>
     <published>2023-05-11T04:47:37.000Z</published>
-    <updated>2023-05-11T11:10:38.481Z</updated>
+    <updated>2023-05-12T04:12:49.060Z</updated>
     
     
       
@@ -34,6 +34,8 @@
     
     
     
+    
+    <category term="Web3, Blockchain," scheme="https://wannaspring.github.io/wannaSpring.github.io/tags/Web3-Blockchain/"/>
     
   </entry>
   
