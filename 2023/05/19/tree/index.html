@@ -1,0 +1,1005 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Tree, Blog, Technology">
+    <meta name="description" content="Tree Data Structuresdiffrent type of tree structuresimple tree
+binary treea parent must have two children. that’s a rule">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Tree | Chat&#39;s Blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Chat's Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Chat&#39;s Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Home</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Chat&#39;s Blog</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Home
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Tree</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2023-05-19
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Tree-Data-Structures"><a href="#Tree-Data-Structures" class="headerlink" title="Tree Data Structures"></a>Tree Data Structures</h1><h2 id="diffrent-type-of-tree-structure"><a href="#diffrent-type-of-tree-structure" class="headerlink" title="diffrent type of tree structure"></a>diffrent type of tree structure</h2><h3 id="simple-tree"><a href="#simple-tree" class="headerlink" title="simple tree"></a>simple tree</h3><p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230517150030ytaxDQ.png" alt="Picsee-20230517150030.png"></p>
+<h3 id="binary-tree"><a href="#binary-tree" class="headerlink" title="binary tree"></a>binary tree</h3><p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230517150055WZh65C.png" alt="Picsee-20230517150055.png"><br>a parent must have two children. that’s a rule of binary tree, if the parent have more than two children, it can’t be called binary tree.</p>
+<h3 id="tree-vs-linked-tree"><a href="#tree-vs-linked-tree" class="headerlink" title="tree vs linked tree."></a>tree vs linked tree.</h3><p>a linked list also is tree - just really long one that only has one child per parent in a long continuous chain. a tree is not necessarily be a linked list.<br>for example</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">linkedList</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>data <span class="token operator">=</span> data<span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>next <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+<span class="token keyword">class</span> <span class="token class-name">tree</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>data <span class="token operator">=</span> data<span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>children <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>noticed the treenode holds the typical data and an array to continue refer to any children of the (parent) node. the linkedlist just keep tract to next node.</p>
+<h2 id="tree-vocabulary-summary"><a href="#tree-vocabulary-summary" class="headerlink" title="tree vocabulary summary"></a>tree vocabulary summary</h2><p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230517150651iAAFtz.png" alt="Picsee-20230517150651.png"></p>
+<ul>
+<li>key, node id </li>
+<li>siblings, nodes under the same parent and on the same level </li>
+<li>root, the top node of the tree.</li>
+<li>subtree, once u isolate a part of broader tree, u can form a brand new tree with new relationship.</li>
+</ul>
+<h2 id="searching-binary-tree"><a href="#searching-binary-tree" class="headerlink" title="searching binary tree"></a>searching binary tree</h2><p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-202305171515066WVF9b.png" alt="Picsee-20230517151506.png"><br>searching tree must have those properties:</p>
+<ul>
+<li>it’s binary tree.</li>
+<li>the left one must be less than the parent</li>
+<li>the right one must be greater than the parent</li>
+</ul>
+<h3 id="the-sbt-implement"><a href="#the-sbt-implement" class="headerlink" title="the sbt implement."></a>the sbt implement.</h3><p>Tree</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">Tree</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>root <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token function">addNode</span><span class="token punctuation">(</span><span class="token parameter">node<span class="token punctuation">,</span>  current <span class="token operator">=</span> <span class="token keyword">null</span></span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>root<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>root <span class="token operator">=</span> node<span class="token punctuation">;</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span>
+      <span class="token punctuation">&#125;</span>
+    
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>current<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token comment">// when we assign this.root to current, we just reference the root to current. so when we change current, we also will change root.</span>
+        current <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>root<span class="token punctuation">;</span>
+      <span class="token punctuation">&#125;</span>
+
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token punctuation">.</span>data <span class="token operator">&lt;</span> current<span class="token punctuation">.</span>data<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>current<span class="token punctuation">.</span>left<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+          current<span class="token punctuation">.</span>left <span class="token operator">=</span> node<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+          <span class="token comment">// if we use recursive, the current will be assigned be new object, but the root also will be impacted.</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">addNode</span><span class="token punctuation">(</span>node<span class="token punctuation">,</span>  current<span class="token punctuation">.</span>left<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+      <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>current<span class="token punctuation">.</span>right<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+          current<span class="token punctuation">.</span>right <span class="token operator">=</span> node<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">addNode</span><span class="token punctuation">(</span>node<span class="token punctuation">,</span>  current<span class="token punctuation">.</span>right<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+      <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token function">hasNode</span><span class="token punctuation">(</span><span class="token parameter">value<span class="token punctuation">,</span> current<span class="token operator">=</span><span class="token keyword">null</span></span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+      <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>root<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>current<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        current <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>root
+      <span class="token punctuation">&#125;</span>
+      <span class="token keyword">if</span><span class="token punctuation">(</span>value <span class="token operator">===</span> current<span class="token punctuation">.</span>data<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span>
+      <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>value <span class="token operator">&lt;</span> current<span class="token punctuation">.</span>data<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> current<span class="token punctuation">.</span>left<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">hasNode</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> current<span class="token punctuation">.</span>left<span class="token punctuation">)</span>
+      <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>value <span class="token operator">></span> current<span class="token punctuation">.</span>data<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> current<span class="token punctuation">.</span>right<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">hasNode</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> current<span class="token punctuation">.</span>right<span class="token punctuation">)</span>
+      <span class="token punctuation">&#125;</span>
+
+      <span class="token keyword">return</span> <span class="token boolean">false</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> Tree<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>Node</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">Node</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>data <span class="token operator">=</span> data 
+        <span class="token keyword">this</span><span class="token punctuation">.</span>left <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>right <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> Node<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>use case</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 创建一个新的二叉搜索树对象</span>
+<span class="token keyword">const</span> tree <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Tree</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 创建一些节点并添加到树中</span>
+tree<span class="token punctuation">.</span><span class="token function">addNode</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span> <span class="token literal-property property">data</span><span class="token operator">:</span> <span class="token number">7</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+tree<span class="token punctuation">.</span><span class="token function">addNode</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span> <span class="token literal-property property">data</span><span class="token operator">:</span> <span class="token number">6</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+tree<span class="token punctuation">.</span><span class="token function">addNode</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span> <span class="token literal-property property">data</span><span class="token operator">:</span> <span class="token number">5</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+tree<span class="token punctuation">.</span><span class="token function">addNode</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span> <span class="token literal-property property">data</span><span class="token operator">:</span> <span class="token number">4</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+tree<span class="token punctuation">.</span><span class="token function">addNode</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span> <span class="token literal-property property">data</span><span class="token operator">:</span> <span class="token number">3</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+tree<span class="token punctuation">.</span><span class="token function">addNode</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span> <span class="token literal-property property">data</span><span class="token operator">:</span> <span class="token number">6</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+tree<span class="token punctuation">.</span><span class="token function">addNode</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span> <span class="token literal-property property">data</span><span class="token operator">:</span> <span class="token number">8</span> <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 打印根节点</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'根节点:'</span><span class="token punctuation">,</span> tree<span class="token punctuation">.</span>root<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="merkle-tree"><a href="#merkle-tree" class="headerlink" title="merkle tree"></a>merkle tree</h2><p>Merkle tree is a data structure that allows us to make efficient verification that data belong in large set of data.<br>They are commonly used in p2p where efficient proof of this nature will help increase the scalability of the network.<br>A Merkle tree is collection reduce to a single hash.</p>
+<pre class="line-numbers language-none"><code class="language-none">   ABCDEFGH &lt;-- Merkle Root
+     &#x2F;    \
+  ABCD     EFGH
+  &#x2F; \      &#x2F; \
+ AB  CD   EF  GH
+&#x2F; \  &#x2F; \  &#x2F; \ &#x2F; \
+A B  C D  E F G H<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Each signle letter reprsent hash. The combined letter represent concatenated hash that have been combined and then hashed to form new hash.</p>
+<p>They allow us to verify if a piece of data is part of a larger data structure. <b>without having all of the data within that structure</b>.<br>this means they can be used to check incosistencies in all kinds of distributed systems.</p>
+<p>For blockchain, storing transactions as Merkle tree allows us to look at a block and verify that a transaction was part of it by only having part of the data set.</p>
+<h3 id="example"><a href="#example" class="headerlink" title="example"></a>example</h3><p>the benefits of the merkle tree design – a recursion hashin-based algorithm  – is that allows for efficient proof that some data exists within the root hash constrution(actually contained in the block). a merkle proof confirmed specific transactions represented by a leaf or branch within merkle hash root.</p>
+<p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230519184902QGl5LL.png" alt="Picsee-20230519184902.png"></p>
+<p>if i want prove c exist in the block, we only need use the root, h(a-b) and h(e-h). so that is effience.</p>
+<h3 id="Logarithmic-scalming"><a href="#Logarithmic-scalming" class="headerlink" title="Logarithmic scalming."></a>Logarithmic scalming.</h3><p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230519185805Uvffb7.png" alt="Picsee-20230519185805.png"></p>
+<p>The amount of proof pieces that you need scales logarithmically to the size of the array of data you need to feed into the Merkle tree hash algorithm. keeping the data storage lean and efficent is the reason behind using structured like Merkle tree.</p>
+<h3 id="Merkle-Tree-Vocabulary-Summary"><a href="#Merkle-Tree-Vocabulary-Summary" class="headerlink" title="Merkle Tree Vocabulary Summary"></a>Merkle Tree Vocabulary Summary</h3><ul>
+<li>Merkle tree, a special binary tree, that allowed just use targetProveHash and proof to verify is that equal with root.</li>
+<li>Merkle root, the hash contained in the block header, which is derived from the hash of all the transactions in the block.</li>
+<li>Merkle path, represents the information that user need to calculate the expected value for Merkle root for a  block, from their owner transactions hash contained in that block.</li>
+<li>Merkle proof, prove the existence of a specific transaction in a specific block(without the user needing to examine all the transaction in block). it includes Merkle root and Merkle proof.</li>
+</ul>
+<h3 id="conclusion"><a href="#conclusion" class="headerlink" title="conclusion"></a>conclusion</h3><p>Merkle tree is a very popular structure in blockchain. it’s importatnt to understand the low-level of blockchain storage and the implications of such a disicion</p>
+<h2 id="partricia-Merkle-tries"><a href="#partricia-Merkle-tries" class="headerlink" title="partricia Merkle tries"></a>partricia Merkle tries</h2><h3 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h3><p>Bitcoin is the frist blockchain-based contralization newwork ever. it popularizes the use of Merkle tree for scalable transactions inclusion. Ethereum also use Merkle tree but since Ethereum is different design. it also use ont other important tree data structures for some of its data storage needs: Partricia Merkle tries.</p>
+<h3 id="Ethereum-block-structure"><a href="#Ethereum-block-structure" class="headerlink" title="Ethereum block structure"></a>Ethereum block structure</h3><p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-202305192045539NsDFI.png" alt="Picsee-20230519204553.png"></p>
+<h3 id="Trees-in-Ethereum"><a href="#Trees-in-Ethereum" class="headerlink" title="Trees in Ethereum"></a>Trees in Ethereum</h3><p>Ethereum make use a tree called “radix trie, also referenced to as a Partricia Merkle tree” and combine this data structure with Merkle tree to create Partricia Merkle Tries.</p>
+<p>A redix trie is a tree like data structure that used to retrieve a string by value triversing down a branch of nodes that store acciocated key that together lead to the end value can be returned.</p>
+<p>A Merkle trie is a data structure that store key-value pairing. just like hash-table. in addition to that. it allow us to verify data integrity and the inclusion of key-value pairs.</p>
+<p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-202305192045539NsDFI.png" alt="Picsee-20230519204553.png"></p>
+<p>PMTs groups similar-value nodes together in the tree. this way searching for ‘help’ leads u along the same path as ‘hello’, the first three letter is same. good for space and efficiency.</p>
+<h1 id="aka"><a href="#aka" class="headerlink" title="aka"></a>aka</h1><p>ethereum: 以太坊<br>Blockchain: 区块链<br>Crypto： 加密<br>crytocurrencts: 加密货币<br>decentralized: 去中心化<br>bitcoin： 比特币，第一个基于区块链技术实现的加密货币<br>fiancial incentives： 金融奖励<br>mining the rewards： 挖矿<br>deterministic: 确定性<br>pseudorandom: 伪随机<br>collsion resistant: 抗碰撞<br>consensus: 共识，一个网络对数据的状态达成共识。<br>censorship：审查<br>bribe： 贿赂<br>drill home： 钻研<br>relatively travel：相对较小的<br>infeasible： 不可能<br>symmetric: 对称<br>digital signature: 数字签名<br>RSA: 非对称加密的经典实现<br>ECDSA： bitcoin采用的非对称加密算法<br>ether： 以太币<br>address： 交易发起方类似于ip, bitcoin 使用checksum and base58, ethereum is last 20 bytes of the hash of the public key.<br>Enforcement： 执行<br>consensus rules： 共识规则<br>consensus mechanisms：协商一致<br>inter-changeable: 可互换的<br>cumulative: 积累型<br>nakamoto consensus： 最长的chain将是其他节点接受的一个真正的链，他是由一条链积累的工作所决定的。<br>txs: transactions.<br>pos: proof of stack, pos中，参与者需要持有一定数量的crytocurrency，参与记账过程，相比pow，pos不需要大量的算力<br>pow: proof of work，miners通过计算来添加txs和block，需要消耗算力。可以增加security of  blockchain<br>merkle root：默克尔根，用来验证和确认交易是否被篡改。<br>underlying: 底层<br>hashcash： Hashcash工作量证明功能由Adam Back于 1997 年发明，并建议用于反 DoS 用途<br>Byzantine General’s Problem： 在p2p场景下，如何证明每个机器都是在工作的。<br>manipulate： 操作<br>Genesis Block: 第一个加入到区块链中的块，初始块<br>cost-effective: 成本效益<br>UTXO：Unspent Transaction Output, 未使用的交易<br>Retrospective： 回顾<br>vulnerable： 脆弱的<br>light nodes: 轻节点 （存储块头的轻节点）<br>full nodes：完整节点（常规节点）<br>achieve nodes: 归档节点， 完整节点（已验证的存档节点）<br>bandwidth： 带宽<br>configure: 配置<br>variables： 变量<br>discrepancies： 差异<br>tradeoffs： 权衡利弊<br>contrast： 对比<br>unfakeable： 不可伪造<br>replicate： 复制<br>Satoshi: “Satoshi” refers to the smallest unit of the cryptocurrency Bitcoin<br>individual： 个人<br>multitude： 众多的<br>aggregate： 总数<br>expedite： 加快<br>hefty prize ： 巨额奖金<br>controlled supply： 受控供应<br>intentional: 故意的<br>quirk： 怪癖<br>denial: 否认<br>distinguish： 辨别<br>preceding： 前面<br>emerge： 出现<br>hierarchically: 层次分明<br>intimidating： 令人生畏的<br>underneath： 底下<br>infacting：连接<br>concatenate： 串联<br>optimization： 优化<br>inconsistencies: 不一致<br>deveration: 推导<br>arbitrary： 随意的<br>immutable： 不可变<br>implications: 含义<br>ledger： 账本<br>traversing: 遍历<br>PMTs: Partricia Merkle tries<br>sealed: 密封.</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,wechat,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
+            <div class="card">
+                <a href="/2023/05/19/tree/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Tree">
+                        
+                        <span class="card-title">Tree</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-19
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Chatwin
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/05/11/blockchain-and-cryto/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Blockchain and cryto">
+                        
+                        <span class="card-title">Blockchain and cryto</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-11
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Chatwin
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Web3-Blockchain/">
+                        <span class="chip bg-color">Web3, Blockchain,</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card " style="background-color: white; overflow-y:auto; height: calc(100vh - 80px);">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2023</span>
+            
+            <a href="/about" target="_blank">Chatwin</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;Total visits:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;Total visitors:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/wannaSpring" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:chent1493@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+    <a href="https://twitter.com/chentao80773360" class="tooltipped" target="_blank" data-tooltip="关注我的Twitter: https://twitter.com/chentao80773360" data-position="top" data-delay="50">
+        <i class="fab fa-twitter"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

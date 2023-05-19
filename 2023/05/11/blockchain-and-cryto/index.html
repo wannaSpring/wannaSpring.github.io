@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Solidity, Blog, Technology">
+    <meta name="keywords" content="Blockchain and cryto, Blog, Technology">
     <meta name="description" content="Blockchain and crytoPurpose of blockchainwith a blockchain we can decentralize where code runs and agree on the output
 
 ">
@@ -19,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Solidity | Chat&#39;s Blog</title>
+    <title>Blockchain and cryto | Chat&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -230,12 +230,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Solidity</h1>
+                    <h1 class="description center-align post-title">Blockchain and cryto</h1>
                 </div>
             </div>
         </div>
@@ -404,7 +404,46 @@
 <blockquote>
 <p>📖 The number that we’re appending on the end of the message here is generally referred to as a nonce. We’ll see how both Ethereum and Bitcoin make use of nonces in a few ways!</p>
 </blockquote>
-<h1 id="aka"><a href="#aka" class="headerlink" title="aka"></a>aka</h1><p>ethereum: 以太坊<br>Blockchain: 区块链<br>Crypto： 加密<br>crytocurrencts: 加密货币<br>decentralized: 去中心化<br>bitcoin： 比特币，第一个基于区块链技术实现的加密货币<br>fiancial incentives： 金融奖励<br>mining the rewards： 挖矿<br>deterministic: 确定性<br>pseudorandom: 伪随机<br>collsion resistant: 抗碰撞<br>consensus: 共识，一个网络对数据的状态达成共识。<br>censorship：审查<br>bribe： 贿赂<br>drill home： 钻研<br>relatively travel：相对较小的<br>infeasible： 不可能<br>symmetric: 对称<br>digital signature: 数字签名<br>RSA: 非对称加密的经典实现<br>ECDSA： bitcoin采用的非对称加密算法<br>ether： 以太币<br>address： 交易发起方类似于ip, bitcoin 使用checksum and base58, ethereum is last 20 bytes of the hash of the public key.<br>Enforcement： 执行<br>consensus rules： 共识规则<br>consensus mechanisms：协商一致<br>inter-changeable: 可互换的<br>cumulative: 积累型<br>nakamoto consensus： 最长的chain将是其他节点接受的一个真正的链，他是由一条链积累的工作所决定的。<br>txs: transactions.<br>pos: proof of stack, pos中，参与者需要持有一定数量的crytocurrency，参与记账过程，相比pow，pos不需要大量的算力<br>pow: proof of work，miners通过计算来添加txs和block，需要消耗算力。可以增加security of  blockchain<br>merkle root：默克尔根，用来验证和确认交易是否被篡改。<br>underlying: 底层<br>hashcash： Hashcash工作量证明功能由Adam Back于 1997 年发明，并建议用于反 DoS 用途</p>
+<h1 id="blockchain-structure"><a href="#blockchain-structure" class="headerlink" title="blockchain structure"></a>blockchain structure</h1><p>The image show three different ways of internet. the first way is centralized for trandional applications, if u want prove value, it decide by centre services. the second way is Decentralized, it always be missunderstanding to blockchain. but blockchain have a important way, it is peer to peer. so the last image shows blockchain.<br><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230512151717l6NMC5.png?token=ALJ6LAVM5B4V2TPXWKILYKTELXUDW" alt="Picsee-20230512151717.png"></p>
+<p>thought challenges<br>Q: how do distributed p2p networks agree on what data is validated without a central administrator running the show?<br>A: Consensus machanisms</p>
+<ul>
+<li>the bitcoins network decides validity of new data based on who is able to produce a  prove of work.</li>
+</ul>
+<p>Q: how is the block hash calculate?<br>A: the hash function takes data as input and returns unique hashes.</p>
+<p>Q: what is ‘valid’ hash?<br>A: A valid hash is meet certain requirements.</p>
+<ul>
+<li>block index is greater than last block index.</li>
+<li>block previous hash is equal to lastest block hash.</li>
+<li>block hash meets difficulty requirements.</li>
+<li>block hash is correct calculated.</li>
+</ul>
+<h1 id="UTXO-amp-Account-Models"><a href="#UTXO-amp-Account-Models" class="headerlink" title="UTXO &amp; Account Models"></a>UTXO &amp; Account Models</h1><p>trandional vs p2p<br><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230515201650tANILr.png" alt="Picsee-20230515201650.png"></p>
+<p>Nodes in blockchain p2p network, like bitcoin, can leave and re-enter the network at will. bitcoin has nodes inclding the light nodes and full nodes.</p>
+<ul>
+<li><p>light nodes: a light node downloads only the block headers , which is the minimum data it need to transact on the network. a light node can validata a transaction because it is able to regenerate the spcific block it need to check by using this data. but this also have <b>limitations</b>, Light nodes will sometimes need to ask full nodes for the data they don’t have access to, whilch could take longer than a full nodes validating the transaction. </p>
+</li>
+<li><p>full nodes: a full use and storage of data means that full nodes require a lot of computing and bandwidth resources. a full nodes download, stores, and verifies the full blockchain state-everything from block zero to the most recent blocks, which can take a weeks to sync.</p>
+</li>
+<li><p>achieve nodes: a full node trims entires that is no longer needed to verify, the latest interaction with the chain, the achive nodes maintain everything. these details are greating for querying information more efficiently and handy for a few applications, but are excessive for most case.</p>
+</li>
+</ul>
+<h2 id="Account-models"><a href="#Account-models" class="headerlink" title="Account models"></a>Account models</h2><p>If you have a bank account, you are very familiar with this model of keeping track of user balances. The account model follows just that: accounts. It tracks the balances of users based on their overall account state, without any tracking on what constitutes the actual balance itself. In other words, an account-based ledger would mark an entry like this:<br><code>Acct #12345 -&gt; Name: Rick Sanchez -&gt; Balance: $142.62</code><br>Notice how the state of the account is kept very high-level? Rick’s account balance is a dollar and cent amount and that’s it. There is no further information tracked on what the breakdown of the the balance is, for example: $142.62 is one $100 bill, one $20 bill, two $10 bills, eight quarters, five dimes, two nickels, two pennies. When Rick goes to an ATM and withdraws from his balance, he gets it in whatever bills + change the bank has at hand - not in the exact change it took to make up that balance in the first place.</p>
+<p>What does a transaction look like in an account-based model?<br>  Alice has $60 total balance<br>  Bob has $20 total balance<br>  Bob sends Alice $5<br>  Bob’s balance is subtracted $5, if the remaining balance is greater then 0, proceed, else revert<br>  Alice balance is summed $5<br>The ledger is marked in both ends to update total balances and that is the end of the transaction in an account-based model.<br>This might seem weird. Why would we want to keep track of these details for something as simple as a total balance? We’ll look at a model for keeping user balances that does include this feature: the UTXO model.</p>
+<h2 id="UTXO"><a href="#UTXO" class="headerlink" title="UTXO"></a>UTXO</h2><p>Ethereum uses the account-based model, while Bitcoin uses UTXOs (short for Unspent Transaction Outputs) to keep track of user state&#x2F;balances.</p>
+<p>The UTXO model differs pretty drastically from the account model. It’s a little bit more complex - mainly because it is not a familiar interface like the account model is! Yet it does set up some interesting features…</p>
+<p>What is a UTXO? 🤔**<br>Alice sends Bob 5 BTC in the form of a transaction relayed to the Bitcoin network. At this point, if the transaction is valid (Alice has &gt; 5 BTC, Alice owns the relevant private keys and can produce a signature, etc), Alice is signaling an intent to change user state. When the Bitcoin network mines Alice’s transaction, Bob is credited with a UTXO worth 5 BTC. This is how the Bitcoin network keeps track of user balances - it keeps a really big long set of UTXOs - outputs out of state-changing transactions that credit users with a certain amount of BTC.</p>
+<p>So when people say: “I own 3 bitcoins”, they should really be saying: “I own some UTXOs that allow me to spend 3 bitcoins.” - or using the Drake meme:<br><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230516115235KUFjj8.png" alt="Picsee-20230516115235.png"></p>
+<h2 id="Account-vs-UTXO"><a href="#Account-vs-UTXO" class="headerlink" title="Account vs UTXO"></a>Account vs UTXO</h2><p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230516115016DvofGv.png" alt="Picsee-20230516115016.png"></p>
+<h3 id="conclusions"><a href="#conclusions" class="headerlink" title="conclusions"></a>conclusions</h3><p>Deciding what model to go with is a game of design tradeoffs. Ethereum uses the account-based model transactions must be more flexible to account for the many moving pieces of state in the system. Bitcoin uses UTXOs as it is a network purposefully designed to be as simple and stateless as possible.</p>
+<p>scriptPubKey<br>scriptPubKey also called “witness script” or the “locking script”.<br>for each locking script there should be an unlocking script that will unlock the UTXO and allow it to spent. typically, all the unlocking scripts needs to provide is a signature for to verify ownership of the public key. then the public key need to match the address after two hashed twice.</p>
+<blockquote>
+<p>Here have a interesting things, the first block of bitcoin( or called genesis block ) can’t be spent because it don’t have coinbase, we don’t why Satoshi don’t give the block coinbase. but if a block that don’t have coinbase, thus all of the nodes will reject the transaction. so we never spent! it’s fovever bount to 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa.</p>
+</blockquote>
+<p>bitcon script<br>the bitcon script language is meant to be a simple stack-based that has no loops so it also will be resolved and there are no denial of the service attacks. the language is basically a list of function like operations code.</p>
+<blockquote>
+<p><code>&lt;a href=&#39;https://bitcoin.stackexchange.com/questions/29754/history-behind-the-scripting-language-in-bitcoin/29763#29763&#39;&gt; bitcon script history&lt;/a&gt;</code></p>
+</blockquote>
+<h1 id="aka"><a href="#aka" class="headerlink" title="aka"></a>aka</h1><p>ethereum: 以太坊<br>Blockchain: 区块链<br>Crypto： 加密<br>crytocurrencts: 加密货币<br>decentralized: 去中心化<br>bitcoin： 比特币，第一个基于区块链技术实现的加密货币<br>fiancial incentives： 金融奖励<br>mining the rewards： 挖矿<br>deterministic: 确定性<br>pseudorandom: 伪随机<br>collsion resistant: 抗碰撞<br>consensus: 共识，一个网络对数据的状态达成共识。<br>censorship：审查<br>bribe： 贿赂<br>drill home： 钻研<br>relatively travel：相对较小的<br>infeasible： 不可能<br>symmetric: 对称<br>digital signature: 数字签名<br>RSA: 非对称加密的经典实现<br>ECDSA： bitcoin采用的非对称加密算法<br>ether： 以太币<br>address： 交易发起方类似于ip, bitcoin 使用checksum and base58, ethereum is last 20 bytes of the hash of the public key.<br>Enforcement： 执行<br>consensus rules： 共识规则<br>consensus mechanisms：协商一致<br>inter-changeable: 可互换的<br>cumulative: 积累型<br>nakamoto consensus： 最长的chain将是其他节点接受的一个真正的链，他是由一条链积累的工作所决定的。<br>txs: transactions.<br>pos: proof of stack, pos中，参与者需要持有一定数量的crytocurrency，参与记账过程，相比pow，pos不需要大量的算力<br>pow: proof of work，miners通过计算来添加txs和block，需要消耗算力。可以增加security of  blockchain<br>merkle root：默克尔根，用来验证和确认交易是否被篡改。<br>underlying: 底层<br>hashcash： Hashcash工作量证明功能由Adam Back于 1997 年发明，并建议用于反 DoS 用途<br>Byzantine General’s Problem： 在p2p场景下，如何证明每个机器都是在工作的。<br>manipulate： 操作<br>Genesis Block: 第一个加入到区块链中的块，初始块<br>cost-effective: 成本效益<br>UTXO：Unspent Transaction Output, 未使用的交易<br>Retrospective： 回顾<br>vulnerable： 脆弱的<br>light nodes: 轻节点 （存储块头的轻节点）<br>full nodes：完整节点（常规节点）<br>achieve nodes: 归档节点， 完整节点（已验证的存档节点）<br>bandwidth： 带宽<br>configure: 配置<br>variables： 变量<br>discrepancies： 差异<br>tradeoffs： 权衡利弊<br>contrast： 对比<br>unfakeable： 不可伪造<br>replicate： 复制<br>Satoshi: “Satoshi” refers to the smallest unit of the cryptocurrency Bitcoin<br>individual： 个人<br>multitude： 众多的<br>aggregate： 总数<br>expedite： 加快<br>hefty prize ： 巨额奖金<br>controlled supply： 受控供应<br>intentional: 故意的<br>quirk： 怪癖<br>denial: 否认<br>distinguish： 辨别<br>preceding： 前面<br>emerge： 出现<br>hierarchically: 层次分明<br>intimidating： 令人生畏的<br>underneath： 底下<br>infacting：连接<br>concatenate： 串联<br>optimization： 优化<br>inconsistencies: 不一致<br>deveration: 推导<br>arbitrary： 随意的<br>immutable： 不可变<br>implications: 含义<br>ledger： 账本<br>traversing: 遍历<br>PMTs: Partricia Merkle tries<br>sealed: 密封.</p>
 
                 
             </div>
@@ -499,18 +538,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2023/05/11/solidity/">
+                <a href="/2023/05/19/tree/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Solidity">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Tree">
                         
-                        <span class="card-title">Solidity</span>
+                        <span class="card-title">Tree</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -520,9 +558,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-11
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-05-19
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -530,15 +568,6 @@
                             
                         </span>
                     </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Web3-Blockchain/">
-                        <span class="chip bg-color">Web3, Blockchain,</span>
-                    </a>
-                    
                 </div>
                 
             </div>
