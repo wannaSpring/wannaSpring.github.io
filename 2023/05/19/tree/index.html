@@ -5,8 +5,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="Tree, Blog, Technology">
-    <meta name="description" content="Tree Data Structuresdiffrent type of tree structuresimple tree
-binary treea parent must have two children. that’s a rule">
+    <meta name="description" content="diffrent type of tree structuresimple tree
+binary treea parent must have two children. that’s a rule of binary tree, if ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -294,7 +294,7 @@ binary treea parent must have two children. that’s a rule">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Tree-Data-Structures"><a href="#Tree-Data-Structures" class="headerlink" title="Tree Data Structures"></a>Tree Data Structures</h1><h2 id="diffrent-type-of-tree-structure"><a href="#diffrent-type-of-tree-structure" class="headerlink" title="diffrent type of tree structure"></a>diffrent type of tree structure</h2><h3 id="simple-tree"><a href="#simple-tree" class="headerlink" title="simple tree"></a>simple tree</h3><p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230517150030ytaxDQ.png" alt="Picsee-20230517150030.png"></p>
+                <h1 id="diffrent-type-of-tree-structure"><a href="#diffrent-type-of-tree-structure" class="headerlink" title="diffrent type of tree structure"></a>diffrent type of tree structure</h1><h3 id="simple-tree"><a href="#simple-tree" class="headerlink" title="simple tree"></a>simple tree</h3><p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230517150030ytaxDQ.png" alt="Picsee-20230517150030.png"></p>
 <h3 id="binary-tree"><a href="#binary-tree" class="headerlink" title="binary tree"></a>binary tree</h3><p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230517150055WZh65C.png" alt="Picsee-20230517150055.png"><br>a parent must have two children. that’s a rule of binary tree, if the parent have more than two children, it can’t be called binary tree.</p>
 <h3 id="tree-vs-linked-tree"><a href="#tree-vs-linked-tree" class="headerlink" title="tree vs linked tree."></a>tree vs linked tree.</h3><p>a linked list also is tree - just really long one that only has one child per parent in a long continuous chain. a tree is not necessarily be a linked list.<br>for example</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">linkedList</span> <span class="token punctuation">&#123;</span>
@@ -306,14 +306,14 @@ binary treea parent must have two children. that’s a rule">
   <span class="token keyword">this</span><span class="token punctuation">.</span>children <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>noticed the treenode holds the typical data and an array to continue refer to any children of the (parent) node. the linkedlist just keep tract to next node.</p>
-<h2 id="tree-vocabulary-summary"><a href="#tree-vocabulary-summary" class="headerlink" title="tree vocabulary summary"></a>tree vocabulary summary</h2><p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230517150651iAAFtz.png" alt="Picsee-20230517150651.png"></p>
+<h1 id="tree-vocabulary-summary"><a href="#tree-vocabulary-summary" class="headerlink" title="tree vocabulary summary"></a>tree vocabulary summary</h1><p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230517150651iAAFtz.png" alt="Picsee-20230517150651.png"></p>
 <ul>
 <li>key, node id </li>
 <li>siblings, nodes under the same parent and on the same level </li>
 <li>root, the top node of the tree.</li>
 <li>subtree, once u isolate a part of broader tree, u can form a brand new tree with new relationship.</li>
 </ul>
-<h2 id="searching-binary-tree"><a href="#searching-binary-tree" class="headerlink" title="searching binary tree"></a>searching binary tree</h2><p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-202305171515066WVF9b.png" alt="Picsee-20230517151506.png"><br>searching tree must have those properties:</p>
+<h1 id="searching-binary-tree"><a href="#searching-binary-tree" class="headerlink" title="searching binary tree"></a>searching binary tree</h1><p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-202305171515066WVF9b.png" alt="Picsee-20230517151506.png"><br>searching tree must have those properties:</p>
 <ul>
 <li>it’s binary tree.</li>
 <li>the left one must be less than the parent</li>
@@ -399,7 +399,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 
 
 
-<h2 id="merkle-tree"><a href="#merkle-tree" class="headerlink" title="merkle tree"></a>merkle tree</h2><p>Merkle tree is a data structure that allows us to make efficient verification that data belong in large set of data.<br>They are commonly used in p2p where efficient proof of this nature will help increase the scalability of the network.<br>A Merkle tree is collection reduce to a single hash.</p>
+<h1 id="merkle-tree"><a href="#merkle-tree" class="headerlink" title="merkle tree"></a>merkle tree</h1><p>Merkle tree is a data structure that allows us to make efficient verification that data belong in large set of data.<br>They are commonly used in p2p where efficient proof of this nature will help increase the scalability of the network.<br>A Merkle tree is collection reduce to a single hash.</p>
 <pre class="line-numbers language-none"><code class="language-none">   ABCDEFGH &lt;-- Merkle Root
      &#x2F;    \
   ABCD     EFGH
@@ -422,14 +422,44 @@ A B  C D  E F G H<span aria-hidden="true" class="line-numbers-rows"><span></span
 <li>Merkle proof, prove the existence of a specific transaction in a specific block(without the user needing to examine all the transaction in block). it includes Merkle root and Merkle proof.</li>
 </ul>
 <h3 id="conclusion"><a href="#conclusion" class="headerlink" title="conclusion"></a>conclusion</h3><p>Merkle tree is a very popular structure in blockchain. it’s importatnt to understand the low-level of blockchain storage and the implications of such a disicion</p>
-<h2 id="partricia-Merkle-tries"><a href="#partricia-Merkle-tries" class="headerlink" title="partricia Merkle tries"></a>partricia Merkle tries</h2><h3 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h3><p>Bitcoin is the frist blockchain-based contralization newwork ever. it popularizes the use of Merkle tree for scalable transactions inclusion. Ethereum also use Merkle tree but since Ethereum is different design. it also use ont other important tree data structures for some of its data storage needs: Partricia Merkle tries.</p>
-<h3 id="Ethereum-block-structure"><a href="#Ethereum-block-structure" class="headerlink" title="Ethereum block structure"></a>Ethereum block structure</h3><p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-202305192045539NsDFI.png" alt="Picsee-20230519204553.png"></p>
-<h3 id="Trees-in-Ethereum"><a href="#Trees-in-Ethereum" class="headerlink" title="Trees in Ethereum"></a>Trees in Ethereum</h3><p>Ethereum make use a tree called “radix trie, also referenced to as a Partricia Merkle tree” and combine this data structure with Merkle tree to create Partricia Merkle Tries.</p>
+<h1 id="partricia-Merkle-tries"><a href="#partricia-Merkle-tries" class="headerlink" title="partricia Merkle tries"></a>partricia Merkle tries</h1><h2 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h2><p>Bitcoin is the frist blockchain-based contralization newwork ever. it popularizes the use of Merkle tree for scalable transactions inclusion. Ethereum also use Merkle tree but since Ethereum is different design. it also use ont other important tree data structures for some of its data storage needs: Partricia Merkle tries.</p>
+<h2 id="Ethereum-block-structure"><a href="#Ethereum-block-structure" class="headerlink" title="Ethereum block structure"></a>Ethereum block structure</h2><p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-202305192045539NsDFI.png" alt="Picsee-20230519204553.png"></p>
+<h2 id="Trees-in-Ethereum"><a href="#Trees-in-Ethereum" class="headerlink" title="Trees in Ethereum"></a>Trees in Ethereum</h2><p>Ethereum make use a tree called “radix trie, also referenced to as a Partricia Merkle tree” and combine this data structure with Merkle tree to create Partricia Merkle Tries.</p>
 <p>A redix trie is a tree like data structure that used to retrieve a string by value triversing down a branch of nodes that store acciocated key that together lead to the end value can be returned.</p>
 <p>A Merkle trie is a data structure that store key-value pairing. just like hash-table. in addition to that. it allow us to verify data integrity and the inclusion of key-value pairs.</p>
 <p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-202305192045539NsDFI.png" alt="Picsee-20230519204553.png"></p>
 <p>PMTs groups similar-value nodes together in the tree. this way searching for ‘help’ leads u along the same path as ‘hello’, the first three letter is same. good for space and efficiency.</p>
-<h1 id="aka"><a href="#aka" class="headerlink" title="aka"></a>aka</h1><p>ethereum: 以太坊<br>Blockchain: 区块链<br>Crypto： 加密<br>crytocurrencts: 加密货币<br>decentralized: 去中心化<br>bitcoin： 比特币，第一个基于区块链技术实现的加密货币<br>fiancial incentives： 金融奖励<br>mining the rewards： 挖矿<br>deterministic: 确定性<br>pseudorandom: 伪随机<br>collsion resistant: 抗碰撞<br>consensus: 共识，一个网络对数据的状态达成共识。<br>censorship：审查<br>bribe： 贿赂<br>drill home： 钻研<br>relatively travel：相对较小的<br>infeasible： 不可能<br>symmetric: 对称<br>digital signature: 数字签名<br>RSA: 非对称加密的经典实现<br>ECDSA： bitcoin采用的非对称加密算法<br>ether： 以太币<br>address： 交易发起方类似于ip, bitcoin 使用checksum and base58, ethereum is last 20 bytes of the hash of the public key.<br>Enforcement： 执行<br>consensus rules： 共识规则<br>consensus mechanisms：协商一致<br>inter-changeable: 可互换的<br>cumulative: 积累型<br>nakamoto consensus： 最长的chain将是其他节点接受的一个真正的链，他是由一条链积累的工作所决定的。<br>txs: transactions.<br>pos: proof of stack, pos中，参与者需要持有一定数量的crytocurrency，参与记账过程，相比pow，pos不需要大量的算力<br>pow: proof of work，miners通过计算来添加txs和block，需要消耗算力。可以增加security of  blockchain<br>merkle root：默克尔根，用来验证和确认交易是否被篡改。<br>underlying: 底层<br>hashcash： Hashcash工作量证明功能由Adam Back于 1997 年发明，并建议用于反 DoS 用途<br>Byzantine General’s Problem： 在p2p场景下，如何证明每个机器都是在工作的。<br>manipulate： 操作<br>Genesis Block: 第一个加入到区块链中的块，初始块<br>cost-effective: 成本效益<br>UTXO：Unspent Transaction Output, 未使用的交易<br>Retrospective： 回顾<br>vulnerable： 脆弱的<br>light nodes: 轻节点 （存储块头的轻节点）<br>full nodes：完整节点（常规节点）<br>achieve nodes: 归档节点， 完整节点（已验证的存档节点）<br>bandwidth： 带宽<br>configure: 配置<br>variables： 变量<br>discrepancies： 差异<br>tradeoffs： 权衡利弊<br>contrast： 对比<br>unfakeable： 不可伪造<br>replicate： 复制<br>Satoshi: “Satoshi” refers to the smallest unit of the cryptocurrency Bitcoin<br>individual： 个人<br>multitude： 众多的<br>aggregate： 总数<br>expedite： 加快<br>hefty prize ： 巨额奖金<br>controlled supply： 受控供应<br>intentional: 故意的<br>quirk： 怪癖<br>denial: 否认<br>distinguish： 辨别<br>preceding： 前面<br>emerge： 出现<br>hierarchically: 层次分明<br>intimidating： 令人生畏的<br>underneath： 底下<br>infacting：连接<br>concatenate： 串联<br>optimization： 优化<br>inconsistencies: 不一致<br>deveration: 推导<br>arbitrary： 随意的<br>immutable： 不可变<br>implications: 含义<br>ledger： 账本<br>traversing: 遍历<br>PMTs: Partricia Merkle tries<br>sealed: 密封.</p>
+<h2 id="why-does-Etherum-use-a-PMTs"><a href="#why-does-Etherum-use-a-PMTs" class="headerlink" title="why does Etherum use a PMTs?"></a>why does Etherum use a PMTs?</h2><p>there are two different type of data:<br>Permenant:</p>
+<ul>
+<li>once a transaction occurs, that record is sealed forever.<ul>
+<li>that means once u locate the transaction in a PMTs, u can return to the same path over and over to retrieve the same result.</li>
+</ul>
+</li>
+</ul>
+<p>Ephemeral:</p>
+<ul>
+<li>the Etherum, account state change all the time(ie. A user recieve some ether, interact with contract…)</li>
+<li>nounce, balance, storageRoot, codeHash.</li>
+</ul>
+<p>It make sense Permenant and Ephemeral need storage separately. Merkle Tree, a perfect data structure for Permenant. PMTs are perfect for Ephemeral data.</p>
+<h1 id="Etherum-Block-header"><a href="#Etherum-Block-header" class="headerlink" title="Etherum Block header"></a>Etherum Block header</h1><p>the block header contains many pieces of data. the block header is the hash result of all of the data element contained in the block. it’s like giftwrap of the all of the block data.</p>
+<ul>
+<li>state root, the root hash of the state trie</li>
+<li>transaction root, the root hash of the transaction</li>
+<li>receipt root, the root hash of the receipt trie</li>
+</ul>
+<h2 id="State-Trie"><a href="#State-Trie" class="headerlink" title="State Trie"></a>State Trie</h2><p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230519214704LOIVt8.png" alt="Picsee-20230519214704.png"></p>
+<p>as show in the above diagram, the state trie is mapping between address and account state.</p>
+<p>it can be seen a global state that is constanly updated by transaction executions. all the information about account are stored in the world state trie and u can retrieve informantion by query it.</p>
+<p>Account Example<br>as mentioned above, the state trie is just mapping that uses an address as the key and the account state(nount, balance) as the value returned. </p>
+<h2 id="Transaction-Trie"><a href="#Transaction-Trie" class="headerlink" title="Transaction Trie"></a>Transaction Trie</h2><p>the transaction trie records transaction in Ethereum. once the block is mined, the transaction trie is never update.</p>
+<p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230519221351dcOw9O.png" alt="Picsee-20230519221351.png"></p>
+<p>each transaction in Ethereum record multiple pieces properties  for each transaction such as gasPrice and value. </p>
+<p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-202305192220048z4yRO.png" alt="Picsee-20230519222004.png"><br>You can even try querying the transactions trie directly using <a herf='https://composer.alchemy.com/'>Alchemy Composer</herf>.</p>
+<h2 id="Transaction-Receipt-Trie"><a href="#Transaction-Receipt-Trie" class="headerlink" title="Transaction Receipt Trie"></a>Transaction Receipt Trie</h2><p>outcomes of transactions. data including gasUsed and logs(events emitted are contained here)<br>Once the block is mined, the transaction receipt trie is never updated.<br><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230519222342e1W7xQ.png" alt="Picsee-20230519222342.png"><br>Try it out on the <a herf='https://composer.alchemy.com/'>Alchemy Composer</a> - just make sure to change the method to eth_getTransactionReceipt</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230519222433loEWhb.png" alt="Picsee-20230519222433.png"></p>
+<p>the above diagram is an excellent visulaztion into how the trie all end up being committed in every block via their root hash. the raw data is stored elsewhere in Etherum, particularly achive nodes.</p>
+<h1 id="aka"><a href="#aka" class="headerlink" title="aka"></a>aka</h1><p>ethereum: 以太坊<br>Blockchain: 区块链<br>Crypto： 加密<br>crytocurrencts: 加密货币<br>decentralized: 去中心化<br>bitcoin： 比特币，第一个基于区块链技术实现的加密货币<br>fiancial incentives： 金融奖励<br>mining the rewards： 挖矿<br>deterministic: 确定性<br>pseudorandom: 伪随机<br>collsion resistant: 抗碰撞<br>consensus: 共识，一个网络对数据的状态达成共识。<br>censorship：审查<br>bribe： 贿赂<br>drill home： 钻研<br>relatively travel：相对较小的<br>infeasible： 不可能<br>symmetric: 对称<br>digital signature: 数字签名<br>RSA: 非对称加密的经典实现<br>ECDSA： bitcoin采用的非对称加密算法<br>ether： 以太币<br>address： 交易发起方类似于ip, bitcoin 使用checksum and base58, ethereum is last 20 bytes of the hash of the public key.<br>Enforcement： 执行<br>consensus rules： 共识规则<br>consensus mechanisms：协商一致<br>inter-changeable: 可互换的<br>cumulative: 积累型<br>nakamoto consensus： 最长的chain将是其他节点接受的一个真正的链，他是由一条链积累的工作所决定的。<br>txs: transactions.<br>pos: proof of stack, pos中，参与者需要持有一定数量的crytocurrency，参与记账过程，相比pow，pos不需要大量的算力<br>pow: proof of work，miners通过计算来添加txs和block，需要消耗算力。可以增加security of  blockchain<br>merkle root：默克尔根，用来验证和确认交易是否被篡改。<br>underlying: 底层<br>hashcash： Hashcash工作量证明功能由Adam Back于 1997 年发明，并建议用于反 DoS 用途<br>Byzantine General’s Problem： 在p2p场景下，如何证明每个机器都是在工作的。<br>manipulate： 操作<br>Genesis Block: 第一个加入到区块链中的块，初始块<br>cost-effective: 成本效益<br>UTXO：Unspent Transaction Output, 未使用的交易<br>Retrospective： 回顾<br>vulnerable： 脆弱的<br>light nodes: 轻节点 （存储块头的轻节点）<br>full nodes：完整节点（常规节点）<br>achieve nodes: 归档节点， 完整节点（已验证的存档节点）<br>bandwidth： 带宽<br>configure: 配置<br>variables： 变量<br>discrepancies： 差异<br>tradeoffs： 权衡利弊<br>contrast： 对比<br>unfakeable： 不可伪造<br>replicate： 复制<br>Satoshi: “Satoshi” refers to the smallest unit of the cryptocurrency Bitcoin<br>individual： 个人<br>multitude： 众多的<br>aggregate： 总数<br>expedite： 加快<br>hefty prize ： 巨额奖金<br>controlled supply： 受控供应<br>intentional: 故意的<br>quirk： 怪癖<br>denial: 否认<br>distinguish： 辨别<br>preceding： 前面<br>emerge： 出现<br>hierarchically: 层次分明<br>intimidating： 令人生畏的<br>underneath： 底下<br>infacting：连接<br>concatenate： 串联<br>optimization： 优化<br>inconsistencies: 不一致<br>deveration: 推导<br>arbitrary： 随意的<br>immutable： 不可变<br>implications: 含义<br>ledger： 账本<br>traversing: 遍历<br>PMTs: Partricia Merkle tries<br>sealed: 密封.<br>Permenant: 永恒的<br>Ephemeral： 短暂的<br>Constantly: 不断的<br>prefixes: 前缀</p>
 
                 
             </div>
