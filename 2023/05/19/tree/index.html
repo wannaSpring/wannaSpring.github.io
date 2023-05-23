@@ -456,10 +456,13 @@ A B  C D  E F G H<span aria-hidden="true" class="line-numbers-rows"><span></span
 <p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230519221351dcOw9O.png" alt="Picsee-20230519221351.png"></p>
 <p>each transaction in Ethereum record multiple pieces properties  for each transaction such as gasPrice and value. </p>
 <p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-202305192220048z4yRO.png" alt="Picsee-20230519222004.png"><br>You can even try querying the transactions trie directly using <a herf='https://composer.alchemy.com/'>Alchemy Composer</herf>.</p>
-<h2 id="Transaction-Receipt-Trie"><a href="#Transaction-Receipt-Trie" class="headerlink" title="Transaction Receipt Trie"></a>Transaction Receipt Trie</h2><p>outcomes of transactions. data including gasUsed and logs(events emitted are contained here)<br>Once the block is mined, the transaction receipt trie is never updated.<br><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230519222342e1W7xQ.png" alt="Picsee-20230519222342.png"><br>Try it out on the <a herf='https://composer.alchemy.com/'>Alchemy Composer</a> - just make sure to change the method to eth_getTransactionReceipt</p>
+<h2 id="Transaction-Receipt-Trie"><a href="#Transaction-Receipt-Trie" class="headerlink" title="Transaction Receipt Trie"></a>Transaction Receipt Trie</h2><p>outcomes of transactions. data including gasUsed and logs(events emitted are contained here)<br>Once the block is mined, the transaction receipt trie is never updated.<br><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230519222342e1W7xQ.png" alt="Picsee-20230519222342.png"><br>Try it out on the <code>&lt;a herf=&#39;https://composer.alchemy.com/&#39;&gt;Alchemy Composer&lt;/a&gt;</code> - just make sure to change the method to eth_getTransactionReceipt</p>
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230519222433loEWhb.png" alt="Picsee-20230519222433.png"></p>
 <p>the above diagram is an excellent visulaztion into how the trie all end up being committed in every block via their root hash. the raw data is stored elsewhere in Etherum, particularly achive nodes.</p>
-<h1 id="aka"><a href="#aka" class="headerlink" title="aka"></a>aka</h1><p>ethereum: 以太坊<br>Blockchain: 区块链<br>Crypto： 加密<br>crytocurrencts: 加密货币<br>decentralized: 去中心化<br>bitcoin： 比特币，第一个基于区块链技术实现的加密货币<br>fiancial incentives： 金融奖励<br>mining the rewards： 挖矿<br>deterministic: 确定性<br>pseudorandom: 伪随机<br>collsion resistant: 抗碰撞<br>consensus: 共识，一个网络对数据的状态达成共识。<br>censorship：审查<br>bribe： 贿赂<br>drill home： 钻研<br>relatively travel：相对较小的<br>infeasible： 不可能<br>symmetric: 对称<br>digital signature: 数字签名<br>RSA: 非对称加密的经典实现<br>ECDSA： bitcoin采用的非对称加密算法<br>ether： 以太币<br>address： 交易发起方类似于ip, bitcoin 使用checksum and base58, ethereum is last 20 bytes of the hash of the public key.<br>Enforcement： 执行<br>consensus rules： 共识规则<br>consensus mechanisms：协商一致<br>inter-changeable: 可互换的<br>cumulative: 积累型<br>nakamoto consensus： 最长的chain将是其他节点接受的一个真正的链，他是由一条链积累的工作所决定的。<br>txs: transactions.<br>pos: proof of stack, pos中，参与者需要持有一定数量的crytocurrency，参与记账过程，相比pow，pos不需要大量的算力<br>pow: proof of work，miners通过计算来添加txs和block，需要消耗算力。可以增加security of  blockchain<br>merkle root：默克尔根，用来验证和确认交易是否被篡改。<br>underlying: 底层<br>hashcash： Hashcash工作量证明功能由Adam Back于 1997 年发明，并建议用于反 DoS 用途<br>Byzantine General’s Problem： 在p2p场景下，如何证明每个机器都是在工作的。<br>manipulate： 操作<br>Genesis Block: 第一个加入到区块链中的块，初始块<br>cost-effective: 成本效益<br>UTXO：Unspent Transaction Output, 未使用的交易<br>Retrospective： 回顾<br>vulnerable： 脆弱的<br>light nodes: 轻节点 （存储块头的轻节点）<br>full nodes：完整节点（常规节点）<br>achieve nodes: 归档节点， 完整节点（已验证的存档节点）<br>bandwidth： 带宽<br>configure: 配置<br>variables： 变量<br>discrepancies： 差异<br>tradeoffs： 权衡利弊<br>contrast： 对比<br>unfakeable： 不可伪造<br>replicate： 复制<br>Satoshi: “Satoshi” refers to the smallest unit of the cryptocurrency Bitcoin<br>individual： 个人<br>multitude： 众多的<br>aggregate： 总数<br>expedite： 加快<br>hefty prize ： 巨额奖金<br>controlled supply： 受控供应<br>intentional: 故意的<br>quirk： 怪癖<br>denial: 否认<br>distinguish： 辨别<br>preceding： 前面<br>emerge： 出现<br>hierarchically: 层次分明<br>intimidating： 令人生畏的<br>underneath： 底下<br>infacting：连接<br>concatenate： 串联<br>optimization： 优化<br>inconsistencies: 不一致<br>deveration: 推导<br>arbitrary： 随意的<br>immutable： 不可变<br>implications: 含义<br>ledger： 账本<br>traversing: 遍历<br>PMTs: Partricia Merkle tries<br>sealed: 密封.<br>Permenant: 永恒的<br>Ephemeral： 短暂的<br>Constantly: 不断的<br>prefixes: 前缀</p>
+<blockquote>
+<p>good trview for <a target="_blank" rel="noopener" href="https://medium.com/shyft-network/understanding-trie-databases-in-ethereum-9f03d2c3325d">PMTSs</a></p>
+</blockquote>
+<h1 id="aka"><a href="#aka" class="headerlink" title="aka"></a>aka</h1><p>ethereum: 以太坊<br>Blockchain: 区块链<br>Crypto： 加密<br>crytocurrencts: 加密货币<br>decentralized: 去中心化<br>bitcoin： 比特币，第一个基于区块链技术实现的加密货币<br>fiancial incentives： 金融奖励<br>mining the rewards： 挖矿<br>deterministic: 确定性<br>pseudorandom: 伪随机<br>collsion resistant: 抗碰撞<br>consensus: 共识，一个网络对数据的状态达成共识。<br>censorship：审查<br>bribe： 贿赂<br>drill home： 钻研<br>relatively travel：相对较小的<br>infeasible： 不可能<br>symmetric: 对称<br>digital signature: 数字签名<br>RSA: 非对称加密的经典实现<br>ECDSA： bitcoin采用的非对称加密算法<br>ether： 以太币<br>address： 交易发起方类似于ip, bitcoin 使用checksum and base58, ethereum is last 20 bytes of the hash of the public key.<br>Enforcement： 执行<br>consensus rules： 共识规则<br>consensus mechanisms：协商一致<br>inter-changeable: 可互换的<br>cumulative: 积累型<br>nakamoto consensus： 最长的chain将是其他节点接受的一个真正的链，他是由一条链积累的工作所决定的。<br>txs: transactions.<br>pos: proof of stack, pos中，参与者需要持有一定数量的crytocurrency，参与记账过程，相比pow，pos不需要大量的算力<br>pow: proof of work，miners通过计算来添加txs和block，需要消耗算力。可以增加security of  blockchain<br>merkle root：默克尔根，用来验证和确认交易是否被篡改。<br>underlying: 底层<br>hashcash： Hashcash工作量证明功能由Adam Back于 1997 年发明，并建议用于反 DoS 用途<br>Byzantine General’s Problem： 在p2p场景下，如何证明每个机器都是在工作的。<br>manipulate： 操作<br>Genesis Block: 第一个加入到区块链中的块，初始块<br>cost-effective: 成本效益<br>UTXO：Unspent Transaction Output, 未使用的交易<br>Retrospective： 回顾<br>vulnerable： 脆弱的<br>light nodes: 轻节点 （存储块头的轻节点）<br>full nodes：完整节点（常规节点）<br>achieve nodes: 归档节点， 完整节点（已验证的存档节点）<br>bandwidth： 带宽<br>configure: 配置<br>variables： 变量<br>discrepancies： 差异<br>tradeoffs： 权衡利弊<br>contrast： 对比<br>unfakeable： 不可伪造<br>replicate： 复制<br>Satoshi: “Satoshi” refers to the smallest unit of the cryptocurrency Bitcoin<br>individual： 个人<br>multitude： 众多的<br>aggregate： 总数<br>expedite： 加快<br>hefty prize ： 巨额奖金<br>controlled supply： 受控供应<br>intentional: 故意的<br>quirk： 怪癖<br>denial: 否认<br>distinguish： 辨别<br>preceding： 前面<br>emerge： 出现<br>hierarchically: 层次分明<br>intimidating： 令人生畏的<br>underneath： 底下<br>infacting：连接<br>concatenate： 串联<br>optimization： 优化<br>inconsistencies: 不一致<br>deveration: 推导<br>arbitrary： 随意的<br>immutable： 不可变<br>implications: 含义<br>ledger： 账本<br>traversal: 遍历<br>PMTs: Partricia Merkle tries<br>sealed: 密封.<br>Permenant: 永恒的<br>Ephemeral： 短暂的<br>Constantly: 不断的<br>prefixes: 前缀<br>recursion: 递归<br>portion： 部分<br>adjacent: 邻近的<br>neat mechanisms: 整洁的机制<br>consists: 包含<br>crowdfunding: 众筹<br>parse： 解析</p>
 
                 
             </div>
@@ -550,18 +553,17 @@ A B  C D  E F G H<span aria-hidden="true" class="line-numbers-rows"><span></span
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2023/05/19/tree/">
+                <a href="/2023/05/22/ethereum/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Tree">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Ethereum">
                         
-                        <span class="card-title">Tree</span>
+                        <span class="card-title">Ethereum</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -571,9 +573,9 @@ A B  C D  E F G H<span aria-hidden="true" class="line-numbers-rows"><span></span
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-19
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-05-22
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -582,7 +584,6 @@ A B  C D  E F G H<span aria-hidden="true" class="line-numbers-rows"><span></span
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
