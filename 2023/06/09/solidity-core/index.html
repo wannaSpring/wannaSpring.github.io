@@ -1,0 +1,900 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Solidity_Core, Blog, Technology">
+    <meta name="description" content="Multi-SigsMulti-sigs is smart contract designed so that multuple signatures from different addresses are needed for tran">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Solidity_Core | Chat&#39;s Blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Chat's Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Chat&#39;s Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Home</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Chat&#39;s Blog</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Home
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Solidity_Core</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2023-06-09
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Multi-Sigs"><a href="#Multi-Sigs" class="headerlink" title="Multi-Sigs"></a>Multi-Sigs</h1><p>Multi-sigs is smart contract designed so that multuple signatures from different addresses are needed for transactions to be executed.<br>Thert are commonly used to wallet.Multi-sigs be a wallet since it can transfer and save funds. it’s called ‘multi-sigs’ because it typically need multiple signatures then can approve activitied from wallet. Since multi-sigs powered by multiple address, thay avoide a single point of failure, which makes it significantly harder for funds to be compromised. This designer provide higher degree of security for against lost or compromised key.</p>
+<h2 id="signle-point-failure"><a href="#signle-point-failure" class="headerlink" title="signle point failure"></a>signle point failure</h2><p>Consider the typcial EOAs contronaled by external actor(ie, someone outside the blockchain, typically human).<br><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-202306091503126gPspA.png" alt="Picsee-20230609150312.png"></p>
+<blockquote>
+<p>Why EOAs has the potential for single point of failure?<br>Because the external actor’s key could be become compromised by a hacker phishing or stolen. Evan as bad, the provided key could be lost by external actor, meaning directly control over an address balance no longer exists.</p>
+</blockquote>
+<h2 id="2-of-3-multi-sigs-contracts"><a href="#2-of-3-multi-sigs-contracts" class="headerlink" title="2 of 3 multi-sigs contracts"></a>2 of 3 multi-sigs contracts</h2><p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230609151739awBDKC.png" alt="Picsee-20230609151739.png"><br>In multi-sigs setups, multi keys are required to aprove a transaction. smart contract requires 2-of-3 keys signature in order to approve and send transactions to the Ethereum.<br>Once we have the setups, it’s doesn’t matter whether one individual loses their keys, because others can will approve the transaction, kick out the compromised keys and re-add the compromised user under a new address.<br>seperator responsiability of ownership of address and its funds between multiple actors means the multi-sigs wallet is secure against signle point of failure. evan if there is malicious party in the multi-sigs, they would need corrupt a majority of the holders to compromised the wallet.<br><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230609153906xh013u.png" alt="Picsee-20230609153906.png"><br>the multi-sigs contract keep track owner 1,2 and 3,it configured with number of required comformations to move funds, 2 in this case.<br>Owner#1 sumbit a transaction and send 0.5 ETH to address. The transaction will be peding until enough confirmations to move forward. since this transaction only required 2 confirmations, it will be executed when Owner#3 confirmed. </p>
+<h1 id="Inheritance"><a href="#Inheritance" class="headerlink" title="Inheritance"></a>Inheritance</h1><p>As with many object-obrient languages, solidity incluces inheritance.<br><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230609211411GX8gWc.png" alt="Picsee-20230609211411.png"><br>In solidity, Inheritance required to use <code>is</code> keyword, As above figure, we can see b is a’s child or b is a’s sub-class.</p>
+<h2 id="multi-inheritance"><a href="#multi-inheritance" class="headerlink" title="multi-inheritance"></a>multi-inheritance</h2><p>Imagine that we have simple contract like below shows.</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">contract Token <span class="token punctuation">&#123;</span>
+    <span class="token function">mapping</span><span class="token punctuation">(</span><span class="token parameter">address</span> <span class="token operator">=></span> uint<span class="token punctuation">)</span> balances<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>now, we use <code>is</code> keyword inheritance Token to Mytoken contract.</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">contract MyToken is Token <span class="token punctuation">&#123;</span>
+    <span class="token keyword">function</span> <span class="token function">mint</span><span class="token punctuation">(</span><span class="token parameter">uint _amount</span><span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token punctuation">&#123;</span>
+        balances<span class="token punctuation">[</span>msg<span class="token punctuation">.</span>sender<span class="token punctuation">]</span> <span class="token operator">+=</span> amount<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>We can see the veriable balances has aleady be inherited from Token. Now, If we also want use OnlyOwner modifier what we can do ? we just need use <code>is</code> keyword to inheritance anohter contract.</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">contract MyToken is Token<span class="token punctuation">,</span> Ownable <span class="token punctuation">&#123;</span>
+    <span class="token keyword">function</span> <span class="token function">mint</span><span class="token punctuation">(</span><span class="token parameter">uint _amount</span><span class="token punctuation">)</span> <span class="token keyword">public</span> onlyOwner <span class="token punctuation">&#123;</span>
+        balances<span class="token punctuation">[</span>msg<span class="token punctuation">.</span>sender<span class="token punctuation">]</span> <span class="token operator">+=</span> amount<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>But if we need to overridding function of basic contract, we need use <code>vitural</code> keyword to declaring function<br>A function that is going to be overrridden by a child contract must be declared by <code>virtual</code> keyword</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> pure virtual <span class="token function">returns</span> <span class="token punctuation">(</span><span class="token parameter">uint</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>And the override function in child contract must be declared by <code>override</code> keyword.</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> pure override <span class="token function">returns</span> <span class="token punctuation">(</span><span class="token parameter">uint</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> <span class="token number">15</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>⚠️ The overriding function must have the same visibility as the virtual function. If not the compiler will throw a TypeError: “Overriding function visibility differs”. Keep en eye out for that one!</p>
+</blockquote>
+<blockquote>
+<p>Inheritance is a great way to follow the DRY (Don’t Repeat Yourself) principle of software development! 💯<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">interesting reading about cleaning of code.</a></p>
+</blockquote>
+<h2 id="More-information"><a href="#More-information" class="headerlink" title="More information"></a>More information</h2><p><a target="_blank" rel="noopener" href="https://medium.com/coinmonks/solidity-and-object-oriented-programming-oop-191f8deb8316">Solidity and OOP</a><br><a target="_blank" rel="noopener" href="https://ethereum.stackexchange.com/questions/90243/calling-super-class-external-functions">Calling super Class</a> — By reading this website, we will know it don’t have <code>super</code> keywords in solidity.</p>
+<h1 id="aka"><a href="#aka" class="headerlink" title="aka"></a>aka</h1><p>ethereum: 以太坊<br>Blockchain: 区块链<br>Crypto： 加密<br>crytocurrencts: 加密货币<br>decentralized: 去中心化<br>bitcoin： 比特币，第一个基于区块链技术实现的加密货币<br>fiancial incentives： 金融奖励<br>mining the rewards： 挖矿<br>deterministic: 确定性<br>pseudorandom: 伪随机<br>collsion resistant: 抗碰撞<br>consensus: 共识，一个网络对数据的状态达成共识。<br>censorship：审查<br>bribe： 贿赂<br>drill home： 钻研<br>relatively travel：相对较小的<br>infeasible： 不可能<br>symmetric: 对称<br>digital signature: 数字签名<br>RSA: 非对称加密的经典实现<br>ECDSA： bitcoin采用的非对称加密算法<br>ether： 以太币<br>address： 交易发起方类似于ip, bitcoin 使用checksum and base58, ethereum is last 20 bytes of the hash of the public key.<br>Enforcement： 执行<br>consensus rules： 共识规则<br>consensus mechanisms：协商一致<br>inter-changeable: 可互换的<br>cumulative: 积累型<br>nakamoto consensus： 最长的chain将是其他节点接受的一个真正的链，他是由一条链积累的工作所决定的。<br>txs: transactions.<br>pos: proof of stack, pos中，参与者需要持有一定数量的crytocurrency，参与记账过程，相比pow，pos不需要大量的算力<br>pow: proof of work，miners通过计算来添加txs和block，需要消耗算力。可以增加security of  blockchain<br>merkle root：默克尔根，用来验证和确认交易是否被篡改。<br>underlying: 底层<br>hashcash： Hashcash工作量证明功能由Adam Back于 1997 年发明，并建议用于反 DoS 用途<br>Byzantine General’s Problem： 在p2p场景下，如何证明每个机器都是在工作的。<br>manipulate： 操作<br>Genesis Block: 第一个加入到区块链中的块，初始块<br>cost-effective: 成本效益<br>UTXO：Unspent Transaction Output, 未使用的交易<br>Retrospective： 回顾<br>vulnerable： 脆弱的<br>light nodes: 轻节点 （存储块头的轻节点）<br>full nodes：完整节点（常规节点）<br>achieve nodes: 归档节点， 完整节点（已验证的存档节点）<br>bandwidth： 带宽<br>configure: 配置<br>variables： 变量<br>discrepancies： 差异<br>tradeoffs： 权衡利弊<br>contrast： 对比<br>unfakeable： 不可伪造<br>replicate： 复制<br>Satoshi: “Satoshi” refers to the smallest unit of the cryptocurrency Bitcoin<br>individual： 个人<br>multitude： 众多的<br>aggregate： 总数<br>expedite： 加快<br>hefty prize ： 巨额奖金<br>controlled supply： 受控供应<br>intentional: 故意的<br>quirk： 怪癖<br>denial: 否认<br>distinguish： 辨别<br>preceding： 前面<br>emerge： 出现<br>hierarchically: 层次分明<br>intimidating： 令人生畏的<br>underneath： 底下<br>infacting：连接<br>concatenate： 串联<br>optimization： 优化<br>inconsistencies: 不一致<br>deveration: 推导<br>arbitrary： 随意的<br>immutable： 不可变<br>implications: 含义<br>ledger： 账本<br>traversal: 遍历<br>PMTs: Partricia Merkle tries<br>sealed: 密封.<br>Permenant: 永恒的<br>Ephemeral： 短暂的<br>Constantly: 不断的<br>prefixes: 前缀<br>recursion: 递归<br>portion： 部分<br>adjacent: 邻近的<br>neat mechanisms: 整洁的机制<br>consists: 包含<br>crowdfunding: 众筹<br>parse： 解析<br>intimidated: 吓坏<br>deterministic: 确定性<br>infrastructure： 基础设施<br>constrain： 限制<br>reside： 贮存<br>presence: 存在<br>cencership: 审查制度<br>auditable：可审查<br>Ubiquitous： 无处不在<br>barries： 障碍<br>curb： 抑制，阻止<br>comprehend： 理解<br>easy as pie： 易如反掌<br>explicitly：明确的<br>clause： 条款<br>neutrality；中立<br>arbitrary： 随意的<br>EVM： Etherrum Virtual Machine<br>Stale&#x2F;Orphan block： 陈旧&#x2F;孤立块，是指在一个区块同时被矿工挖掘出，区块可能会出现临时分叉，未能被选为有效区块的区块被称为stale&#x2F;Orphan block，在Etherum中此类区块又称为Ommer block，是Etherrum作为鼓励和奖励矿工为安全做出贡献的机制。<br>emulate： 模仿<br>underlying： 潜在的<br>monetary： 货币<br>fixed： 固定的<br>Arithmetic: 算术<br>benchmarking: 基准测试<br>discrepancies: 差异<br>philosophy: 理念<br>Ethereum improvement proposal: EIP， Ethereum 改进提案<br>first and foremost: 首先<br>specification： 规范<br>adhere: 符合<br>impromptu： 即兴<br>compatible： 兼容的<br>contentious： 有争议的<br>overHead：高昂的<br>collateral: 抵押物<br>intuitively: 直观的<br>re-orged： 重组<br>manual：手动的<br>intervention： 干涉<br>canonical: 经典的<br>shifted： 转移<br>denomination: 面值<br>demand： 需求<br>circumventing： 规避<br>deflationary: 通缩<br>deprecated: 弃用<br>redunant: 多余的<br>tampered: 被篡改<br>EOAs: Extended owned account.<br>Vulnerability: 漏洞<br>JSON-RPC: remote procedure call(rpc) protocal that uses JSON to encode message.<br>exclusively: 只，仅仅 equied to only<br>instruction: 指令<br>term: 术语<br>boilerplate: 样板<br>pioneer： 先锋<br>lucrative: 有利可图<br>mnemonic: 助记词<br>configured： 配置<br>specified： 指定的<br>analogues： 相似的<br>discarded： 丢弃<br>underscore preceding: 前下划线<br>snippet： 片段<br>dire consquences: 可怕的后果<br>unsigned integer: 无符号整数<br>allocated： 分配的<br>resilient: 弹性的<br>LIFO： 堆栈结构，it’s have pushing and poping<br>destructure: 解构<br>parenthesis: 括号<br>exception： 异常<br>declared: 声明<br>ephermal: 短暂的<br>ABI: application binary interface, that’s bridge connected compilers and applications.<br>writing up a to b: 连接a到b<br>pass into: 传递……进<br>repercurssion: 反应<br>padded out: 填充到<br>replay to: 转发到<br>associative array: 关联数组<br>brute force search: 暴力搜索<br>hit the nail on the head ： 一针见血<br>Nested： 嵌套<br>maintaining: 维护<br>Escrows: 托管<br>treadoff: 权衡<br>peroid of inactivity: 不活跃期<br>compromised: 损坏&#x2F;妥协<br>expenditure： 支出<br>consent: 同意<br>DRY: don’t repeat yourself<br>WET: write everything twice<br>AHA: avoid hasty abstraction<br>audited： 审核<br>Standalone: 独立的<br>comma-separated: 逗号分离</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,wechat,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
+            <div class="card">
+                <a href="/2023/06/09/solidity-core/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Solidity_Core">
+                        
+                        <span class="card-title">Solidity_Core</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-06-09
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Chatwin
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/06/01/solidity/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Solidity">
+                        
+                        <span class="card-title">Solidity</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-06-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Chatwin
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card " style="background-color: white; overflow-y:auto; height: calc(100vh - 80px);">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2023</span>
+            
+            <a href="/about" target="_blank">Chatwin</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;Total visits:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;Total visitors:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/wannaSpring" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:chent1493@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+    <a href="https://twitter.com/chentao80773360" class="tooltipped" target="_blank" data-tooltip="关注我的Twitter: https://twitter.com/chentao80773360" data-position="top" data-delay="50">
+        <i class="fab fa-twitter"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

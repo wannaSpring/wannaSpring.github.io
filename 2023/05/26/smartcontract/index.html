@@ -1,0 +1,1199 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="smartContract, Blog, Technology">
+    <meta name="description" content="Solidity syntaxWhat’s SoliditySolidity is an object-oriented programming language. It is used to be implemented smart co">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>smartContract | Chat&#39;s Blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Chat's Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Chat&#39;s Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Home</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Chat&#39;s Blog</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Home
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">smartContract</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2023-05-26
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Solidity-syntax"><a href="#Solidity-syntax" class="headerlink" title="Solidity syntax"></a>Solidity syntax</h1><h2 id="What’s-Solidity"><a href="#What’s-Solidity" class="headerlink" title="What’s Solidity"></a>What’s Solidity</h2><p>Solidity is an object-oriented programming language. It is used to be implemented smart contract and it’s very resembles javascript.<br>Important Properties:</p>
+<ul>
+<li>static typecity</li>
+<li>support extends</li>
+<li>Libraies</li>
+<li>complex user defined types<br>First of all, smart contract was be developed by Nick Szabo, the beginning of means is “smart contract is a set of promise, specified in digital form, including protocol whithin which parties perform on these promises”.<br>For now, smart contract is a programming which it running on Ethereum, containers state and function.</li>
+</ul>
+<p>Solidity is very similar to Vending machines, because both of them have strong logic, if u paid fees, u<br>can but the commodities. or not u’ll be refused.<br><a href="ssss">321</a></p>
+<h2 id="Suggested-Reading"><a href="#Suggested-Reading" class="headerlink" title="Suggested Reading"></a>Suggested Reading</h2><p><a target="_blank" rel="noopener" href="https://github.com/ethereumbook/ethereumbook">Mastering Ethereum</a><br>  Chapter 7: Smart Contracts &amp; Solidity<br>  Chapter 9: Smart Contract Security<br>  Chapter 13: EVM<br><a target="_blank" rel="noopener" href="https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html">Smart Contracts: Building Blocks for Digital Markets</a><br><a target="_blank" rel="noopener" href="https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/idea.html">The Idea of Smart Contracts</a><br><a target="_blank" rel="noopener" href="https://solidity-by-example.org/">Solidity by Example</a></p>
+<h2 id="Solidity-syntax-1"><a href="#Solidity-syntax-1" class="headerlink" title="Solidity syntax"></a>Solidity syntax</h2><ul>
+<li>public, private, external, internal<ul>
+<li>public, the virables can been read by other contract or EOAs</li>
+<li>private, the virables can only be read by contract self.</li>
+<li>external, the virables can been read by other contract(except the contract slef)</li>
+<li>internal, the virables can only be read or used by the contract that inherits own chain or contract self.<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">contract myContract <span class="token punctuation">&#123;</span>
+  string <span class="token keyword">public</span> name <span class="token operator">=</span> <span class="token string">'hello world'</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">function</span> <span class="token function">HelloWorld</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> view <span class="token keyword">return</span> <span class="token punctuation">(</span>string<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> name
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+</li>
+</ul>
+<p>If the function returns a value, the syntax of a function header includes a returns statement, as shown below:<br><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230527182633nAvpK3.png" alt="Picsee-20230527182633.png"></p>
+<ol>
+<li>Declarations<br>function in solidity have contain one of the following keywords: pure and view</li>
+</ol>
+<ul>
+<li>view means we only read state from contract state, but not write state</li>
+<li>pure means no read nor write!<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">contract myContract <span class="token punctuation">&#123;</span> 
+  uint a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  uint b <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">function</span> <span class="token function">helloWorld</span><span class="token punctuation">(</span><span class="token punctuation">)</span> view <span class="token function">returns</span><span class="token punctuation">(</span><span class="token parameter">uint</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> a<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+
+  <span class="token keyword">function</span> <span class="token function">helloworld2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> pure <span class="token function">returns</span><span class="token punctuation">(</span><span class="token parameter">uint</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    uint c <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> c<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token comment">// if we want to change the state in contract, we don't need put the declaration in second part here.</span>
+  <span class="token keyword">function</span> <span class="token function">helloWorld3</span><span class="token punctuation">(</span><span class="token punctuation">)</span> external <span class="token punctuation">&#123;</span>
+    a <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>payable<br>that’s used to declaration the function can recieve ether. actually the function’s statemutability can be one of four values: pure, view, payable and unpayable. if we don’t set the declarations above function, unpayable is default in abi which means the function can’t read or write any state in contract and can’t receive ether.</li>
+</ul>
+<ol start="2">
+<li>returns<br>in the third part of syntax that show in above figure, we need show what we will return if we have value need to be result of.<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">contract myContract <span class="token punctuation">&#123;</span> 
+  uint a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">function</span> <span class="token function">helloWorld</span><span class="token punctuation">(</span><span class="token punctuation">)</span> external pure <span class="token function">returns</span><span class="token punctuation">(</span><span class="token parameter">uint</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">function</span> <span class="token function">helloworld2</span><span class="token punctuation">(</span><span class="token parameter">uint a<span class="token punctuation">,</span> uint b</span><span class="token punctuation">)</span> external pure <span class="token function">returns</span><span class="token punctuation">(</span><span class="token parameter">uint z</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    z <span class="token operator">=</span> a<span class="token operator">+</span>b<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">function</span> <span class="token function">helloWorld3</span><span class="token punctuation">(</span><span class="token parameter">uint a<span class="token punctuation">,</span> uint b</span><span class="token punctuation">)</span> external pure <span class="token function">returns</span><span class="token punctuation">(</span><span class="token parameter">uint z<span class="token punctuation">,</span> unit x</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    z <span class="token operator">=</span> a<span class="token operator">+</span>b<span class="token punctuation">;</span>
+    x <span class="token operator">=</span> a<span class="token operator">+</span>z<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">function</span> <span class="token function">helloWorld3</span><span class="token punctuation">(</span><span class="token parameter">uint a<span class="token punctuation">,</span> uint b</span><span class="token punctuation">)</span> external pure <span class="token function">returns</span><span class="token punctuation">(</span><span class="token parameter">uint<span class="token punctuation">,</span> unit</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    z <span class="token operator">=</span> a<span class="token operator">+</span>b<span class="token punctuation">;</span>
+    x <span class="token operator">=</span> a<span class="token operator">+</span>z<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>z<span class="token punctuation">,</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">;</span> <span class="token comment">// the return values is referred to as a tuple.</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ol>
+<blockquote>
+<p>Believe it or not, z is implicitly returned here! 🤯</p>
+</blockquote>
+<h2 id="Contract-compliation-procedure"><a href="#Contract-compliation-procedure" class="headerlink" title="Contract compliation procedure"></a>Contract compliation procedure</h2><p>When the smart contract compiles, it will produce two important work when the solidity compiles.<br><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230527212736req562.png" alt="Picsee-20230527212736.png"></p>
+<ul>
+<li><p>ABI<br>we keep the ABI for front-end library to be able to communicate with the smart contract. </p>
+</li>
+<li><p>Contract’s bytecode<br>we will deploy the bytecode directly to the blockchain, in this situation, it will be stored in state tries of the contract account.</p>
+<ul>
+<li>ABI(computer science)<br>In computer science, ABI used to be a interface between two applications. for example, opeartion system must be communication with the application by some ways, that communication is bridge by ABI.</li>
+</ul>
+<p>ABI define how data structures and functions accessible in the machine code, thus, this is the main way to encode&#x2F;decode data from machine code.</p>
+<ul>
+<li>ABI(Ethereum)<br>In Ethereum, ABI need communication with smart contract. wheter why u always need ABI to be bridge<ul>
+<li>try to communicate with contract on the outside of the blockchain</li>
+<li>try to communicate with other contract.<br>the target of the ABI</li>
+</ul>
+</li>
+<li>describe how  each function will accept the parameters and return its result.</li>
+</ul>
+</li>
+<li><p>bytecode<br>they are have two different bytecode, <strong>creation time bytecode</strong>(only execute once when contract deploed) and <strong>run time bytecode</strong>(as permenant executable file in the blockchain).</p>
+</li>
+</ul>
+<h2 id="Transaction’s-Recipients"><a href="#Transaction’s-Recipients" class="headerlink" title="Transaction’s Recipients"></a>Transaction’s Recipients</h2><p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230527221056Vp1yXi.png" alt="Picsee-20230527221056.png"><br>As in the script above, we provide the ABI to ethers. Once ethers has the contract’s ABI, we can make a call to the Counter smart contract’s inc() function. Like the image above shows, the front-end library then translates and delivers any requests using the ABI. Once the transaction is successfully sent and validated on the Ethereum network, a receipt is generated containing logs and any gas used.</p>
+<h2 id="Deploy-conclusions"><a href="#Deploy-conclusions" class="headerlink" title="Deploy conclusions"></a>Deploy conclusions</h2><p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-202305272211480EeZoL.png" alt="Picsee-20230527221148.png"><br>if we write contract in Ethereum, it will procedure the context we want when contract compilation: contract’s bytecode<br>if we reading contract form Ethereum, it also will procedure the context we want when contract compilation: contract’s ABI.</p>
+<h1 id="Hardhat"><a href="#Hardhat" class="headerlink" title="Hardhat"></a>Hardhat</h1><p>Hardhat is a development enviroment to compile, build, deploy, test and debug Ethereum smart contract. </p>
+<h2 id="why-we-need-hardhat"><a href="#why-we-need-hardhat" class="headerlink" title="why we need hardhat"></a>why we need hardhat</h2><p>it help dev manage and automate the recuring task that are inherent process in build dApp and smart contract, as well as easily introducing more functionality arount this workflow.<br>hardhat’s function</p>
+<ul>
+<li>test in local environment, include local blockchain called hardhat network, it’s default choose when u try to deploy .</li>
+<li>Solidty compiler and error checking.</li>
+<li>easily compile smart contract and interact with.</li>
+</ul>
+<h2 id="fileTree-introduction"><a href="#fileTree-introduction" class="headerlink" title="fileTree introduction"></a>fileTree introduction</h2><ul>
+<li>&#x2F;artfacts, file  produced out of smart contract compilaction.</li>
+<li>&#x2F;contract, all of our .sol file</li>
+<li>&#x2F;script, script that we need to run.</li>
+<li>hardhat.config.env, project settings file, very important.</li>
+<li>&#x2F;test, test file for script testing.</li>
+</ul>
+<h2 id="how-to-use"><a href="#how-to-use" class="headerlink" title="how to use"></a>how to use</h2><ol>
+<li>initialize a project with npm init</li>
+<li>create .env by <code>touch .env</code> after <code>npm install dotenv</code></li>
+<li>input something we always used. example API_KEY, PrivateKey et…</li>
+<li><code>npm i hardhat</code>, then run <code>npx hardhat</code> to initialize the project.</li>
+<li>do u want to do.</li>
+</ol>
+<h1 id="Calldata"><a href="#Calldata" class="headerlink" title="Calldata"></a>Calldata</h1><p>When we have EOAs and want to communicate with Ethereum network, we boardcast transactions. in this transaction, we can choose to sent the bytes data intended to be interacting with EVM.<br>The bytes data called the calldata and used to passed it to into EVM. it will target a specific contract’s account(contract, libray. solidity term) which can make call to another contract account. when contract make call to anther contract it forms a <strong>message</strong>.it includes sender’s address, target function signature, and the amount of the wei sent.<br>In solidty we have access to these message through global variables.</p>
+<ul>
+<li>msg.data(bytes), the complete calldata.</li>
+<li>msg.value(uint), the amount of the wei sent.</li>
+<li>msg.sig(bytes4), the targeted function signature. bytes4 is value of first four bytes by function keccak256 signatured. It provides a way to unique identify(and target) the function in contract. and don’t need worry about signature bytes lengths.</li>
+<li>msg.sender(address), the address sending the message.</li>
+</ul>
+<h2 id="recieve-function"><a href="#recieve-function" class="headerlink" title="recieve function"></a>recieve function</h2><p>In the latest version of solidity, the contract default can’t be received ether.<br>In order to receive Ether, we need specify payable function.</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token string">"hardhat/console.sol"</span><span class="token punctuation">;</span>
+contract Contract <span class="token punctuation">&#123;</span>
+    <span class="token keyword">function</span> <span class="token function">pay</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> payable <span class="token punctuation">&#123;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span> msg<span class="token punctuation">.</span>value <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 100000</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>just by adding the parable keyword to the function we are able to recieve the Ether. Ether will auto saved in the contract. if someone wants to transfer Ether to non-parable spicify contract, the transaction will be refused and Ether will be returned to the original account.<br>If we want to recieve Ether without call the payable function, we do like this.</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token string">"hardhat/console.sol"</span><span class="token punctuation">;</span>
+contract Contract <span class="token punctuation">&#123;</span>
+    <span class="token function">receive</span><span class="token punctuation">(</span><span class="token punctuation">)</span> external payable <span class="token punctuation">&#123;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>msg<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 100000</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>Recive</strong> function don’t have function keywords that’s because receive is specifically function in solidity(like constructor). it’s a function that runs when a contract is sent ether <strong>without any calldata</strong>.<br>receive function must be payable and external and can’t be recieve arguments and can’t be return any values. </p>
+<p>Receive function must be external because it just provider convenience to devs when EOAs send Ether to contract, it’s function body for deve to write logic.</p>
+<p><strong>Fallback</strong> function is similar to recieve function and it also don’t have function keywords. it used to be a function when input wrong function name and spcifying a bad arguments type. if contract don’t know how response the data sent to it, it will invoke fallback function.<br>Nomarlly, creat fallback function is used to handling function signature misstake. </p>
+<h2 id="Keyword-This"><a href="#Keyword-This" class="headerlink" title="Keyword This"></a>Keyword <strong>This</strong></h2><p>Keyword <strong>This</strong> is represent contract self. we can call function on it using <code>.</code> operator. </p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token string">"hardhat/console.sol"</span><span class="token punctuation">;</span>
+contract <span class="token function">Example</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">function</span> <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> view <span class="token punctuation">&#123;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">b</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 3</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">function</span> <span class="token function">b</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> pure <span class="token function">returns</span><span class="token punctuation">(</span><span class="token parameter">uint</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>if we use address function, we can convert this to address. when it converted, it’s equal to the address, we can use any propeiries in address.</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token string">"./UIntFunctions.sol"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">"hardhat/console.sol"</span><span class="token punctuation">;</span>
+contract Example <span class="token punctuation">&#123;</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span> <span class="token function">address</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 0x8858eeb3dfffa017d4bce9801d340d36cf895ccf</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span> <span class="token function">address</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span>balance <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 100000000000000000</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span> <span class="token function">address</span><span class="token punctuation">(</span>UIntFunctions<span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 0x7c2c195cd6d34b8f845992d380aadb2730bb9c6f</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="Revert-transaction"><a href="#Revert-transaction" class="headerlink" title="Revert transaction"></a>Revert transaction</h1><p>When we try to revert a transaction, basically we treat it like transaction never happened. we halt the execution of transactions and delete all the state changes.transactions can still be include in block, when it invoke to block, the transaction’s sender will still pay for the gas used.</p>
+<h2 id="Real-World-Example"><a href="#Real-World-Example" class="headerlink" title="Real World Example"></a>Real World Example</h2><p>Let’s take a look at a recently reverted transaction here: <a target="_blank" rel="noopener" href="https://etherscan.io/tx/0x6def53bf56c2eb9dc08c6b87eeaadf90c46c0f4a57aab5ce9ca1481e7ff690d5">https://etherscan.io/tx/0x6def53bf56c2eb9dc08c6b87eeaadf90c46c0f4a57aab5ce9ca1481e7ff690d5</a></p>
+<p>If you look at the error message, it is an error that is coming from Uniswap saying UniswapV2Router: INSUFFICIENT_OUTPUT_AMOUNT’. Often times, when interacting with a decentralized exchange like Uniswap, the conditions will change between when the EOA signs the transaction and when the transaction is included in the block. It’s perfectly possible that when the EOA signed this transaction, the conditions of the market would have allowed for this transaction to happen, however at the time when it was included in the block it failed one of Uniswap’s checks.</p>
+<p>You’ll notice that there still was an associated gas fee, since this transaction did run in an Ethereum block up until that point of the revert. Since this transaction reverted, the state changes did not go through and no token balances were updated for the user.</p>
+<p>In EVM, the main opcode of revert is revert, require and assert. the above code all communicate errors to the calling code by stopping any further code execution and immediately handling the control back to the calling code. usually also return error code or message.</p>
+<ol>
+<li><p>revert<br>It’s used to be precondition to check function.</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">
+<span class="token comment">// only can be used with start solidity v0.8.0</span>
+revert <span class="token function">MyCustomError</span><span class="token punctuation">(</span>arg1<span class="token punctuation">,</span> arg2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>someBooleanCondition<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token function">revert</span><span class="token punctuation">(</span><span class="token string">'it'</span>s fault'<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li><p>require<br>The target of require is equal to revert, they all are precondition. require have two arguments. 1nd arguments is required boolean, 2nd arguments is optional string by any forms(include function that must return string).</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token function">require</span><span class="token punctuation">(</span>someBooleanCondition<span class="token punctuation">,</span> <span class="token string">'it'</span>s fault'<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">require</span><span class="token punctuation">(</span>someBooleanCondition<span class="token punctuation">,</span> <span class="token function">functionReturnString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>assert(un-recommended)<br>it’s a logical assertion that is held to always be true during certain phases of the code execution.</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token function">assert</span><span class="token punctuation">(</span>someBooleanCondition<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ol>
+<blockquote>
+<p>if we don’t set second optional arguments in require, it will return empty error when we encounter error even error selector also don’t have the error.</p>
+</blockquote>
+<h2 id="Selfdestruct"><a href="#Selfdestruct" class="headerlink" title="Selfdestruct"></a>Selfdestruct</h2><p>When we call selfdestruct on a contract account, we must sure no one will transfer to the contract. because once selfdestruct is successed, the bytecode of contract will clear. we can’t to draw ether with the contract account. so </p>
+<h1 id="Modifier"><a href="#Modifier" class="headerlink" title="Modifier"></a>Modifier</h1><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// SPDX-License-Identifier: GPL-3.0</span>
+pragma solidity <span class="token operator">>=</span><span class="token number">0.7</span><span class="token number">.0</span> <span class="token operator">&lt;</span><span class="token number">0.9</span><span class="token number">.0</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Owned.sol</span>
+contract Owned <span class="token punctuation">&#123;</span>
+    address <span class="token keyword">public</span> owner<span class="token punctuation">;</span>
+
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        owner <span class="token operator">=</span> msg<span class="token punctuation">.</span>sender<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    modifier onlyOwner <span class="token punctuation">&#123;</span>
+        <span class="token function">require</span><span class="token punctuation">(</span>msg<span class="token punctuation">.</span>sender <span class="token operator">==</span> owner<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        _<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token keyword">function</span> <span class="token function">transferOwnership</span><span class="token punctuation">(</span><span class="token parameter">address newOwner</span><span class="token punctuation">)</span> <span class="token keyword">public</span> onlyOwner <span class="token punctuation">&#123;</span>
+        owner <span class="token operator">=</span> newOwner<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Modifier is similar to slot of vue, when add keywords in function means it will first run modifier function then is the function self.</p>
+<h1 id="Calling"><a href="#Calling" class="headerlink" title="Calling"></a>Calling</h1><p>When we need interact with contract, we need to know contract’s address, contract name, ABI of contract.<br>if we are going to interact with contract by EOAs, we can find the address and name of the contract. or get the ABI of the contract. if we don’t know the ABI and address, we also can use interface to instance the contract. luckly,Once the bytecode is cleared, you can deploy the same code to the same address using the CREATE2 opcode introduced in EIP-1014.</p>
+<h2 id="Calling-EOAs-in-Contract"><a href="#Calling-EOAs-in-Contract" class="headerlink" title="Calling EOAs in Contract"></a>Calling EOAs in Contract</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">contract spicifyContract <span class="token punctuation">&#123;</span>
+  address address1<span class="token punctuation">;</span>
+  address address2<span class="token punctuation">;</span>
+  <span class="token function">recieve</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> external payable <span class="token punctuation">&#123;</span>
+    <span class="token comment">// get the value of transaction by calldata</span>
+    uint value <span class="token operator">=</span> msg<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+    <span class="token comment">// when we use call means we make EOAs(exactly address1) recieve the ether from contract's account</span>
+    <span class="token comment">// (bool success1) is the result of the transaction.</span>
+    <span class="token comment">// &#123;&#125; provides opportunity to override value and gas</span>
+    <span class="token comment">// ("") is was use to location a function of contract, but since we call for EOAs so that we just input ""</span>
+    <span class="token comment">// (bool success) is the result of the transaction. () is used to deconstruction.</span>
+    <span class="token punctuation">(</span>bool success1<span class="token punctuation">)</span> <span class="token operator">=</span> address1<span class="token punctuation">.</span>call<span class="token punctuation">&#123;</span><span class="token literal-property property">value</span><span class="token operator">:</span> value<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">&#125;</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">require</span><span class="token punctuation">(</span>success1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">(</span>bool success2<span class="token punctuation">)</span> <span class="token operator">=</span> address2<span class="token punctuation">.</span>call<span class="token punctuation">&#123;</span><span class="token literal-property property">value</span><span class="token operator">:</span> value<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">&#125;</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">require</span><span class="token punctuation">(</span>success2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Real Example</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">&#123;</span> ethers <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"hardhat"</span><span class="token punctuation">;</span>
+<span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'dotenv'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">config</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">const</span> <span class="token constant">ABI</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">&#123;</span><span class="token string-property property">"anonymous"</span><span class="token operator">:</span><span class="token boolean">false</span><span class="token punctuation">,</span><span class="token string-property property">"inputs"</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token punctuation">&#123;</span><span class="token string-property property">"indexed"</span><span class="token operator">:</span><span class="token boolean">false</span><span class="token punctuation">,</span><span class="token string-property property">"internalType"</span><span class="token operator">:</span><span class="token string">"address"</span><span class="token punctuation">,</span><span class="token string-property property">"name"</span><span class="token operator">:</span><span class="token string">""</span><span class="token punctuation">,</span><span class="token string-property property">"type"</span><span class="token operator">:</span><span class="token string">"address"</span><span class="token punctuation">&#125;</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string-property property">"name"</span><span class="token operator">:</span><span class="token string">"Winner"</span><span class="token punctuation">,</span><span class="token string-property property">"type"</span><span class="token operator">:</span><span class="token string">"event"</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span><span class="token punctuation">&#123;</span><span class="token string-property property">"inputs"</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string-property property">"name"</span><span class="token operator">:</span><span class="token string">"attempt"</span><span class="token punctuation">,</span><span class="token string-property property">"outputs"</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string-property property">"stateMutability"</span><span class="token operator">:</span><span class="token string">"nonpayable"</span><span class="token punctuation">,</span><span class="token string-property property">"type"</span><span class="token operator">:</span><span class="token string">"function"</span><span class="token punctuation">&#125;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> address <span class="token operator">=</span> <span class="token string">'0xcF469d3BEB3Fc24cEe979eFf83BE33ed50988502'</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> provider <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ethers<span class="token punctuation">.</span>providers<span class="token punctuation">.</span>JsonRpcProvider</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">TEST_API_URL</span> <span class="token keyword">as</span> string<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> wallet <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ethers<span class="token punctuation">.</span>Wallet</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">TEST_PRIVATE_KEY</span> <span class="token keyword">as</span> string<span class="token punctuation">,</span> provider<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// we need signature, so must be wallet and that need private key and provider.</span>
+  <span class="token keyword">const</span> contract  <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ethers<span class="token punctuation">.</span>Contract</span><span class="token punctuation">(</span>address<span class="token punctuation">,</span><span class="token constant">ABI</span><span class="token punctuation">,</span>wallet<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// or we can use ethers.getContractAt to get the contract.</span>
+  <span class="token comment">// const contract = await ethers.getContractAt('Contract',address, wallet);</span>
+
+  <span class="token keyword">const</span> attempt <span class="token operator">=</span> <span class="token keyword">await</span> contract<span class="token punctuation">.</span><span class="token function">attempt</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token comment">// i don't have eth, so can't be pay for gas fees.</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>wallet<span class="token punctuation">,</span> <span class="token string">'wallet'</span><span class="token punctuation">)</span>
+  <span class="token keyword">await</span> attempt<span class="token punctuation">.</span><span class="token function">wait</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment">// We recommend this pattern to be able to use async/await everywhere</span>
+<span class="token comment">// and properly handle errors.</span>
+<span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+  console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  process<span class="token punctuation">.</span>exitCode <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="Calling-another-contract"><a href="#Calling-another-contract" class="headerlink" title="Calling another contract."></a>Calling another contract.</h2><ol>
+<li>Call by Manual coding<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token string">"hardhat/console.sol"</span><span class="token punctuation">;</span>
+
+contract <span class="token constant">A</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">function</span> <span class="token function">setValueOnB</span><span class="token punctuation">(</span><span class="token parameter">address b</span><span class="token punctuation">)</span> external <span class="token punctuation">&#123;</span>
+        <span class="token punctuation">(</span>bool s<span class="token punctuation">,</span> <span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token function">b</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>abi<span class="token punctuation">.</span><span class="token function">encodeWithSignature</span><span class="token punctuation">(</span><span class="token string">"storeValue(uint256)"</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">require</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+contract <span class="token constant">B</span> <span class="token punctuation">&#123;</span>
+    uint x<span class="token punctuation">;</span>
+
+    <span class="token keyword">function</span> <span class="token function">storeValue</span><span class="token punctuation">(</span><span class="token parameter">uint256 _x</span><span class="token punctuation">)</span> external <span class="token punctuation">&#123;</span>
+        x <span class="token operator">=</span> _x<span class="token punctuation">;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 22</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>Call by contract address<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token string">"hardhat/console.sol"</span><span class="token punctuation">;</span>
+
+contract <span class="token constant">A</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">function</span> <span class="token function">setValueOnB</span><span class="token punctuation">(</span><span class="token parameter">address b</span><span class="token punctuation">)</span> external <span class="token punctuation">&#123;</span>
+        <span class="token punctuation">(</span>bool s<span class="token punctuation">,</span> <span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token constant">B</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">storeValue</span><span class="token punctuation">(</span><span class="token number">22</span><span class="token punctuation">)</span>
+        <span class="token function">require</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+contract <span class="token constant">B</span> <span class="token punctuation">&#123;</span>
+    uint x<span class="token punctuation">;</span>
+
+    <span class="token keyword">function</span> <span class="token function">storeValue</span><span class="token punctuation">(</span><span class="token parameter">uint256 _x</span><span class="token punctuation">)</span> external <span class="token punctuation">&#123;</span>
+        x <span class="token operator">=</span> _x<span class="token punctuation">;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 22</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>call by interface (for we don’t have contract content)<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">interface</span> <span class="token class-name">B</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">function</span> <span class="token function">storeValue</span><span class="token punctuation">(</span><span class="token parameter">uint256</span><span class="token punctuation">)</span> external<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+contract <span class="token constant">A</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">function</span> <span class="token function">setValueOnB</span><span class="token punctuation">(</span><span class="token parameter">address b</span><span class="token punctuation">)</span> external <span class="token punctuation">&#123;</span>
+        <span class="token constant">B</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">storeValue</span><span class="token punctuation">(</span><span class="token number">22</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ol>
+<h1 id="Test"><a href="#Test" class="headerlink" title="Test"></a>Test</h1><h2 id="describe"><a href="#describe" class="headerlink" title="describe"></a>describe</h2><p>that’s just a function and the reason we need use this is that provide a function body for it.</p>
+<h2 id="it"><a href="#it" class="headerlink" title="it"></a>it</h2><p>it is a function scope, we need write test logic in second arguments, the first argument is string to describe the stage.</p>
+<h2 id="fixture"><a href="#fixture" class="headerlink" title="fixture"></a>fixture</h2><p>when testing code dependent deployed contract, it’s often to useful to have spcific scenes before play out before each test. it probably need to check whether each and every address can or not perform transfer. however, we need to deploy the contract first. because repeated deployment of contract slow down the test significantly, this is why waffle provide us to create a fixture by <code>createFixtureLoader</code> function. it need arguments that is state we need to snapshot.</p>
+<p>for example</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">await</span> <span class="token function">delay</span><span class="token punctuation">(</span><span class="token number">222</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token punctuation">&#123;</span> <span class="token literal-property property">test1</span><span class="token operator">:</span> <span class="token number">2</span> <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token function">it</span><span class="token punctuation">(</span><span class="token string">'should deploy and set the owner correctly'</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">// const &#123; faucet, owner &#125; = await loadFixture(deployContractAndSetVariables);</span>
+  <span class="token keyword">const</span> <span class="token punctuation">&#123;</span> test1 <span class="token punctuation">&#125;</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">loadFixture</span><span class="token punctuation">(</span>test<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>test1<span class="token punctuation">,</span> <span class="token string">'???'</span><span class="token punctuation">)</span>
+  <span class="token comment">// expect(await faucet.owner()).to.equal(owner.address);</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// once snapshot, it always will be store in function scopes</span>
+<span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">'Faucet'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">// We define a fixture to reuse the same setup in every test.</span>
+  <span class="token comment">// We use loadFixture to run this setup once, snapshot that state,</span>
+  <span class="token comment">// and reset Hardhat Network to that snapshot in every test.</span>
+  <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">deployContractAndSetVariables</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">const</span> Faucet <span class="token operator">=</span> <span class="token keyword">await</span> ethers<span class="token punctuation">.</span><span class="token function">getContractFactory</span><span class="token punctuation">(</span><span class="token string">'Faucet'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> faucet <span class="token operator">=</span> <span class="token keyword">await</span> Faucet<span class="token punctuation">.</span><span class="token function">deploy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">const</span> <span class="token punctuation">[</span>owner<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">await</span> ethers<span class="token punctuation">.</span><span class="token function">getSigners</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Signer 1 address: '</span><span class="token punctuation">,</span> owner<span class="token punctuation">.</span>address<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">&#123;</span> faucet<span class="token punctuation">,</span> owner <span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+
+
+  <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">'should deploy and set the owner correctly'</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">const</span> <span class="token punctuation">&#123;</span> faucet<span class="token punctuation">,</span> owner <span class="token punctuation">&#125;</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">loadFixture</span><span class="token punctuation">(</span>deployContractAndSetVariables<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">expect</span><span class="token punctuation">(</span><span class="token keyword">await</span> faucet<span class="token punctuation">.</span><span class="token function">owner</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>to<span class="token punctuation">.</span><span class="token function">equal</span><span class="token punctuation">(</span>owner<span class="token punctuation">.</span>address<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ 
+<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="aka"><a href="#aka" class="headerlink" title="aka"></a>aka</h1><p>ethereum: 以太坊<br>Blockchain: 区块链<br>Crypto： 加密<br>crytocurrencts: 加密货币<br>decentralized: 去中心化<br>bitcoin： 比特币，第一个基于区块链技术实现的加密货币<br>fiancial incentives： 金融奖励<br>mining the rewards： 挖矿<br>deterministic: 确定性<br>pseudorandom: 伪随机<br>collsion resistant: 抗碰撞<br>consensus: 共识，一个网络对数据的状态达成共识。<br>censorship：审查<br>bribe： 贿赂<br>drill home： 钻研<br>relatively travel：相对较小的<br>infeasible： 不可能<br>symmetric: 对称<br>digital signature: 数字签名<br>RSA: 非对称加密的经典实现<br>ECDSA： bitcoin采用的非对称加密算法<br>ether： 以太币<br>address： 交易发起方类似于ip, bitcoin 使用checksum and base58, ethereum is last 20 bytes of the hash of the public key.<br>Enforcement： 执行<br>consensus rules： 共识规则<br>consensus mechanisms：协商一致<br>inter-changeable: 可互换的<br>cumulative: 积累型<br>nakamoto consensus： 最长的chain将是其他节点接受的一个真正的链，他是由一条链积累的工作所决定的。<br>txs: transactions.<br>pos: proof of stack, pos中，参与者需要持有一定数量的crytocurrency，参与记账过程，相比pow，pos不需要大量的算力<br>pow: proof of work，miners通过计算来添加txs和block，需要消耗算力。可以增加security of  blockchain<br>merkle root：默克尔根，用来验证和确认交易是否被篡改。<br>underlying: 底层<br>hashcash： Hashcash工作量证明功能由Adam Back于 1997 年发明，并建议用于反 DoS 用途<br>Byzantine General’s Problem： 在p2p场景下，如何证明每个机器都是在工作的。<br>manipulate： 操作<br>Genesis Block: 第一个加入到区块链中的块，初始块<br>cost-effective: 成本效益<br>UTXO：Unspent Transaction Output, 未使用的交易<br>Retrospective： 回顾<br>vulnerable： 脆弱的<br>light nodes: 轻节点 （存储块头的轻节点）<br>full nodes：完整节点（常规节点）<br>achieve nodes: 归档节点， 完整节点（已验证的存档节点）<br>bandwidth： 带宽<br>configure: 配置<br>variables： 变量<br>discrepancies： 差异<br>tradeoffs： 权衡利弊<br>contrast： 对比<br>unfakeable： 不可伪造<br>replicate： 复制<br>Satoshi: “Satoshi” refers to the smallest unit of the cryptocurrency Bitcoin<br>individual： 个人<br>multitude： 众多的<br>aggregate： 总数<br>expedite： 加快<br>hefty prize ： 巨额奖金<br>controlled supply： 受控供应<br>intentional: 故意的<br>quirk： 怪癖<br>denial: 否认<br>distinguish： 辨别<br>preceding： 前面<br>emerge： 出现<br>hierarchically: 层次分明<br>intimidating： 令人生畏的<br>underneath： 底下<br>infacting：连接<br>concatenate： 串联<br>optimization： 优化<br>inconsistencies: 不一致<br>deveration: 推导<br>arbitrary： 随意的<br>immutable： 不可变<br>implications: 含义<br>ledger： 账本<br>traversal: 遍历<br>PMTs: Partricia Merkle tries<br>sealed: 密封.<br>Permenant: 永恒的<br>Ephemeral： 短暂的<br>Constantly: 不断的<br>prefixes: 前缀<br>recursion: 递归<br>portion： 部分<br>adjacent: 邻近的<br>neat mechanisms: 整洁的机制<br>consists: 包含<br>crowdfunding: 众筹<br>parse： 解析<br>intimidated: 吓坏<br>deterministic: 确定性<br>infrastructure： 基础设施<br>constrain： 限制<br>reside： 贮存<br>presence: 存在<br>cencership: 审查制度<br>auditable：可审查<br>Ubiquitous： 无处不在<br>barries： 障碍<br>curb： 抑制，阻止<br>comprehend： 理解<br>easy as pie： 易如反掌<br>explicitly：明确的<br>clause： 条款<br>neutrality；中立<br>arbitrary： 随意的<br>EVM： Etherrum Virtual Machine<br>Stale&#x2F;Orphan block： 陈旧&#x2F;孤立块，是指在一个区块同时被矿工挖掘出，区块可能会出现临时分叉，未能被选为有效区块的区块被称为stale&#x2F;Orphan block，在Etherum中此类区块又称为Ommer block，是Etherrum作为鼓励和奖励矿工为安全做出贡献的机制。<br>emulate： 模仿<br>underlying： 潜在的<br>monetary： 货币<br>fixed： 固定的<br>Arithmetic: 算术<br>benchmarking: 基准测试<br>discrepancies: 差异<br>philosophy: 理念<br>Ethereum improvement proposal: EIP， Ethereum 改进提案<br>first and foremost: 首先<br>specification： 规范<br>adhere: 符合<br>impromptu： 即兴<br>compatible： 兼容的<br>contentious： 有争议的<br>overHead：高昂的<br>collateral: 抵押物<br>intuitively: 直观的<br>re-orged： 重组<br>manual：手动的<br>intervention： 干涉<br>canonical: 经典的<br>shifted： 转移<br>denomination: 面值<br>demand： 需求<br>circumventing： 规避<br>deflationary: 通缩<br>deprecated: 弃用<br>redunant: 多余的<br>tampered: 被篡改<br>EOAs: Extended owned account.<br>Vulnerability: 漏洞<br>JSON-RPC: remote procedure call(rpc) protocal that uses JSON to encode message.<br>exclusively: 只，仅仅 equied to only<br>instruction: 指令<br>term: 术语<br>boilerplate: 样板<br>pioneer： 先锋<br>lucrative: 有利可图<br>mnemonic: 助记词<br>configured： 配置<br>specified： 指定的<br>analogues： 相似的<br>discarded： 丢弃<br>underscore preceding: 前下划线<br>snippet： 片段<br>dire consquences: 可怕的后果<br>unsigned integer: 无符号整数<br>allocated： 分配的<br>resilient: 弹性的<br>LIFO： 堆栈结构，it’s have pushing and poping<br>destructure: 解构<br>parenthesis: 括号<br>exception： 异常<br>declared: 声明<br>ephermal: 短暂的<br>ABI: application binary interface, that’s bridge connected compilers and applications.<br>writing up a to b: 连接a到b<br>pass into: 传递……进<br>repercurssion: 反应<br>padded out: 填充到<br>replay to: 转发到<br>occurrence: 事件<br>precede xx with : 先于 xx<br>shrink: 收缩</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,wechat,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2023/06/01/solidity/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Solidity">
+                        
+                        <span class="card-title">Solidity</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-06-01
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Chatwin
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/05/22/ethereum/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Ethereum">
+                        
+                        <span class="card-title">Ethereum</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Chatwin
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card " style="background-color: white; overflow-y:auto; height: calc(100vh - 80px);">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2023</span>
+            
+            <a href="/about" target="_blank">Chatwin</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;Total visits:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;Total visitors:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/wannaSpring" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:chent1493@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+    <a href="https://twitter.com/chentao80773360" class="tooltipped" target="_blank" data-tooltip="关注我的Twitter: https://twitter.com/chentao80773360" data-position="top" data-delay="50">
+        <i class="fab fa-twitter"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

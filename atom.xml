@@ -6,7 +6,7 @@
   <link href="https://wannaspring.github.io/wannaSpring.github.io/atom.xml" rel="self"/>
   
   <link href="https://wannaspring.github.io/wannaSpring.github.io/"/>
-  <updated>2023-05-23T13:49:49.074Z</updated>
+  <updated>2023-06-11T10:34:32.055Z</updated>
   <id>https://wannaspring.github.io/wannaSpring.github.io/</id>
   
   <author>
@@ -17,11 +17,74 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Solidity_Core</title>
+    <link href="https://wannaspring.github.io/wannaSpring.github.io/2023/06/09/solidity-core/"/>
+    <id>https://wannaspring.github.io/wannaSpring.github.io/2023/06/09/solidity-core/</id>
+    <published>2023-06-09T05:51:28.000Z</published>
+    <updated>2023-06-11T10:34:32.055Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Multi-Sigs&quot;&gt;&lt;a href=&quot;#Multi-Sigs&quot; class=&quot;headerlink&quot; title=&quot;Multi-Sigs&quot;&gt;&lt;/a&gt;Multi-Sigs&lt;/h1&gt;&lt;p&gt;Multi-sigs is smart contract designed</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Solidity</title>
+    <link href="https://wannaspring.github.io/wannaSpring.github.io/2023/06/01/solidity/"/>
+    <id>https://wannaspring.github.io/wannaSpring.github.io/2023/06/01/solidity/</id>
+    <published>2023-06-01T10:57:21.000Z</published>
+    <updated>2023-06-09T05:51:37.081Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Mapping-amp-amp-structure&quot;&gt;&lt;a href=&quot;#Mapping-amp-amp-structure&quot; class=&quot;headerlink&quot; title=&quot;Mapping &amp;amp;&amp;amp; structure&quot;&gt;&lt;/a&gt;Mapping</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>smartContract</title>
+    <link href="https://wannaspring.github.io/wannaSpring.github.io/2023/05/26/smartcontract/"/>
+    <id>https://wannaspring.github.io/wannaSpring.github.io/2023/05/26/smartcontract/</id>
+    <published>2023-05-26T13:33:31.000Z</published>
+    <updated>2023-06-04T08:45:26.205Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Solidity-syntax&quot;&gt;&lt;a href=&quot;#Solidity-syntax&quot; class=&quot;headerlink&quot; title=&quot;Solidity syntax&quot;&gt;&lt;/a&gt;Solidity syntax&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Ethereum</title>
     <link href="https://wannaspring.github.io/wannaSpring.github.io/2023/05/22/ethereum/"/>
     <id>https://wannaspring.github.io/wannaSpring.github.io/2023/05/22/ethereum/</id>
     <published>2023-05-22T05:11:16.000Z</published>
-    <updated>2023-05-23T13:49:49.074Z</updated>
+    <updated>2023-05-26T13:03:10.592Z</updated>
     
     
       
