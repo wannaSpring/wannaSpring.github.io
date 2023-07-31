@@ -6,7 +6,7 @@
   <link href="https://wannaspring.github.io/wannaSpring.github.io/atom.xml" rel="self"/>
   
   <link href="https://wannaspring.github.io/wannaSpring.github.io/"/>
-  <updated>2023-06-16T10:13:25.233Z</updated>
+  <updated>2023-07-30T18:40:59.539Z</updated>
   <id>https://wannaspring.github.io/wannaSpring.github.io/</id>
   
   <author>
@@ -17,11 +17,79 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="https://wannaspring.github.io/wannaSpring.github.io/2023/07/29/function-kmp-s-t/"/>
+    <id>https://wannaspring.github.io/wannaSpring.github.io/2023/07/29/function-kmp-s-t/</id>
+    <published>2023-07-29T02:57:14.659Z</published>
+    <updated>2023-07-30T18:40:59.539Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">/**
+ * @param {string} word
+ * @return {number}
+ */
+function longestBeautifulSubstring(word) {
+  const vowels = new Set([&#39;a&#39;, &#39;e&#39;, &#39;i&#39;,</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>foundation</title>
+    <link href="https://wannaspring.github.io/wannaSpring.github.io/2023/07/25/foundation/"/>
+    <id>https://wannaspring.github.io/wannaSpring.github.io/2023/07/25/foundation/</id>
+    <published>2023-07-25T08:08:03.000Z</published>
+    <updated>2023-07-27T12:17:48.067Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;EventLoop&quot;&gt;&lt;a href=&quot;#EventLoop&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Algorithms</title>
+    <link href="https://wannaspring.github.io/wannaSpring.github.io/2023/07/20/algorithms/"/>
+    <id>https://wannaspring.github.io/wannaSpring.github.io/2023/07/20/algorithms/</id>
+    <published>2023-07-20T06:07:18.000Z</published>
+    <updated>2023-07-20T06:52:12.276Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Simply&quot;&gt;&lt;a href=&quot;#Simply&quot; class=&quot;headerlink&quot; title=&quot;Simply&quot;&gt;&lt;/a&gt;Simply&lt;/h1&gt;&lt;h2 id=&quot;进制转换&quot;&gt;&lt;a href=&quot;#进制转换&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Solidity_Core</title>
-    <link href="https://wannaspring.github.io/wannaSpring.github.io/2023/06/09/solidity-core/"/>
-    <id>https://wannaspring.github.io/wannaSpring.github.io/2023/06/09/solidity-core/</id>
-    <published>2023-06-09T05:51:28.000Z</published>
-    <updated>2023-06-16T10:13:25.233Z</updated>
+    <link href="https://wannaspring.github.io/wannaSpring.github.io/2023/06/10/solidity-core/"/>
+    <id>https://wannaspring.github.io/wannaSpring.github.io/2023/06/10/solidity-core/</id>
+    <published>2023-06-10T05:51:28.000Z</published>
+    <updated>2023-07-02T12:20:52.443Z</updated>
     
     
       
@@ -29,6 +97,27 @@
         
         
     <summary type="html">&lt;h1 id=&quot;Multi-Sigs&quot;&gt;&lt;a href=&quot;#Multi-Sigs&quot; class=&quot;headerlink&quot; title=&quot;Multi-Sigs&quot;&gt;&lt;/a&gt;Multi-Sigs&lt;/h1&gt;&lt;p&gt;Multi-sigs is smart contract designed</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Solidity_Core</title>
+    <link href="https://wannaspring.github.io/wannaSpring.github.io/2023/06/10/governance/"/>
+    <id>https://wannaspring.github.io/wannaSpring.github.io/2023/06/10/governance/</id>
+    <published>2023-06-10T05:51:28.000Z</published>
+    <updated>2023-06-24T11:53:26.174Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Governance&quot;&gt;&lt;a href=&quot;#Governance&quot; class=&quot;headerlink&quot; title=&quot;Governance&quot;&gt;&lt;/a&gt;Governance&lt;/h1&gt;&lt;p&gt;Decentralization protocol are in</summary>
         
       
     
@@ -149,7 +238,7 @@
     <link href="https://wannaspring.github.io/wannaSpring.github.io/2023/02/17/interview/"/>
     <id>https://wannaspring.github.io/wannaSpring.github.io/2023/02/17/interview/</id>
     <published>2023-02-17T06:45:18.000Z</published>
-    <updated>2023-05-09T11:19:54.674Z</updated>
+    <updated>2023-07-04T08:53:32.988Z</updated>
     
     
       

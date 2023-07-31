@@ -4,8 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Solidity, Blog, Technology">
-    <meta name="description" content="Mapping &amp;amp;&amp;amp; structurestorage keywordsstorage keywords is used to spcify that variables should parmnately stored i">
+    <meta name="keywords" content="Algorithms, Blog, Technology">
+    <meta name="description" content="Simply进制转换const parseInt = (line) =&gt; &amp;#123;
+    // 最简单的方法
+    // let a = parseInt(line, 16);
+    // console.log(a);
+    ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +21,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Solidity | Chat&#39;s Blog</title>
+    <title>Algorithms | Chat&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -228,12 +232,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Solidity</h1>
+                    <h1 class="description center-align post-title">Algorithms</h1>
                 </div>
             </div>
         </div>
@@ -269,7 +273,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2023-06-01
+                    2023-07-20
                 </div>
                 
 
@@ -293,92 +297,61 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Mapping-amp-amp-structure"><a href="#Mapping-amp-amp-structure" class="headerlink" title="Mapping &amp;&amp; structure"></a>Mapping &amp;&amp; structure</h1><h2 id="storage-keywords"><a href="#storage-keywords" class="headerlink" title="storage keywords"></a>storage keywords</h2><p>storage keywords is used to spcify that variables should parmnately stored in blockchain. It represents  persistent storage area of the contract where data is stored across multiple function calls and Even persistent storage after contract execution is completed.</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">Collectible storage collectible <span class="token operator">=</span> idToCollectible<span class="token punctuation">[</span>_id<span class="token punctuation">]</span><span class="token punctuation">;</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>storage kerwords represent the collectible variables will refrence the idTocollectible[_id], means any change of the coolectible will directly affect the value stored in the mapping.</p>
-<h2 id="Structure"><a href="#Structure" class="headerlink" title="Structure"></a>Structure</h2><p>Structure keywords is used to describe the structure of the data. it’s similar to typescripe’s interface. and we can use this to declare the variables have the same structure. It will provide convience for dev to know the variables’s structure also EVM to do static checks.</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"> struct User <span class="token punctuation">&#123;</span>
-	uint balance<span class="token punctuation">;</span>
-	bool isActive<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+                <h1 id="Simply"><a href="#Simply" class="headerlink" title="Simply"></a>Simply</h1><h2 id="进制转换"><a href="#进制转换" class="headerlink" title="进制转换"></a>进制转换</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function">parseInt</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">line</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 最简单的方法</span>
+    <span class="token comment">// let a = parseInt(line, 16);</span>
+    <span class="token comment">// console.log(a);</span>
+    <span class="token comment">// 通过转换进制计算。</span>
+    <span class="token comment">// 0xaa</span>
+    <span class="token comment">// a*16^0 + a* 16 ^ 1 </span>
+    <span class="token keyword">const</span> str <span class="token operator">=</span> line<span class="token punctuation">.</span><span class="token function">substr</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> LetterMap <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token constant">A</span><span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token constant">B</span><span class="token operator">:</span><span class="token number">11</span><span class="token punctuation">,</span> <span class="token constant">C</span><span class="token operator">:</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token constant">D</span><span class="token operator">:</span><span class="token number">13</span><span class="token punctuation">,</span> <span class="token constant">E</span><span class="token operator">:</span><span class="token number">14</span><span class="token punctuation">,</span> <span class="token constant">F</span><span class="token operator">:</span><span class="token number">15</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> iter <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> <span class="token function-variable function">d</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>n <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token operator">?</span> n <span class="token operator">:</span> LetterMap<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> str<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        iter <span class="token operator">=</span> iter <span class="token operator">+</span> <span class="token function">d</span><span class="token punctuation">(</span>str<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">16</span><span class="token operator">**</span><span class="token punctuation">(</span>str<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span> <span class="token operator">-</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>iter<span class="token punctuation">)</span>
+<span class="token punctuation">&#125;</span>
+<span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token string">'0xAA'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="Signer-Provider-and-Wallet"><a href="#Signer-Provider-and-Wallet" class="headerlink" title="Signer, Provider and Wallet."></a>Signer, Provider and Wallet.</h1><h2 id="Signer"><a href="#Signer" class="headerlink" title="Signer"></a>Signer</h2><p>A Signer in ethers is an abstraction of an Ethereum Account, which can be used to sign messages and transactions and send signed transactions to the Ethereum Network to execute state changing operations.<br>The most common Signers you will encounter are:</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">	<span class="token keyword">const</span> signer <span class="token operator">=</span> ethers<span class="token punctuation">.</span>provider<span class="token punctuation">.</span><span class="token function">getSigner</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token keyword">await</span> signer<span class="token punctuation">.</span><span class="token function">sendTransaction</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
-	<span class="token literal-property property">to</span><span class="token operator">:</span> <span class="token keyword">await</span> wallet<span class="token punctuation">.</span><span class="token function">getAddress</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-	<span class="token literal-property property">value</span><span class="token operator">:</span> ethers<span class="token punctuation">.</span>utils<span class="token punctuation">.</span><span class="token function">parseEther</span><span class="token punctuation">(</span><span class="token string">'2'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="两数之和"><a href="#两数之和" class="headerlink" title="两数之和"></a>两数之和</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">/**
+ * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+ *
+ * 
+ * @param numbers int整型一维数组 
+ * @param target int整型 
+ * @return int整型一维数组
+ */</span>
+<span class="token keyword">function</span> <span class="token function">twoSum</span><span class="token punctuation">(</span> <span class="token parameter">numbers <span class="token punctuation">,</span>  target</span> <span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// write code here</span>
+    <span class="token comment">// 暴力</span>
+    <span class="token comment">// const len = numbers.length;</span>
+    <span class="token comment">// for (let i = 0; i&lt;= len-1; i++) &#123;</span>
+    <span class="token comment">//     for(let j = i+ 1; j&lt;=len-1;j++)&#123;</span>
+    <span class="token comment">//         if(numbers[i] + numbers[j] === target)&#123;</span>
+    <span class="token comment">//             return [i+1, j+1];</span>
+    <span class="token comment">//         &#125;</span>
+    <span class="token comment">//     &#125;</span>
+    <span class="token comment">// &#125;</span>
+    <span class="token comment">// map</span>
+    <span class="token keyword">const</span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> numbers<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>map<span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span>target <span class="token operator">-</span> numbers<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+            <span class="token keyword">return</span> <span class="token punctuation">[</span>map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>target <span class="token operator">-</span> numbers<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span>
+        <span class="token punctuation">&#125;</span><span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+            map<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>numbers<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+    <span class="token literal-property property">twoSum</span> <span class="token operator">:</span> twoSum
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Map的思想是</p>
 <ul>
-<li>Wallet, which is a class which knows its private key and can execute any operations with it</li>
-<li>JsonRpcSigner, which is connected to a JsonRpcProvider (or sub-class) and is acquired using getSigner</li>
+<li>判断条件， map中存在目标值-当前值的剩余值</li>
+<li>如果存在就返回存储的下标，不存在就塞入当前项</li>
 </ul>
-<h2 id="Provider"><a href="#Provider" class="headerlink" title="Provider"></a>Provider</h2><p>A Provider is an abstraction of a connection to the Ethereum network, providing a concise, consistent interface to standard Ethereum node functionality.</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> provider <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ethers<span class="token punctuation">.</span>providers<span class="token punctuation">.</span>JsonRpcProvider</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">TEST_API_URL</span> <span class="token keyword">as</span> string<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="Wallet"><a href="#Wallet" class="headerlink" title="Wallet"></a>Wallet</h2><p>The Wallet class inherits Signer and can sign transactions and messages using a private key as a standard Externally Owned Account (EOA).</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> wallet <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ethers<span class="token punctuation">.</span>Wallet</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">TEST_PRIVATE_KEY</span> <span class="token keyword">as</span> string<span class="token punctuation">,</span> provider<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h1 id="Event"><a href="#Event" class="headerlink" title="Event"></a>Event</h1><p>Event are the way solidty and EVM provide dev with logging functionality used to write data to a data structure on the blockchain that lives out of smart contract’s storage variables.</p>
-<p>Event are an abstraction on top of the EVM’s low-level log functionality, opcode is LOG0-LOG4. The spcific code used will depend on the number of topics that event using <code>indexed</code> keyword.</p>
-<ol>
-<li>Topics in Ethereum record<br>The first part of logs record consists of an array of topics. The first topic usually consists of the <strong>Signature(kaccak256 hash)</strong> of the name of the events that occurred, including the types (uint256, string, etc.) of its parameters.</li>
-<li>Data in Ethereum record<br>The second part of logs record consists additional data. Best to combine data and topics together. while topic is searchable, but data is not.</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230602172346BXBM7A.png" alt="Picsee-20230602172346.png"></p>
-<p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-202306021724045GeFGa.png" alt="Picsee-20230602172404.png"></p>
-<p>Now, we just need to understand how data (like our final argument) can be included. LOG3 requires 5 arguments:</p>
-<p>LOG3(memoryStart, memoryLength, topic1, topic2, topic3)</p>
-<p>Event data is read from memory in the following fashion:</p>
-<p>memory[memoryStart…(memoryStart + memoryLength)]</p>
-<p>Luckily, higher-level smart contract programming languages like Solidity, Vyper, or Bamboo will handle writing event data to memory for us, which means you can usually pass data directly as a parameter when emitting logs.</p>
-<p><a target="_blank" rel="noopener" href="https://dashboard.alchemy.com/composer">real example by eth_getLogs, block hash 0xc34b89772be37cef16c151e62c548fce0767531f45ac1eacf7409451ab7304c8</a></p>
-<p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-202306021724280nzLWi.png" alt="Picsee-20230602172428.png"></p>
-<blockquote>
-<p>read more details here: <a target="_blank" rel="noopener" href="https://medium.com/mycrypto/understanding-event-logs-on-the-ethereum-blockchain-f4ae7ba50378">Event</a></p>
-</blockquote>
-<h1 id="Escrows"><a href="#Escrows" class="headerlink" title="Escrows"></a>Escrows</h1><p>Escrows is a subjuct service in financial, but in blockchain, It will be smart contract forms, because smart contract is immutable when it deploys. Both sellers and buyers can be trusted the smart contract and it’s transparented. </p>
-<p><img src="https://raw.githubusercontent.com/wannaSpring/snapshot/main/Picsee/Picsee-20230604153021OJQFAq.png" alt="Picsee-20230604153021.png"></p>
-<p>When buyer pay for the deposit to Escrow, the Escrow will save the deposit, and it will check the condition is satisfied or not. if not the deposit will retrun to buyer. when the condition is satisfied, the deposit will release to the seller, and the goods or services will be send to buyer.<br><a target="_blank" rel="noopener" href="https://research.csiro.au/blockchainpatterns/general-patterns/blockchain-payment-patterns/escrow-2/">Read more info</a></p>
-<h1 id="Data-location-reference-type"><a href="#Data-location-reference-type" class="headerlink" title="Data location (reference type)"></a>Data location (reference type)</h1><p>There are three different locations for data in solidity. <code>Calldata</code>, <code>Memory</code> and <code>Storage</code>.<code>Calldata</code> is external data, <code>Memory</code> is ephemeral data, <code>Storage</code> is persistent data.</p>
-<ol>
-<li><p>Calldata<br>When we broadcast a transaction from EOA, We contain bytecode for EVM running. The bytecode is Calldata and it include identifier for the function we’re targeting and the parameters we’re sent.<br>When we use Array to be paremeters in external function, It must be identified by the calldata. it’s only-read reference for parameters and similar to Memory unless only-read.</p>
-</li>
-<li><p>Memory<br>Memory is temporary data location provided for use to keep our local veriables. These variables will only exist in memory for the length of the transaction.<br>When we’re working with arrays that should only exist for the length of the transaction, we labeled them with <code>Memory</code> keywords. We can read&#x2F;write the data location that cheaply than compare with storage.</p>
-</li>
-<li><p>Storage<br>Storage actully is location that store in blockchain. This is where the state variables are stored.<br>All of the Ethereum full node will store them in the local machine, since that Storage operations are expensive.</p>
-</li>
-</ol>
-<p>Value vs Reference<br>Assigning an array will copy it in some cases and store a reference in other cases.</p>
-<p>Let’s consider this example:</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token string">"hardhat/console.sol"</span><span class="token punctuation">;</span>
-contract Contract <span class="token punctuation">&#123;</span>
-    uint<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">function</span> <span class="token function">modify</span><span class="token punctuation">(</span><span class="token punctuation">)</span> external <span class="token punctuation">&#123;</span>
-        uint<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> memory memoryArray <span class="token operator">=</span> numbers<span class="token punctuation">;</span>
-        <span class="token comment">// will modifying memoryArray modify numbers?</span>
-        memoryArray<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
-        <span class="token comment">// nope! </span>
-        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>numbers<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 1</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>☝️ This will not modify the numbers. The values from numbers are copied into memoryArray at this assignment and they are otherwise unrelated.</p>
-<p>📖 In fact, the compiler will warn that this can be labeled as a view. Didn’t want to give any spoilers. 😉</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token string">"hardhat/console.sol"</span><span class="token punctuation">;</span>
-contract Contract <span class="token punctuation">&#123;</span>
-    uint<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">function</span> <span class="token function">modify</span><span class="token punctuation">(</span><span class="token punctuation">)</span> external <span class="token punctuation">&#123;</span>
-        uint<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> storage storageArray <span class="token operator">=</span> numbers<span class="token punctuation">;</span>
-        <span class="token comment">// will modifying storageArray modify numbers?</span>
-        storageArray<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
-        <span class="token comment">// yup! </span>
-        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>numbers<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 4</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>☝️ This will modify the numbers. In this case, storageArray contains a reference to numbers due to its storage location.</p>
-<p>💡 Equal references point to the same spot in memory. Making a modification updates the memory directly, all the references still point to the same place.</p>
-<h1 id="aka"><a href="#aka" class="headerlink" title="aka"></a>aka</h1><p>ethereum: 以太坊<br>Blockchain: 区块链<br>Crypto： 加密<br>crytocurrencts: 加密货币<br>decentralized: 去中心化<br>bitcoin： 比特币，第一个基于区块链技术实现的加密货币<br>fiancial incentives： 金融奖励<br>mining the rewards： 挖矿<br>deterministic: 确定性<br>pseudorandom: 伪随机<br>collsion resistant: 抗碰撞<br>consensus: 共识，一个网络对数据的状态达成共识。<br>censorship：审查<br>bribe： 贿赂<br>drill home： 钻研<br>relatively travel：相对较小的<br>infeasible： 不可能<br>symmetric: 对称<br>digital signature: 数字签名<br>RSA: 非对称加密的经典实现<br>ECDSA： bitcoin采用的非对称加密算法<br>ether： 以太币<br>address： 交易发起方类似于ip, bitcoin 使用checksum and base58, ethereum is last 20 bytes of the hash of the public key.<br>Enforcement： 执行<br>consensus rules： 共识规则<br>consensus mechanisms：协商一致<br>inter-changeable: 可互换的<br>cumulative: 积累型<br>nakamoto consensus： 最长的chain将是其他节点接受的一个真正的链，他是由一条链积累的工作所决定的。<br>txs: transactions.<br>pos: proof of stack, pos中，参与者需要持有一定数量的crytocurrency，参与记账过程，相比pow，pos不需要大量的算力<br>pow: proof of work，miners通过计算来添加txs和block，需要消耗算力。可以增加security of  blockchain<br>merkle root：默克尔根，用来验证和确认交易是否被篡改。<br>underlying: 底层<br>hashcash： Hashcash工作量证明功能由Adam Back于 1997 年发明，并建议用于反 DoS 用途<br>Byzantine General’s Problem： 在p2p场景下，如何证明每个机器都是在工作的。<br>manipulate： 操作<br>Genesis Block: 第一个加入到区块链中的块，初始块<br>cost-effective: 成本效益<br>UTXO：Unspent Transaction Output, 未使用的交易<br>Retrospective： 回顾<br>vulnerable： 脆弱的<br>light nodes: 轻节点 （存储块头的轻节点）<br>full nodes：完整节点（常规节点）<br>achieve nodes: 归档节点， 完整节点（已验证的存档节点）<br>bandwidth： 带宽<br>configure: 配置<br>variables： 变量<br>discrepancies： 差异<br>tradeoffs： 权衡利弊<br>contrast： 对比<br>unfakeable： 不可伪造<br>replicate： 复制<br>Satoshi: “Satoshi” refers to the smallest unit of the cryptocurrency Bitcoin<br>individual： 个人<br>multitude： 众多的<br>aggregate： 总数<br>expedite： 加快<br>hefty prize ： 巨额奖金<br>controlled supply： 受控供应<br>intentional: 故意的<br>quirk： 怪癖<br>denial: 否认<br>distinguish： 辨别<br>preceding： 前面<br>emerge： 出现<br>hierarchically: 层次分明<br>intimidating： 令人生畏的<br>underneath： 底下<br>infacting：连接<br>concatenate： 串联<br>optimization： 优化<br>inconsistencies: 不一致<br>deveration: 推导<br>arbitrary： 随意的<br>immutable： 不可变<br>implications: 含义<br>ledger： 账本<br>traversal: 遍历<br>PMTs: Partricia Merkle tries<br>sealed: 密封.<br>Permenant: 永恒的<br>Ephemeral： 短暂的<br>Constantly: 不断的<br>prefixes: 前缀<br>recursion: 递归<br>portion： 部分<br>adjacent: 邻近的<br>neat mechanisms: 整洁的机制<br>consists: 包含<br>crowdfunding: 众筹<br>parse： 解析<br>intimidated: 吓坏<br>deterministic: 确定性<br>infrastructure： 基础设施<br>constrain： 限制<br>reside： 贮存<br>presence: 存在<br>cencership: 审查制度<br>auditable：可审查<br>Ubiquitous： 无处不在<br>barries： 障碍<br>curb： 抑制，阻止<br>comprehend： 理解<br>easy as pie： 易如反掌<br>explicitly：明确的<br>clause： 条款<br>neutrality；中立<br>arbitrary： 随意的<br>EVM： Etherrum Virtual Machine<br>Stale&#x2F;Orphan block： 陈旧&#x2F;孤立块，是指在一个区块同时被矿工挖掘出，区块可能会出现临时分叉，未能被选为有效区块的区块被称为stale&#x2F;Orphan block，在Etherum中此类区块又称为Ommer block，是Etherrum作为鼓励和奖励矿工为安全做出贡献的机制。<br>emulate： 模仿<br>underlying： 潜在的<br>monetary： 货币<br>fixed： 固定的<br>Arithmetic: 算术<br>benchmarking: 基准测试<br>discrepancies: 差异<br>philosophy: 理念<br>Ethereum improvement proposal: EIP， Ethereum 改进提案<br>first and foremost: 首先<br>specification： 规范<br>adhere: 符合<br>impromptu： 即兴<br>compatible： 兼容的<br>contentious： 有争议的<br>overHead：高昂的<br>collateral: 抵押物<br>intuitively: 直观的<br>re-orged： 重组<br>manual：手动的<br>intervention： 干涉<br>canonical: 经典的<br>shifted： 转移<br>denomination: 面值<br>demand： 需求<br>circumventing： 规避<br>deflationary: 通缩<br>deprecated: 弃用<br>redunant: 多余的<br>tampered: 被篡改<br>EOAs: Extended owned account.<br>Vulnerability: 漏洞<br>JSON-RPC: remote procedure call(rpc) protocal that uses JSON to encode message.<br>exclusively: 只，仅仅 equied to only<br>instruction: 指令<br>term: 术语<br>boilerplate: 样板<br>pioneer： 先锋<br>lucrative: 有利可图<br>mnemonic: 助记词<br>configured： 配置<br>specified： 指定的<br>analogues： 相似的<br>discarded： 丢弃<br>underscore preceding: 前下划线<br>snippet： 片段<br>dire consquences: 可怕的后果<br>unsigned integer: 无符号整数<br>allocated： 分配的<br>resilient: 弹性的<br>LIFO： 堆栈结构，it’s have pushing and poping<br>destructure: 解构<br>parenthesis: 括号<br>exception： 异常<br>declared: 声明<br>ephermal: 短暂的<br>ABI: application binary interface, that’s bridge connected compilers and applications.<br>writing up a to b: 连接a到b<br>pass into: 传递……进<br>repercurssion: 反应<br>padded out: 填充到<br>replay to: 转发到<br>associative array: 关联数组<br>brute force search: 暴力搜索<br>hit the nail on the head ： 一针见血<br>Nested： 嵌套<br>maintaining: 维护<br>Escrows: 托管<br>treadoff: 权衡<br>peroid of inactivity: 不活跃期<br>compromised: 损坏&#x2F;妥协</p>
 
                 
             </div>
@@ -473,13 +446,13 @@ contract Contract <span class="token punctuation">&#123;</span>
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2023/06/10/governance/">
+                <a href="/2023/07/25/foundation/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Solidity_Core">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="foundation">
                         
-                        <span class="card-title">Solidity_Core</span>
+                        <span class="card-title">foundation</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -490,7 +463,7 @@ contract Contract <span class="token punctuation">&#123;</span>
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-06-10
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-07-25
                         </span>
                         <span class="publish-author">
                             
@@ -510,13 +483,13 @@ contract Contract <span class="token punctuation">&#123;</span>
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/05/26/smartcontract/">
+                <a href="/2023/06/10/solidity-core/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="smartContract">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Solidity_Core">
                         
-                        <span class="card-title">smartContract</span>
+                        <span class="card-title">Solidity_Core</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -527,7 +500,7 @@ contract Contract <span class="token punctuation">&#123;</span>
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-06-10
                             </span>
                         <span class="publish-author">
                             
