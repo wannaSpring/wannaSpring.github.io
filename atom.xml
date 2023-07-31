@@ -6,7 +6,7 @@
   <link href="https://wannaspring.github.io/wannaSpring.github.io/atom.xml" rel="self"/>
   
   <link href="https://wannaspring.github.io/wannaSpring.github.io/"/>
-  <updated>2023-07-30T18:40:59.539Z</updated>
+  <updated>2023-07-27T12:17:48.067Z</updated>
   <id>https://wannaspring.github.io/wannaSpring.github.io/</id>
   
   <author>
@@ -15,32 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="https://wannaspring.github.io/wannaSpring.github.io/2023/07/29/function-kmp-s-t/"/>
-    <id>https://wannaspring.github.io/wannaSpring.github.io/2023/07/29/function-kmp-s-t/</id>
-    <published>2023-07-29T02:57:14.659Z</published>
-    <updated>2023-07-30T18:40:59.539Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">/**
- * @param {string} word
- * @return {number}
- */
-function longestBeautifulSubstring(word) {
-  const vowels = new Set([&#39;a&#39;, &#39;e&#39;, &#39;i&#39;,</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>foundation</title>
@@ -85,111 +59,6 @@ function longestBeautifulSubstring(word) {
   </entry>
   
   <entry>
-    <title>Solidity_Core</title>
-    <link href="https://wannaspring.github.io/wannaSpring.github.io/2023/06/10/solidity-core/"/>
-    <id>https://wannaspring.github.io/wannaSpring.github.io/2023/06/10/solidity-core/</id>
-    <published>2023-06-10T05:51:28.000Z</published>
-    <updated>2023-07-02T12:20:52.443Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Multi-Sigs&quot;&gt;&lt;a href=&quot;#Multi-Sigs&quot; class=&quot;headerlink&quot; title=&quot;Multi-Sigs&quot;&gt;&lt;/a&gt;Multi-Sigs&lt;/h1&gt;&lt;p&gt;Multi-sigs is smart contract designed</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Solidity_Core</title>
-    <link href="https://wannaspring.github.io/wannaSpring.github.io/2023/06/10/governance/"/>
-    <id>https://wannaspring.github.io/wannaSpring.github.io/2023/06/10/governance/</id>
-    <published>2023-06-10T05:51:28.000Z</published>
-    <updated>2023-06-24T11:53:26.174Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Governance&quot;&gt;&lt;a href=&quot;#Governance&quot; class=&quot;headerlink&quot; title=&quot;Governance&quot;&gt;&lt;/a&gt;Governance&lt;/h1&gt;&lt;p&gt;Decentralization protocol are in</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Solidity</title>
-    <link href="https://wannaspring.github.io/wannaSpring.github.io/2023/06/01/solidity/"/>
-    <id>https://wannaspring.github.io/wannaSpring.github.io/2023/06/01/solidity/</id>
-    <published>2023-06-01T10:57:21.000Z</published>
-    <updated>2023-06-09T05:51:37.081Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Mapping-amp-amp-structure&quot;&gt;&lt;a href=&quot;#Mapping-amp-amp-structure&quot; class=&quot;headerlink&quot; title=&quot;Mapping &amp;amp;&amp;amp; structure&quot;&gt;&lt;/a&gt;Mapping</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>smartContract</title>
-    <link href="https://wannaspring.github.io/wannaSpring.github.io/2023/05/26/smartcontract/"/>
-    <id>https://wannaspring.github.io/wannaSpring.github.io/2023/05/26/smartcontract/</id>
-    <published>2023-05-26T13:33:31.000Z</published>
-    <updated>2023-06-04T08:45:26.205Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Solidity-syntax&quot;&gt;&lt;a href=&quot;#Solidity-syntax&quot; class=&quot;headerlink&quot; title=&quot;Solidity syntax&quot;&gt;&lt;/a&gt;Solidity syntax&lt;/h1&gt;&lt;h2</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Ethereum</title>
-    <link href="https://wannaspring.github.io/wannaSpring.github.io/2023/05/22/ethereum/"/>
-    <id>https://wannaspring.github.io/wannaSpring.github.io/2023/05/22/ethereum/</id>
-    <published>2023-05-22T05:11:16.000Z</published>
-    <updated>2023-05-26T13:03:10.592Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Ethereum&quot;&gt;&lt;a href=&quot;#Ethereum&quot; class=&quot;headerlink&quot; title=&quot;Ethereum&quot;&gt;&lt;/a&gt;Ethereum&lt;/h1&gt;&lt;h2 id=&quot;What-is-Ethereum&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>Tree</title>
     <link href="https://wannaspring.github.io/wannaSpring.github.io/2023/05/19/tree/"/>
     <id>https://wannaspring.github.io/wannaSpring.github.io/2023/05/19/tree/</id>
@@ -207,29 +76,6 @@ function longestBeautifulSubstring(word) {
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>Blockchain and cryto</title>
-    <link href="https://wannaspring.github.io/wannaSpring.github.io/2023/05/11/blockchain-and-cryto/"/>
-    <id>https://wannaspring.github.io/wannaSpring.github.io/2023/05/11/blockchain-and-cryto/</id>
-    <published>2023-05-11T04:47:37.000Z</published>
-    <updated>2023-05-19T13:02:00.370Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Blockchain-and-cryto&quot;&gt;&lt;a href=&quot;#Blockchain-and-cryto&quot; class=&quot;headerlink&quot; title=&quot;Blockchain and cryto&quot;&gt;&lt;/a&gt;Blockchain and</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Web3, Blockchain," scheme="https://wannaspring.github.io/wannaSpring.github.io/tags/Web3-Blockchain/"/>
     
   </entry>
   
@@ -314,6 +160,134 @@ function longestBeautifulSubstring(word) {
     <category term="Remote Job" scheme="https://wannaspring.github.io/wannaSpring.github.io/tags/Remote-Job/"/>
     
     <category term="Interview" scheme="https://wannaspring.github.io/wannaSpring.github.io/tags/Interview/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>smartContract</title>
+    <link href="https://wannaspring.github.io/wannaSpring.github.io/2023/01/26/smartcontract/"/>
+    <id>https://wannaspring.github.io/wannaSpring.github.io/2023/01/26/smartcontract/</id>
+    <published>2023-01-26T13:33:31.000Z</published>
+    <updated>2023-07-31T07:58:55.147Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Solidity-syntax&quot;&gt;&lt;a href=&quot;#Solidity-syntax&quot; class=&quot;headerlink&quot; title=&quot;Solidity syntax&quot;&gt;&lt;/a&gt;Solidity syntax&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Ethereum</title>
+    <link href="https://wannaspring.github.io/wannaSpring.github.io/2023/01/22/ethereum/"/>
+    <id>https://wannaspring.github.io/wannaSpring.github.io/2023/01/22/ethereum/</id>
+    <published>2023-01-22T05:11:16.000Z</published>
+    <updated>2023-07-31T07:58:55.148Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Ethereum&quot;&gt;&lt;a href=&quot;#Ethereum&quot; class=&quot;headerlink&quot; title=&quot;Ethereum&quot;&gt;&lt;/a&gt;Ethereum&lt;/h1&gt;&lt;h2 id=&quot;What-is-Ethereum&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Blockchain and cryto</title>
+    <link href="https://wannaspring.github.io/wannaSpring.github.io/2023/01/11/blockchain-and-cryto/"/>
+    <id>https://wannaspring.github.io/wannaSpring.github.io/2023/01/11/blockchain-and-cryto/</id>
+    <published>2023-01-11T04:47:37.000Z</published>
+    <updated>2023-07-31T07:58:55.147Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Blockchain-and-cryto&quot;&gt;&lt;a href=&quot;#Blockchain-and-cryto&quot; class=&quot;headerlink&quot; title=&quot;Blockchain and cryto&quot;&gt;&lt;/a&gt;Blockchain and</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Web3, Blockchain," scheme="https://wannaspring.github.io/wannaSpring.github.io/tags/Web3-Blockchain/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Solidity_Core</title>
+    <link href="https://wannaspring.github.io/wannaSpring.github.io/2023/01/10/solidity-core/"/>
+    <id>https://wannaspring.github.io/wannaSpring.github.io/2023/01/10/solidity-core/</id>
+    <published>2023-01-10T05:51:28.000Z</published>
+    <updated>2023-07-31T07:58:55.189Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Multi-Sigs&quot;&gt;&lt;a href=&quot;#Multi-Sigs&quot; class=&quot;headerlink&quot; title=&quot;Multi-Sigs&quot;&gt;&lt;/a&gt;Multi-Sigs&lt;/h1&gt;&lt;p&gt;Multi-sigs is smart contract designed</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Solidity_Core</title>
+    <link href="https://wannaspring.github.io/wannaSpring.github.io/2023/01/10/governance/"/>
+    <id>https://wannaspring.github.io/wannaSpring.github.io/2023/01/10/governance/</id>
+    <published>2023-01-10T05:51:28.000Z</published>
+    <updated>2023-07-31T07:58:55.169Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Governance&quot;&gt;&lt;a href=&quot;#Governance&quot; class=&quot;headerlink&quot; title=&quot;Governance&quot;&gt;&lt;/a&gt;Governance&lt;/h1&gt;&lt;p&gt;Decentralization protocol are in</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Solidity</title>
+    <link href="https://wannaspring.github.io/wannaSpring.github.io/2023/01/01/solidity/"/>
+    <id>https://wannaspring.github.io/wannaSpring.github.io/2023/01/01/solidity/</id>
+    <published>2023-01-01T10:57:21.000Z</published>
+    <updated>2023-07-31T07:58:55.125Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Mapping-amp-amp-structure&quot;&gt;&lt;a href=&quot;#Mapping-amp-amp-structure&quot; class=&quot;headerlink&quot; title=&quot;Mapping &amp;amp;&amp;amp; structure&quot;&gt;&lt;/a&gt;Mapping</summary>
+        
+      
+    
+    
+    
     
   </entry>
   
